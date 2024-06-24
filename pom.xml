@@ -10,7 +10,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>ai-sdk</module>
-        <module>analytics</module>
+        <module>inference</module>
     </modules>
 
     <properties>
@@ -20,7 +20,7 @@
         <retrofit2.version>2.9.0</retrofit2.version>
         <lombok.version>1.18.30</lombok.version>
         <okhttp3.version>4.9.3</okhttp3.version>
-        <stream-query.version>3.0.0</stream-query.version>
+        <stream-query.version>2.1.0</stream-query.version>
         <hutool.version>6.0.0-M7</hutool.version>
     </properties>
 
@@ -61,6 +61,12 @@
                 <artifactId>logging-interceptor</artifactId>
                 <version>${okhttp3.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.dromara.stream-query</groupId>
+                <artifactId>stream-plugin-mybatis-plus</artifactId>
+                <version>${stream-query.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>org.dromara.stream-query</groupId>
                 <artifactId>stream-core</artifactId>
