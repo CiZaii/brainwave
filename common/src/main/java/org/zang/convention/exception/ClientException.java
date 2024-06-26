@@ -1,7 +1,7 @@
-package org.zang.mybatis.core.convention.exception;
+package org.zang.convention.exception;
 
-import org.zang.mybatis.core.convention.errorcode.BaseErrorCode;
-import org.zang.mybatis.core.convention.errorcode.IErrorCode;
+import org.zang.convention.errorcode.BaseErrorCode;
+import org.zang.convention.errorcode.IErrorCode;
 
 /**
  * 客户端异常

@@ -1,10 +1,10 @@
 
-package org.zang.mybatis.core.convention.result;
+package org.zang.convention.result;
 
 import java.util.Optional;
 
-import org.zang.mybatis.core.convention.errorcode.BaseErrorCode;
-import org.zang.mybatis.core.convention.exception.AbstractException;
+import org.zang.convention.errorcode.BaseErrorCode;
+import org.zang.convention.exception.AbstractException;
 
 
 /**

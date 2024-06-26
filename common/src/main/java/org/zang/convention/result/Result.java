@@ -1,6 +1,6 @@
 
 
-package org.zang.mybatis.core.convention.result;
+package org.zang.convention.result;
 
 import java.io.Serial;
 import java.io.Serializable;

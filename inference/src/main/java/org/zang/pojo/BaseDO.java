@@ -1,4 +1,4 @@
-package org.zang.mybatis.core.domain;
+package org.zang.pojo;
 
 import java.time.LocalDateTime;
 import java.util.Date;

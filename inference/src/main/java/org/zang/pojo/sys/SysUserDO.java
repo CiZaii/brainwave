@@ -2,12 +2,11 @@ package org.zang.pojo.sys;
 
 import java.util.Date;
 
-import org.zang.mybatis.core.domain.BaseDO;
+import org.zang.pojo.BaseDO;
 
 import com.baomidou.mybatisplus.annotation.FieldStrategy;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonFormat;
 

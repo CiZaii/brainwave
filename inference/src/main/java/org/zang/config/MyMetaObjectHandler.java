@@ -1,4 +1,4 @@
-package org.zang.mybatis.core.config;
+package org.zang.config;
 
 import java.util.Date;
 

@@ -1,10 +1,10 @@
 
 
-package org.zang.mybatis.core.convention.exception;
+package org.zang.convention.exception;
 
 
-import org.zang.mybatis.core.convention.errorcode.BaseErrorCode;
-import org.zang.mybatis.core.convention.errorcode.IErrorCode;
+import org.zang.convention.errorcode.BaseErrorCode;
+import org.zang.convention.errorcode.IErrorCode;
 
 /**
  * 远程服务调用异常

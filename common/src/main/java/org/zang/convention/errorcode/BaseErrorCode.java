@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.zang.mybatis.core.convention.errorcode;
+package org.zang.convention.errorcode;
 
 /**
  * 基础错误码定义

@@ -1,10 +1,10 @@
 
-package org.zang.mybatis.core.convention.exception;
+package org.zang.convention.exception;
 
 import java.util.Optional;
 
 import org.springframework.util.StringUtils;
-import org.zang.mybatis.core.convention.errorcode.IErrorCode;
+import org.zang.convention.errorcode.IErrorCode;
 
 
 import lombok.Getter;
