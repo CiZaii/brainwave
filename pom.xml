@@ -22,6 +22,8 @@
         <okhttp3.version>4.9.3</okhttp3.version>
         <stream-query.version>2.1.0</stream-query.version>
         <hutool.version>6.0.0-M7</hutool.version>
+        <p6spy.version>3.9.1</p6spy.version>
+        <dynamic-datasource.version>4.3.1</dynamic-datasource.version>
     </properties>
 
     <dependencyManagement>
@@ -41,6 +43,20 @@
                 <artifactId>retrofit</artifactId>
                 <version>${retrofit2.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>p6spy</groupId>
+                <artifactId>p6spy</artifactId>
+                <version>${p6spy.version}</version>
+            </dependency>
+
+            <!-- dynamic-datasource 多数据源-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>dynamic-datasource-spring-boot3-starter</artifactId>
+                <version>${dynamic-datasource.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>com.squareup.retrofit2</groupId>
                 <artifactId>converter-jackson</artifactId>

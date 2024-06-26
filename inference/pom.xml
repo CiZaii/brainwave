@@ -45,14 +45,12 @@
         <dependency>
             <groupId>p6spy</groupId>
             <artifactId>p6spy</artifactId>
-            <version>3.9.1</version> <!-- 请使用最新版本 -->
         </dependency>
 
         <!-- dynamic-datasource 多数据源-->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>dynamic-datasource-spring-boot3-starter</artifactId>
-            <version>4.3.1</version>
         </dependency>
 
         <dependency>
