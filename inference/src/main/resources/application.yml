@@ -5,7 +5,13 @@ spring:
 server:
   # 端口
   port: 8081
-
+mybatis-plus:
+  global-config:
+    db-config:
+      schema: "\"NexusAI\""
+stream-query:
+  mybatis-plus:
+    safe-mode: on
 ############## Sa-Token 配置 (文档: https://sa-token.cc) ##############
 sa-token:
   # token前缀

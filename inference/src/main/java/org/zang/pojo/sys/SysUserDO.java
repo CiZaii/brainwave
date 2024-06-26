@@ -9,6 +9,7 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -88,12 +89,6 @@ public class SysUserDO extends BaseDO {
     private String status;
 
     /**
-     * 删除标志（0代表存在 2代表删除）
-     */
-    @TableLogic
-    private String delFlag;
-
-    /**
      * 最后登录IP
      */
     private String loginIp;
@@ -101,6 +96,7 @@ public class SysUserDO extends BaseDO {
     /**
      * 最后登录时间
      */
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss", timezone="GMT+8")
     private Date loginDate;
 
     /**
