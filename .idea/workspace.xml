@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f51813c9-514b-41f1-83a3-1dfd75b02a18" name="更改" comment="feat(ai-sdk): add OpenAI session factory and related classes&#10;&#10;Implement OpenAiSessionFactory and associated classes to support creationof OpenAiSession instances. This includes the introduction of new session&#10;configuration options and the refactoring of existing AI SDK components to&#10;integrate with the session factory.">
+      <change afterPath="$PROJECT_DIR$/inference/src/main/java/org/zang/controller/UserController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/inference/src/main/resources/application-zsl.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1246a388-2df9-4145-8092-1fa65e338091.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1246a388-2df9-4145-8092-1fa65e338091.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inference/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/inference/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inference/src/main/java/org/zang/InferenceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/inference/src/main/java/org/zang/InferenceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inference/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/inference/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +36,13 @@
         </projects_view>
       </state>
     </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -61,39 +73,50 @@
     <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven.BrainWave [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.BrainWave [install].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.InferenceApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Spring Boot.ShortLinkAdminApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-21 (2)&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/zang/Documents/IDEA/BrainWave/inference/src/main/java/org/zang/Main.java&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Java&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.BrainWave [clean].executor": "Run",
+    "Maven.BrainWave [install].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.InferenceApplication.executor": "Debug",
+    "Spring Boot.ShortLinkAdminApplication.executor": "Debug",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "openjdk-21 (2)",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/zang/Documents/IDEA/BrainWave/ai-common/ai-common-tenant",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/Users/zang/Documents/IDEA/BrainWave/ai-common/ai-common-tenant/src/main/java/org/zang/Main.java",
+    "settings.editor.selected.configurable": "settings.sync",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ai-common/ai-common-tenant" />
+      <recent name="$PROJECT_DIR$/ai-common" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.zang.pojo.sys" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.InferenceApplication">
@@ -149,7 +172,7 @@
       <workItem from="1719237415154" duration="5824000" />
       <workItem from="1719284153834" duration="640000" />
       <workItem from="1719364471656" duration="2977000" />
-      <workItem from="1719367481546" duration="388000" />
+      <workItem from="1719367481546" duration="6113000" />
     </task>
     <task id="LOCAL-00001" summary="feat(ai-sdk): add OpenAI session factory and related classes&#10;&#10;Implement OpenAiSessionFactory and associated classes to support creationof OpenAiSession instances. This includes the introduction of new session&#10;configuration options and the refactoring of existing AI SDK components to&#10;integrate with the session factory.">
       <option name="closed" value="true" />
@@ -191,7 +214,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719367053385</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat(ai-sdk): add OpenAI session factory and related classes&#10;&#10;Implement OpenAiSessionFactory and associated classes to support creationof OpenAiSession instances. This includes the introduction of new session&#10;configuration options and the refactoring of existing AI SDK components to&#10;integrate with the session factory.">
+      <option name="closed" value="true" />
+      <created>1719370325778</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1719370325778</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,6 +247,16 @@
           <url>file://$PROJECT_DIR$/analytics/src/main/resources/Main.java</url>
           <line>19</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ai-common/src/main/java/org/zang/Main.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ai-common/ai-common-tenant/src/main/java/org/zang/Main.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

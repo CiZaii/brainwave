@@ -13,6 +13,8 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/ai-common/ai-common-tenant/pom.xml" />
+        <option value="$PROJECT_DIR$/ai-common/pom.xml" />
         <option value="$PROJECT_DIR$/demo/pom.xml" />
       </set>
     </option>
