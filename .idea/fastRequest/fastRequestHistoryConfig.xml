@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="fastRequestHistoryConfig">
+    <option name="historyList">
+      <list>
+        <ResponseHistory>
+          <option name="className" value="org.zang.controller.UserController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="inference" />
+          <option name="method" value="save" />
+          <option name="methodType" value="POST" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="{&#10;  &quot;userId&quot;: 2,&#10;  &quot;deptId&quot;: 1,&#10;  &quot;userName&quot;: &quot;userName_fqlme&quot;,&#10;  &quot;nickName&quot;: &quot;nickName_b2x9o&quot;,&#10;  &quot;userType&quot;: &quot;userTyp&quot;,&#10;  &quot;email&quot;: &quot;email_1da80&quot;,&#10;  &quot;phonenumber&quot;: &quot;11111111111&quot;,&#10;  &quot;sex&quot;: &quot;0&quot;,&#10;  &quot;avatar&quot;: 1,&#10;  &quot;password&quot;: &quot;password_bnij8&quot;,&#10;  &quot;status&quot;: &quot;1&quot;,&#10;  &quot;loginIp&quot;: &quot;loginIp_hlq1u&quot;,&#10;  &quot;loginDate&quot;: &quot;2024-06-26 14:23:18&quot;,&#10;  &quot;remark&quot;: &quot;remark_qn4ll&quot;,&#10;}" />
+              <option name="className" value="org.zang.controller.UserController" />
+              <option name="jsonDocument" value="{&#10;  &quot;userId&quot;: &quot;用户ID&quot;,&#10;  &quot;deptId&quot;: &quot;部门ID&quot;,&#10;  &quot;userName&quot;: &quot;用户账号&quot;,&#10;  &quot;nickName&quot;: &quot;用户昵称&quot;,&#10;  &quot;userType&quot;: &quot;用户类型（sys_user系统用户）&quot;,&#10;  &quot;email&quot;: &quot;用户邮箱&quot;,&#10;  &quot;phonenumber&quot;: &quot;手机号码&quot;,&#10;  &quot;sex&quot;: &quot;用户性别&quot;,&#10;  &quot;avatar&quot;: &quot;用户头像&quot;,&#10;  &quot;password&quot;: &quot;密码&quot;,&#10;  &quot;status&quot;: &quot;帐号状态（0正常 1停用）&quot;,&#10;  &quot;delFlag&quot;: &quot;删除标志（0代表存在 2代表删除）&quot;,&#10;  &quot;loginIp&quot;: &quot;最后登录IP&quot;,&#10;  &quot;loginDate&quot;: &quot;最后登录时间&quot;,&#10;  &quot;remark&quot;: &quot;备注&quot;,&#10;  &quot;createTime&quot;: &quot;创建时间&quot;,&#10;  &quot;updateTime&quot;: &quot;修改时间&quot;,&#10;  &quot;gmtDeleted&quot;: &quot;No comment,Value =2024-06-26 00:00:00&quot;&#10;}" />
+              <option name="method" value="save" />
+              <option name="methodDescription" value="save" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/user/save" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;code&quot;:&quot;返回码&quot;,&quot;message&quot;:&quot;返回消息&quot;,&quot;data&quot;:{&quot;userId&quot;:&quot;用户ID&quot;,&quot;deptId&quot;:&quot;部门ID&quot;,&quot;userName&quot;:&quot;用户账号&quot;,&quot;nickName&quot;:&quot;用户昵称&quot;,&quot;userType&quot;:&quot;用户类型（sys_user系统用户）&quot;,&quot;email&quot;:&quot;用户邮箱&quot;,&quot;phonenumber&quot;:&quot;手机号码&quot;,&quot;sex&quot;:&quot;用户性别&quot;,&quot;avatar&quot;:&quot;用户头像&quot;,&quot;password&quot;:&quot;密码&quot;,&quot;status&quot;:&quot;帐号状态（0正常 1停用）&quot;,&quot;delFlag&quot;:&quot;删除标志（0代表存在 2代表删除）&quot;,&quot;loginIp&quot;:&quot;最后登录IP&quot;,&quot;loginDate&quot;:&quot;最后登录时间&quot;,&quot;remark&quot;:&quot;备注&quot;,&quot;createTime&quot;:&quot;创建时间&quot;,&quot;updateTime&quot;:&quot;修改时间&quot;,&quot;gmtDeleted&quot;:&quot;No comment,Type =String&quot;},&quot;requestId&quot;:&quot;请求ID&quot;}" />
+              <option name="url" value="/user/save" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8081/user/save&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Fast Request/2024.1.5.1&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Content-Length: 296&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&quot;nickName&quot;:&quot;nickName_b2x9o&quot;,&quot;sex&quot;:&quot;0&quot;,&quot;deptId&quot;:1,&quot;phonenumber&quot;:&quot;11111111111&quot;,&quot;loginDate&quot;:&quot;2024-06-26 14:23:18&quot;,&quot;remark&quot;:&quot;remark_qn4ll&quot;,&quot;avatar&quot;:1,&quot;userName&quot;:&quot;userName_fqlme&quot;,&quot;userId&quot;:2,&quot;password&quot;:&quot;password_bnij8&quot;,&quot;loginIp&quot;:&quot;loginIp_hlq1u&quot;,&quot;userType&quot;:&quot;userTyp&quot;,&quot;email&quot;:&quot;email_1da80&quot;,&quot;status&quot;:&quot;1&quot;}&#13;&#10;" />
+          <option name="response" value="{&quot;code&quot;:&quot;0&quot;,&quot;message&quot;:null,&quot;data&quot;:{&quot;createTime&quot;:&quot;2024-06-26 15:48:22&quot;,&quot;updateTime&quot;:&quot;2024-06-26 15:48:22&quot;,&quot;gmtDeleted&quot;:null,&quot;userId&quot;:2,&quot;deptId&quot;:1,&quot;userName&quot;:&quot;userName_fqlme&quot;,&quot;nickName&quot;:&quot;nickName_b2x9o&quot;,&quot;userType&quot;:&quot;userTyp&quot;,&quot;email&quot;:&quot;email_1da80&quot;,&quot;phonenumber&quot;:&quot;11111111111&quot;,&quot;sex&quot;:&quot;0&quot;,&quot;avatar&quot;:1,&quot;password&quot;:&quot;password_bnij8&quot;,&quot;status&quot;:&quot;1&quot;,&quot;loginIp&quot;:&quot;loginIp_hlq1u&quot;,&quot;loginDate&quot;:&quot;2024-06-26 14:23:18&quot;,&quot;remark&quot;:&quot;remark_qn4ll&quot;},&quot;requestId&quot;:null,&quot;success&quot;:true}" />
+          <option name="url" value="/user/save" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="org.zang.controller.UserController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="inference" />
+          <option name="method" value="save" />
+          <option name="methodType" value="POST" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="{&#10;  &quot;userId&quot;: 1,&#10;  &quot;deptId&quot;: 1,&#10;  &quot;userName&quot;: &quot;userName_fqlme&quot;,&#10;  &quot;nickName&quot;: &quot;nickName_b2x9o&quot;,&#10;  &quot;userType&quot;: &quot;userTyp&quot;,&#10;  &quot;email&quot;: &quot;email_1da80&quot;,&#10;  &quot;phonenumber&quot;: &quot;11111111111&quot;,&#10;  &quot;sex&quot;: &quot;0&quot;,&#10;  &quot;avatar&quot;: 1,&#10;  &quot;password&quot;: &quot;password_bnij8&quot;,&#10;  &quot;status&quot;: &quot;1&quot;,&#10;  &quot;loginIp&quot;: &quot;loginIp_hlq1u&quot;,&#10;  &quot;loginDate&quot;: &quot;2024-06-26 14:23:18&quot;,&#10;  &quot;remark&quot;: &quot;remark_qn4ll&quot;,&#10;}" />
+              <option name="className" value="org.zang.controller.UserController" />
+              <option name="jsonDocument" value="{&#10;  &quot;userId&quot;: &quot;用户ID&quot;,&#10;  &quot;deptId&quot;: &quot;部门ID&quot;,&#10;  &quot;userName&quot;: &quot;用户账号&quot;,&#10;  &quot;nickName&quot;: &quot;用户昵称&quot;,&#10;  &quot;userType&quot;: &quot;用户类型（sys_user系统用户）&quot;,&#10;  &quot;email&quot;: &quot;用户邮箱&quot;,&#10;  &quot;phonenumber&quot;: &quot;手机号码&quot;,&#10;  &quot;sex&quot;: &quot;用户性别&quot;,&#10;  &quot;avatar&quot;: &quot;用户头像&quot;,&#10;  &quot;password&quot;: &quot;密码&quot;,&#10;  &quot;status&quot;: &quot;帐号状态（0正常 1停用）&quot;,&#10;  &quot;delFlag&quot;: &quot;删除标志（0代表存在 2代表删除）&quot;,&#10;  &quot;loginIp&quot;: &quot;最后登录IP&quot;,&#10;  &quot;loginDate&quot;: &quot;最后登录时间&quot;,&#10;  &quot;remark&quot;: &quot;备注&quot;,&#10;  &quot;createTime&quot;: &quot;创建时间&quot;,&#10;  &quot;updateTime&quot;: &quot;修改时间&quot;,&#10;  &quot;gmtDeleted&quot;: &quot;No comment,Value =2024-06-26 00:00:00&quot;&#10;}" />
+              <option name="method" value="save" />
+              <option name="methodDescription" value="save" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/user/save" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;code&quot;:&quot;返回码&quot;,&quot;message&quot;:&quot;返回消息&quot;,&quot;data&quot;:{&quot;userId&quot;:&quot;用户ID&quot;,&quot;deptId&quot;:&quot;部门ID&quot;,&quot;userName&quot;:&quot;用户账号&quot;,&quot;nickName&quot;:&quot;用户昵称&quot;,&quot;userType&quot;:&quot;用户类型（sys_user系统用户）&quot;,&quot;email&quot;:&quot;用户邮箱&quot;,&quot;phonenumber&quot;:&quot;手机号码&quot;,&quot;sex&quot;:&quot;用户性别&quot;,&quot;avatar&quot;:&quot;用户头像&quot;,&quot;password&quot;:&quot;密码&quot;,&quot;status&quot;:&quot;帐号状态（0正常 1停用）&quot;,&quot;delFlag&quot;:&quot;删除标志（0代表存在 2代表删除）&quot;,&quot;loginIp&quot;:&quot;最后登录IP&quot;,&quot;loginDate&quot;:&quot;最后登录时间&quot;,&quot;remark&quot;:&quot;备注&quot;,&quot;createTime&quot;:&quot;创建时间&quot;,&quot;updateTime&quot;:&quot;修改时间&quot;,&quot;gmtDeleted&quot;:&quot;No comment,Type =String&quot;},&quot;requestId&quot;:&quot;请求ID&quot;}" />
+              <option name="url" value="/user/save" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8081/user/save&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Fast Request/2024.1.5.1&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Content-Length: 296&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&quot;nickName&quot;:&quot;nickName_b2x9o&quot;,&quot;sex&quot;:&quot;0&quot;,&quot;deptId&quot;:1,&quot;phonenumber&quot;:&quot;11111111111&quot;,&quot;loginDate&quot;:&quot;2024-06-26 14:23:18&quot;,&quot;remark&quot;:&quot;remark_qn4ll&quot;,&quot;avatar&quot;:1,&quot;userName&quot;:&quot;userName_fqlme&quot;,&quot;userId&quot;:1,&quot;password&quot;:&quot;password_bnij8&quot;,&quot;loginIp&quot;:&quot;loginIp_hlq1u&quot;,&quot;userType&quot;:&quot;userTyp&quot;,&quot;email&quot;:&quot;email_1da80&quot;,&quot;status&quot;:&quot;1&quot;}&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2024-06-26T07:47:23.837+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/user/save&quot;}" />
+          <option name="url" value="/user/save" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="org.zang.controller.UserController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="inference" />
+          <option name="method" value="save" />
+          <option name="methodType" value="POST" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="{&#10;  &quot;userId&quot;: 1,&#10;  &quot;deptId&quot;: 1,&#10;  &quot;userName&quot;: &quot;userName_fqlme&quot;,&#10;  &quot;nickName&quot;: &quot;nickName_b2x9o&quot;,&#10;  &quot;userType&quot;: &quot;userTyp&quot;,&#10;  &quot;email&quot;: &quot;email_1da80&quot;,&#10;  &quot;phonenumber&quot;: &quot;11111111111&quot;,&#10;  &quot;sex&quot;: &quot;0&quot;,&#10;  &quot;avatar&quot;: 1,&#10;  &quot;password&quot;: &quot;password_bnij8&quot;,&#10;  &quot;status&quot;: &quot;status_3dp8x&quot;,&#10;  &quot;loginIp&quot;: &quot;loginIp_hlq1u&quot;,&#10;  &quot;loginDate&quot;: &quot;2024-06-26 14:23:18&quot;,&#10;  &quot;remark&quot;: &quot;remark_qn4ll&quot;,&#10;}" />
+              <option name="className" value="org.zang.controller.UserController" />
+              <option name="jsonDocument" value="{&#10;  &quot;userId&quot;: &quot;用户ID&quot;,&#10;  &quot;deptId&quot;: &quot;部门ID&quot;,&#10;  &quot;userName&quot;: &quot;用户账号&quot;,&#10;  &quot;nickName&quot;: &quot;用户昵称&quot;,&#10;  &quot;userType&quot;: &quot;用户类型（sys_user系统用户）&quot;,&#10;  &quot;email&quot;: &quot;用户邮箱&quot;,&#10;  &quot;phonenumber&quot;: &quot;手机号码&quot;,&#10;  &quot;sex&quot;: &quot;用户性别&quot;,&#10;  &quot;avatar&quot;: &quot;用户头像&quot;,&#10;  &quot;password&quot;: &quot;密码&quot;,&#10;  &quot;status&quot;: &quot;帐号状态（0正常 1停用）&quot;,&#10;  &quot;delFlag&quot;: &quot;删除标志（0代表存在 2代表删除）&quot;,&#10;  &quot;loginIp&quot;: &quot;最后登录IP&quot;,&#10;  &quot;loginDate&quot;: &quot;最后登录时间&quot;,&#10;  &quot;remark&quot;: &quot;备注&quot;,&#10;  &quot;createTime&quot;: &quot;创建时间&quot;,&#10;  &quot;updateTime&quot;: &quot;修改时间&quot;,&#10;  &quot;gmtDeleted&quot;: &quot;No comment,Value =2024-06-26 00:00:00&quot;&#10;}" />
+              <option name="method" value="save" />
+              <option name="methodDescription" value="save" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/user/save" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;code&quot;:&quot;返回码&quot;,&quot;message&quot;:&quot;返回消息&quot;,&quot;data&quot;:{&quot;userId&quot;:&quot;用户ID&quot;,&quot;deptId&quot;:&quot;部门ID&quot;,&quot;userName&quot;:&quot;用户账号&quot;,&quot;nickName&quot;:&quot;用户昵称&quot;,&quot;userType&quot;:&quot;用户类型（sys_user系统用户）&quot;,&quot;email&quot;:&quot;用户邮箱&quot;,&quot;phonenumber&quot;:&quot;手机号码&quot;,&quot;sex&quot;:&quot;用户性别&quot;,&quot;avatar&quot;:&quot;用户头像&quot;,&quot;password&quot;:&quot;密码&quot;,&quot;status&quot;:&quot;帐号状态（0正常 1停用）&quot;,&quot;delFlag&quot;:&quot;删除标志（0代表存在 2代表删除）&quot;,&quot;loginIp&quot;:&quot;最后登录IP&quot;,&quot;loginDate&quot;:&quot;最后登录时间&quot;,&quot;remark&quot;:&quot;备注&quot;,&quot;createTime&quot;:&quot;创建时间&quot;,&quot;updateTime&quot;:&quot;修改时间&quot;,&quot;gmtDeleted&quot;:&quot;No comment,Type =String&quot;},&quot;requestId&quot;:&quot;请求ID&quot;}" />
+              <option name="url" value="/user/save" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8081/user/save&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Fast Request/2024.1.5.1&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Content-Length: 307&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&quot;nickName&quot;:&quot;nickName_b2x9o&quot;,&quot;sex&quot;:&quot;0&quot;,&quot;deptId&quot;:1,&quot;phonenumber&quot;:&quot;11111111111&quot;,&quot;loginDate&quot;:&quot;2024-06-26 14:23:18&quot;,&quot;remark&quot;:&quot;remark_qn4ll&quot;,&quot;avatar&quot;:1,&quot;userName&quot;:&quot;userName_fqlme&quot;,&quot;userId&quot;:1,&quot;password&quot;:&quot;password_bnij8&quot;,&quot;loginIp&quot;:&quot;loginIp_hlq1u&quot;,&quot;userType&quot;:&quot;userTyp&quot;,&quot;email&quot;:&quot;email_1da80&quot;,&quot;status&quot;:&quot;status_3dp8x&quot;}&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2024-06-26T07:46:44.393+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/user/save&quot;}" />
+          <option name="url" value="/user/save" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="org.zang.controller.UserController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="inference" />
+          <option name="method" value="save" />
+          <option name="methodType" value="POST" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="{&#10;  &quot;userId&quot;: 1,&#10;  &quot;deptId&quot;: 1,&#10;  &quot;userName&quot;: &quot;userName_fqlme&quot;,&#10;  &quot;nickName&quot;: &quot;nickName_b2x9o&quot;,&#10;  &quot;userType&quot;: &quot;userTyp&quot;,&#10;  &quot;email&quot;: &quot;email_1da80&quot;,&#10;  &quot;phonenumber&quot;: &quot;11111111111&quot;,&#10;  &quot;sex&quot;: &quot;sex_pwgbj&quot;,&#10;  &quot;avatar&quot;: 1,&#10;  &quot;password&quot;: &quot;password_bnij8&quot;,&#10;  &quot;status&quot;: &quot;status_3dp8x&quot;,&#10;  &quot;loginIp&quot;: &quot;loginIp_hlq1u&quot;,&#10;  &quot;loginDate&quot;: &quot;2024-06-26 14:23:18&quot;,&#10;  &quot;remark&quot;: &quot;remark_qn4ll&quot;,&#10;}" />
+              <option name="className" value="org.zang.controller.UserController" />
+              <option name="jsonDocument" value="{&#10;  &quot;userId&quot;: &quot;用户ID&quot;,&#10;  &quot;deptId&quot;: &quot;部门ID&quot;,&#10;  &quot;userName&quot;: &quot;用户账号&quot;,&#10;  &quot;nickName&quot;: &quot;用户昵称&quot;,&#10;  &quot;userType&quot;: &quot;用户类型（sys_user系统用户）&quot;,&#10;  &quot;email&quot;: &quot;用户邮箱&quot;,&#10;  &quot;phonenumber&quot;: &quot;手机号码&quot;,&#10;  &quot;sex&quot;: &quot;用户性别&quot;,&#10;  &quot;avatar&quot;: &quot;用户头像&quot;,&#10;  &quot;password&quot;: &quot;密码&quot;,&#10;  &quot;status&quot;: &quot;帐号状态（0正常 1停用）&quot;,&#10;  &quot;delFlag&quot;: &quot;删除标志（0代表存在 2代表删除）&quot;,&#10;  &quot;loginIp&quot;: &quot;最后登录IP&quot;,&#10;  &quot;loginDate&quot;: &quot;最后登录时间&quot;,&#10;  &quot;remark&quot;: &quot;备注&quot;,&#10;  &quot;createTime&quot;: &quot;创建时间&quot;,&#10;  &quot;updateTime&quot;: &quot;修改时间&quot;,&#10;  &quot;gmtDeleted&quot;: &quot;No comment,Value =2024-06-26 00:00:00&quot;&#10;}" />
+              <option name="method" value="save" />
+              <option name="methodDescription" value="save" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/user/save" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;code&quot;:&quot;返回码&quot;,&quot;message&quot;:&quot;返回消息&quot;,&quot;data&quot;:{&quot;userId&quot;:&quot;用户ID&quot;,&quot;deptId&quot;:&quot;部门ID&quot;,&quot;userName&quot;:&quot;用户账号&quot;,&quot;nickName&quot;:&quot;用户昵称&quot;,&quot;userType&quot;:&quot;用户类型（sys_user系统用户）&quot;,&quot;email&quot;:&quot;用户邮箱&quot;,&quot;phonenumber&quot;:&quot;手机号码&quot;,&quot;sex&quot;:&quot;用户性别&quot;,&quot;avatar&quot;:&quot;用户头像&quot;,&quot;password&quot;:&quot;密码&quot;,&quot;status&quot;:&quot;帐号状态（0正常 1停用）&quot;,&quot;delFlag&quot;:&quot;删除标志（0代表存在 2代表删除）&quot;,&quot;loginIp&quot;:&quot;最后登录IP&quot;,&quot;loginDate&quot;:&quot;最后登录时间&quot;,&quot;remark&quot;:&quot;备注&quot;,&quot;createTime&quot;:&quot;创建时间&quot;,&quot;updateTime&quot;:&quot;修改时间&quot;,&quot;gmtDeleted&quot;:&quot;No comment,Type =String&quot;},&quot;requestId&quot;:&quot;请求ID&quot;}" />
+              <option name="url" value="/user/save" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8081/user/save&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Fast Request/2024.1.5.1&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Content-Length: 315&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&quot;nickName&quot;:&quot;nickName_b2x9o&quot;,&quot;sex&quot;:&quot;sex_pwgbj&quot;,&quot;deptId&quot;:1,&quot;phonenumber&quot;:&quot;11111111111&quot;,&quot;loginDate&quot;:&quot;2024-06-26 14:23:18&quot;,&quot;remark&quot;:&quot;remark_qn4ll&quot;,&quot;avatar&quot;:1,&quot;userName&quot;:&quot;userName_fqlme&quot;,&quot;userId&quot;:1,&quot;password&quot;:&quot;password_bnij8&quot;,&quot;loginIp&quot;:&quot;loginIp_hlq1u&quot;,&quot;userType&quot;:&quot;userTyp&quot;,&quot;email&quot;:&quot;email_1da80&quot;,&quot;status&quot;:&quot;status_3dp8x&quot;}&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2024-06-26T07:46:00.584+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/user/save&quot;}" />
+          <option name="url" value="/user/save" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="org.zang.controller.UserController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="inference" />
+          <option name="method" value="save" />
+          <option name="methodType" value="POST" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="{&#10;  &quot;userId&quot;: 1,&#10;  &quot;deptId&quot;: 1,&#10;  &quot;userName&quot;: &quot;userName_fqlme&quot;,&#10;  &quot;nickName&quot;: &quot;nickName_b2x9o&quot;,&#10;  &quot;userType&quot;: &quot;userTyp&quot;,&#10;  &quot;email&quot;: &quot;email_1da80&quot;,&#10;  &quot;phonenumber&quot;: &quot;phonenumber_my1lt&quot;,&#10;  &quot;sex&quot;: &quot;sex_pwgbj&quot;,&#10;  &quot;avatar&quot;: 1,&#10;  &quot;password&quot;: &quot;password_bnij8&quot;,&#10;  &quot;status&quot;: &quot;status_3dp8x&quot;,&#10;  &quot;loginIp&quot;: &quot;loginIp_hlq1u&quot;,&#10;  &quot;loginDate&quot;: &quot;2024-06-26 14:23:18&quot;,&#10;  &quot;remark&quot;: &quot;remark_qn4ll&quot;,&#10;}" />
+              <option name="className" value="org.zang.controller.UserController" />
+              <option name="jsonDocument" value="{&#10;  &quot;userId&quot;: &quot;用户ID&quot;,&#10;  &quot;deptId&quot;: &quot;部门ID&quot;,&#10;  &quot;userName&quot;: &quot;用户账号&quot;,&#10;  &quot;nickName&quot;: &quot;用户昵称&quot;,&#10;  &quot;userType&quot;: &quot;用户类型（sys_user系统用户）&quot;,&#10;  &quot;email&quot;: &quot;用户邮箱&quot;,&#10;  &quot;phonenumber&quot;: &quot;手机号码&quot;,&#10;  &quot;sex&quot;: &quot;用户性别&quot;,&#10;  &quot;avatar&quot;: &quot;用户头像&quot;,&#10;  &quot;password&quot;: &quot;密码&quot;,&#10;  &quot;status&quot;: &quot;帐号状态（0正常 1停用）&quot;,&#10;  &quot;delFlag&quot;: &quot;删除标志（0代表存在 2代表删除）&quot;,&#10;  &quot;loginIp&quot;: &quot;最后登录IP&quot;,&#10;  &quot;loginDate&quot;: &quot;最后登录时间&quot;,&#10;  &quot;remark&quot;: &quot;备注&quot;,&#10;  &quot;createTime&quot;: &quot;创建时间&quot;,&#10;  &quot;updateTime&quot;: &quot;修改时间&quot;,&#10;  &quot;gmtDeleted&quot;: &quot;No comment,Value =2024-06-26 00:00:00&quot;&#10;}" />
+              <option name="method" value="save" />
+              <option name="methodDescription" value="save" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/user/save" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;code&quot;:&quot;返回码&quot;,&quot;message&quot;:&quot;返回消息&quot;,&quot;data&quot;:{&quot;userId&quot;:&quot;用户ID&quot;,&quot;deptId&quot;:&quot;部门ID&quot;,&quot;userName&quot;:&quot;用户账号&quot;,&quot;nickName&quot;:&quot;用户昵称&quot;,&quot;userType&quot;:&quot;用户类型（sys_user系统用户）&quot;,&quot;email&quot;:&quot;用户邮箱&quot;,&quot;phonenumber&quot;:&quot;手机号码&quot;,&quot;sex&quot;:&quot;用户性别&quot;,&quot;avatar&quot;:&quot;用户头像&quot;,&quot;password&quot;:&quot;密码&quot;,&quot;status&quot;:&quot;帐号状态（0正常 1停用）&quot;,&quot;delFlag&quot;:&quot;删除标志（0代表存在 2代表删除）&quot;,&quot;loginIp&quot;:&quot;最后登录IP&quot;,&quot;loginDate&quot;:&quot;最后登录时间&quot;,&quot;remark&quot;:&quot;备注&quot;,&quot;createTime&quot;:&quot;创建时间&quot;,&quot;updateTime&quot;:&quot;修改时间&quot;,&quot;gmtDeleted&quot;:&quot;No comment,Type =String&quot;},&quot;requestId&quot;:&quot;请求ID&quot;}" />
+              <option name="url" value="/user/save" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8081/user/save&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Fast Request/2024.1.5.1&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Content-Length: 321&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&quot;nickName&quot;:&quot;nickName_b2x9o&quot;,&quot;sex&quot;:&quot;sex_pwgbj&quot;,&quot;deptId&quot;:1,&quot;phonenumber&quot;:&quot;phonenumber_my1lt&quot;,&quot;loginDate&quot;:&quot;2024-06-26 14:23:18&quot;,&quot;remark&quot;:&quot;remark_qn4ll&quot;,&quot;avatar&quot;:1,&quot;userName&quot;:&quot;userName_fqlme&quot;,&quot;userId&quot;:1,&quot;password&quot;:&quot;password_bnij8&quot;,&quot;loginIp&quot;:&quot;loginIp_hlq1u&quot;,&quot;userType&quot;:&quot;userTyp&quot;,&quot;email&quot;:&quot;email_1da80&quot;,&quot;status&quot;:&quot;status_3dp8x&quot;}&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2024-06-26T07:45:36.081+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/user/save&quot;}" />
+          <option name="url" value="/user/save" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="org.zang.controller.UserController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="inference" />
+          <option name="method" value="save" />
+          <option name="methodType" value="POST" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="{&#10;  &quot;userId&quot;: 1,&#10;  &quot;deptId&quot;: 1,&#10;  &quot;userName&quot;: &quot;userName_fqlme&quot;,&#10;  &quot;nickName&quot;: &quot;nickName_b2x9o&quot;,&#10;  &quot;userType&quot;: &quot;userType_q6toh&quot;,&#10;  &quot;email&quot;: &quot;email_1da80&quot;,&#10;  &quot;phonenumber&quot;: &quot;phonenumber_my1lt&quot;,&#10;  &quot;sex&quot;: &quot;sex_pwgbj&quot;,&#10;  &quot;avatar&quot;: 1,&#10;  &quot;password&quot;: &quot;password_bnij8&quot;,&#10;  &quot;status&quot;: &quot;status_3dp8x&quot;,&#10;  &quot;loginIp&quot;: &quot;loginIp_hlq1u&quot;,&#10;  &quot;loginDate&quot;: &quot;2024-06-26 14:23:18&quot;,&#10;  &quot;remark&quot;: &quot;remark_qn4ll&quot;,&#10;}" />
+              <option name="className" value="org.zang.controller.UserController" />
+              <option name="jsonDocument" value="{&#10;  &quot;userId&quot;: &quot;用户ID&quot;,&#10;  &quot;deptId&quot;: &quot;部门ID&quot;,&#10;  &quot;userName&quot;: &quot;用户账号&quot;,&#10;  &quot;nickName&quot;: &quot;用户昵称&quot;,&#10;  &quot;userType&quot;: &quot;用户类型（sys_user系统用户）&quot;,&#10;  &quot;email&quot;: &quot;用户邮箱&quot;,&#10;  &quot;phonenumber&quot;: &quot;手机号码&quot;,&#10;  &quot;sex&quot;: &quot;用户性别&quot;,&#10;  &quot;avatar&quot;: &quot;用户头像&quot;,&#10;  &quot;password&quot;: &quot;密码&quot;,&#10;  &quot;status&quot;: &quot;帐号状态（0正常 1停用）&quot;,&#10;  &quot;delFlag&quot;: &quot;删除标志（0代表存在 2代表删除）&quot;,&#10;  &quot;loginIp&quot;: &quot;最后登录IP&quot;,&#10;  &quot;loginDate&quot;: &quot;最后登录时间&quot;,&#10;  &quot;remark&quot;: &quot;备注&quot;,&#10;  &quot;createTime&quot;: &quot;创建时间&quot;,&#10;  &quot;updateTime&quot;: &quot;修改时间&quot;,&#10;  &quot;gmtDeleted&quot;: &quot;No comment,Value =2024-06-26 00:00:00&quot;&#10;}" />
+              <option name="method" value="save" />
+              <option name="methodDescription" value="save" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/user/save" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;code&quot;:&quot;返回码&quot;,&quot;message&quot;:&quot;返回消息&quot;,&quot;data&quot;:{&quot;userId&quot;:&quot;用户ID&quot;,&quot;deptId&quot;:&quot;部门ID&quot;,&quot;userName&quot;:&quot;用户账号&quot;,&quot;nickName&quot;:&quot;用户昵称&quot;,&quot;userType&quot;:&quot;用户类型（sys_user系统用户）&quot;,&quot;email&quot;:&quot;用户邮箱&quot;,&quot;phonenumber&quot;:&quot;手机号码&quot;,&quot;sex&quot;:&quot;用户性别&quot;,&quot;avatar&quot;:&quot;用户头像&quot;,&quot;password&quot;:&quot;密码&quot;,&quot;status&quot;:&quot;帐号状态（0正常 1停用）&quot;,&quot;delFlag&quot;:&quot;删除标志（0代表存在 2代表删除）&quot;,&quot;loginIp&quot;:&quot;最后登录IP&quot;,&quot;loginDate&quot;:&quot;最后登录时间&quot;,&quot;remark&quot;:&quot;备注&quot;,&quot;createTime&quot;:&quot;创建时间&quot;,&quot;updateTime&quot;:&quot;修改时间&quot;,&quot;gmtDeleted&quot;:&quot;No comment,Type =String&quot;},&quot;requestId&quot;:&quot;请求ID&quot;}" />
+              <option name="url" value="/user/save" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8081/user/save&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Fast Request/2024.1.5.1&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Content-Length: 328&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&quot;nickName&quot;:&quot;nickName_b2x9o&quot;,&quot;sex&quot;:&quot;sex_pwgbj&quot;,&quot;deptId&quot;:1,&quot;phonenumber&quot;:&quot;phonenumber_my1lt&quot;,&quot;loginDate&quot;:&quot;2024-06-26 14:23:18&quot;,&quot;remark&quot;:&quot;remark_qn4ll&quot;,&quot;avatar&quot;:1,&quot;userName&quot;:&quot;userName_fqlme&quot;,&quot;userId&quot;:1,&quot;password&quot;:&quot;password_bnij8&quot;,&quot;loginIp&quot;:&quot;loginIp_hlq1u&quot;,&quot;userType&quot;:&quot;userType_q6toh&quot;,&quot;email&quot;:&quot;email_1da80&quot;,&quot;status&quot;:&quot;status_3dp8x&quot;}&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2024-06-26T07:43:24.155+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/user/save&quot;}" />
+          <option name="url" value="/user/save" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="org.zang.controller.UserController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="inference" />
+          <option name="method" value="save" />
+          <option name="methodType" value="POST" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="{&#10;  &quot;userId&quot;: 1,&#10;  &quot;deptId&quot;: 1,&#10;  &quot;userName&quot;: &quot;userName_fqlme&quot;,&#10;  &quot;nickName&quot;: &quot;nickName_b2x9o&quot;,&#10;  &quot;userType&quot;: &quot;userType_q6toh&quot;,&#10;  &quot;email&quot;: &quot;email_1da80&quot;,&#10;  &quot;phonenumber&quot;: &quot;phonenumber_my1lt&quot;,&#10;  &quot;sex&quot;: &quot;sex_pwgbj&quot;,&#10;  &quot;avatar&quot;: 1,&#10;  &quot;password&quot;: &quot;password_bnij8&quot;,&#10;  &quot;status&quot;: &quot;status_3dp8x&quot;,&#10;  &quot;loginIp&quot;: &quot;loginIp_hlq1u&quot;,&#10;  &quot;loginDate&quot;: &quot;2024-06-26 14:23:18&quot;,&#10;  &quot;remark&quot;: &quot;remark_qn4ll&quot;,&#10;}" />
+              <option name="className" value="org.zang.controller.UserController" />
+              <option name="jsonDocument" value="{&#10;  &quot;userId&quot;: &quot;用户ID&quot;,&#10;  &quot;deptId&quot;: &quot;部门ID&quot;,&#10;  &quot;userName&quot;: &quot;用户账号&quot;,&#10;  &quot;nickName&quot;: &quot;用户昵称&quot;,&#10;  &quot;userType&quot;: &quot;用户类型（sys_user系统用户）&quot;,&#10;  &quot;email&quot;: &quot;用户邮箱&quot;,&#10;  &quot;phonenumber&quot;: &quot;手机号码&quot;,&#10;  &quot;sex&quot;: &quot;用户性别&quot;,&#10;  &quot;avatar&quot;: &quot;用户头像&quot;,&#10;  &quot;password&quot;: &quot;密码&quot;,&#10;  &quot;status&quot;: &quot;帐号状态（0正常 1停用）&quot;,&#10;  &quot;delFlag&quot;: &quot;删除标志（0代表存在 2代表删除）&quot;,&#10;  &quot;loginIp&quot;: &quot;最后登录IP&quot;,&#10;  &quot;loginDate&quot;: &quot;最后登录时间&quot;,&#10;  &quot;remark&quot;: &quot;备注&quot;,&#10;  &quot;createTime&quot;: &quot;创建时间&quot;,&#10;  &quot;updateTime&quot;: &quot;修改时间&quot;,&#10;  &quot;gmtDeleted&quot;: &quot;No comment,Value =2024-06-26 00:00:00&quot;&#10;}" />
+              <option name="method" value="save" />
+              <option name="methodDescription" value="save" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/user/save" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;code&quot;:&quot;返回码&quot;,&quot;message&quot;:&quot;返回消息&quot;,&quot;data&quot;:{&quot;userId&quot;:&quot;用户ID&quot;,&quot;deptId&quot;:&quot;部门ID&quot;,&quot;userName&quot;:&quot;用户账号&quot;,&quot;nickName&quot;:&quot;用户昵称&quot;,&quot;userType&quot;:&quot;用户类型（sys_user系统用户）&quot;,&quot;email&quot;:&quot;用户邮箱&quot;,&quot;phonenumber&quot;:&quot;手机号码&quot;,&quot;sex&quot;:&quot;用户性别&quot;,&quot;avatar&quot;:&quot;用户头像&quot;,&quot;password&quot;:&quot;密码&quot;,&quot;status&quot;:&quot;帐号状态（0正常 1停用）&quot;,&quot;delFlag&quot;:&quot;删除标志（0代表存在 2代表删除）&quot;,&quot;loginIp&quot;:&quot;最后登录IP&quot;,&quot;loginDate&quot;:&quot;最后登录时间&quot;,&quot;remark&quot;:&quot;备注&quot;,&quot;createTime&quot;:&quot;创建时间&quot;,&quot;updateTime&quot;:&quot;修改时间&quot;,&quot;gmtDeleted&quot;:&quot;No comment,Type =String&quot;},&quot;requestId&quot;:&quot;请求ID&quot;}" />
+              <option name="url" value="/user/save" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8081/user/save&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Fast Request/2024.1.5.1&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Content-Length: 328&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&quot;nickName&quot;:&quot;nickName_b2x9o&quot;,&quot;sex&quot;:&quot;sex_pwgbj&quot;,&quot;deptId&quot;:1,&quot;phonenumber&quot;:&quot;phonenumber_my1lt&quot;,&quot;loginDate&quot;:&quot;2024-06-26 14:23:18&quot;,&quot;remark&quot;:&quot;remark_qn4ll&quot;,&quot;avatar&quot;:1,&quot;userName&quot;:&quot;userName_fqlme&quot;,&quot;userId&quot;:1,&quot;password&quot;:&quot;password_bnij8&quot;,&quot;loginIp&quot;:&quot;loginIp_hlq1u&quot;,&quot;userType&quot;:&quot;userType_q6toh&quot;,&quot;email&quot;:&quot;email_1da80&quot;,&quot;status&quot;:&quot;status_3dp8x&quot;}&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2024-06-26T07:42:20.798+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/user/save&quot;}" />
+          <option name="url" value="/user/save" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="org.zang.controller.UserController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="inference" />
+          <option name="method" value="save" />
+          <option name="methodType" value="POST" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="{&#10;  &quot;userId&quot;: 1,&#10;  &quot;deptId&quot;: 1,&#10;  &quot;userName&quot;: &quot;userName_fqlme&quot;,&#10;  &quot;nickName&quot;: &quot;nickName_b2x9o&quot;,&#10;  &quot;userType&quot;: &quot;userType_q6toh&quot;,&#10;  &quot;email&quot;: &quot;email_1da80&quot;,&#10;  &quot;phonenumber&quot;: &quot;phonenumber_my1lt&quot;,&#10;  &quot;sex&quot;: &quot;sex_pwgbj&quot;,&#10;  &quot;avatar&quot;: 1,&#10;  &quot;password&quot;: &quot;password_bnij8&quot;,&#10;  &quot;status&quot;: &quot;status_3dp8x&quot;,&#10;  &quot;loginIp&quot;: &quot;loginIp_hlq1u&quot;,&#10;  &quot;loginDate&quot;: &quot;2024-06-26 14:23:18&quot;,&#10;  &quot;remark&quot;: &quot;remark_qn4ll&quot;,&#10;}" />
+              <option name="className" value="org.zang.controller.UserController" />
+              <option name="jsonDocument" value="{&#10;  &quot;userId&quot;: &quot;用户ID&quot;,&#10;  &quot;deptId&quot;: &quot;部门ID&quot;,&#10;  &quot;userName&quot;: &quot;用户账号&quot;,&#10;  &quot;nickName&quot;: &quot;用户昵称&quot;,&#10;  &quot;userType&quot;: &quot;用户类型（sys_user系统用户）&quot;,&#10;  &quot;email&quot;: &quot;用户邮箱&quot;,&#10;  &quot;phonenumber&quot;: &quot;手机号码&quot;,&#10;  &quot;sex&quot;: &quot;用户性别&quot;,&#10;  &quot;avatar&quot;: &quot;用户头像&quot;,&#10;  &quot;password&quot;: &quot;密码&quot;,&#10;  &quot;status&quot;: &quot;帐号状态（0正常 1停用）&quot;,&#10;  &quot;delFlag&quot;: &quot;删除标志（0代表存在 2代表删除）&quot;,&#10;  &quot;loginIp&quot;: &quot;最后登录IP&quot;,&#10;  &quot;loginDate&quot;: &quot;最后登录时间&quot;,&#10;  &quot;remark&quot;: &quot;备注&quot;,&#10;  &quot;createTime&quot;: &quot;创建时间&quot;,&#10;  &quot;updateTime&quot;: &quot;修改时间&quot;,&#10;  &quot;gmtDeleted&quot;: &quot;No comment,Value =2024-06-26 00:00:00&quot;&#10;}" />
+              <option name="method" value="save" />
+              <option name="methodDescription" value="save" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/user/save" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;code&quot;:&quot;返回码&quot;,&quot;message&quot;:&quot;返回消息&quot;,&quot;data&quot;:{&quot;userId&quot;:&quot;用户ID&quot;,&quot;deptId&quot;:&quot;部门ID&quot;,&quot;userName&quot;:&quot;用户账号&quot;,&quot;nickName&quot;:&quot;用户昵称&quot;,&quot;userType&quot;:&quot;用户类型（sys_user系统用户）&quot;,&quot;email&quot;:&quot;用户邮箱&quot;,&quot;phonenumber&quot;:&quot;手机号码&quot;,&quot;sex&quot;:&quot;用户性别&quot;,&quot;avatar&quot;:&quot;用户头像&quot;,&quot;password&quot;:&quot;密码&quot;,&quot;status&quot;:&quot;帐号状态（0正常 1停用）&quot;,&quot;delFlag&quot;:&quot;删除标志（0代表存在 2代表删除）&quot;,&quot;loginIp&quot;:&quot;最后登录IP&quot;,&quot;loginDate&quot;:&quot;最后登录时间&quot;,&quot;remark&quot;:&quot;备注&quot;,&quot;createTime&quot;:&quot;创建时间&quot;,&quot;updateTime&quot;:&quot;修改时间&quot;,&quot;gmtDeleted&quot;:&quot;No comment,Type =String&quot;},&quot;requestId&quot;:&quot;请求ID&quot;}" />
+              <option name="url" value="/user/save" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8081/user/save&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Fast Request/2024.1.5.1&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Content-Length: 328&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&quot;nickName&quot;:&quot;nickName_b2x9o&quot;,&quot;sex&quot;:&quot;sex_pwgbj&quot;,&quot;deptId&quot;:1,&quot;phonenumber&quot;:&quot;phonenumber_my1lt&quot;,&quot;loginDate&quot;:&quot;2024-06-26 14:23:18&quot;,&quot;remark&quot;:&quot;remark_qn4ll&quot;,&quot;avatar&quot;:1,&quot;userName&quot;:&quot;userName_fqlme&quot;,&quot;userId&quot;:1,&quot;password&quot;:&quot;password_bnij8&quot;,&quot;loginIp&quot;:&quot;loginIp_hlq1u&quot;,&quot;userType&quot;:&quot;userType_q6toh&quot;,&quot;email&quot;:&quot;email_1da80&quot;,&quot;status&quot;:&quot;status_3dp8x&quot;}&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2024-06-26T07:37:57.382+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/user/save&quot;}" />
+          <option name="url" value="/user/save" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="org.zang.controller.UserController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="inference" />
+          <option name="method" value="save" />
+          <option name="methodType" value="POST" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="{&#10;  &quot;userId&quot;: 1,&#10;  &quot;deptId&quot;: 1,&#10;  &quot;userName&quot;: &quot;userName_fqlme&quot;,&#10;  &quot;nickName&quot;: &quot;nickName_b2x9o&quot;,&#10;  &quot;userType&quot;: &quot;userType_q6toh&quot;,&#10;  &quot;email&quot;: &quot;email_1da80&quot;,&#10;  &quot;phonenumber&quot;: &quot;phonenumber_my1lt&quot;,&#10;  &quot;sex&quot;: &quot;sex_pwgbj&quot;,&#10;  &quot;avatar&quot;: 1,&#10;  &quot;password&quot;: &quot;password_bnij8&quot;,&#10;  &quot;status&quot;: &quot;status_3dp8x&quot;,&#10;  &quot;loginIp&quot;: &quot;loginIp_hlq1u&quot;,&#10;  &quot;loginDate&quot;: &quot;2024-06-26 14:23:18&quot;,&#10;  &quot;remark&quot;: &quot;remark_qn4ll&quot;,&#10;}" />
+              <option name="className" value="org.zang.controller.UserController" />
+              <option name="jsonDocument" value="{&#10;  &quot;userId&quot;: &quot;用户ID&quot;,&#10;  &quot;deptId&quot;: &quot;部门ID&quot;,&#10;  &quot;userName&quot;: &quot;用户账号&quot;,&#10;  &quot;nickName&quot;: &quot;用户昵称&quot;,&#10;  &quot;userType&quot;: &quot;用户类型（sys_user系统用户）&quot;,&#10;  &quot;email&quot;: &quot;用户邮箱&quot;,&#10;  &quot;phonenumber&quot;: &quot;手机号码&quot;,&#10;  &quot;sex&quot;: &quot;用户性别&quot;,&#10;  &quot;avatar&quot;: &quot;用户头像&quot;,&#10;  &quot;password&quot;: &quot;密码&quot;,&#10;  &quot;status&quot;: &quot;帐号状态（0正常 1停用）&quot;,&#10;  &quot;delFlag&quot;: &quot;删除标志（0代表存在 2代表删除）&quot;,&#10;  &quot;loginIp&quot;: &quot;最后登录IP&quot;,&#10;  &quot;loginDate&quot;: &quot;最后登录时间&quot;,&#10;  &quot;remark&quot;: &quot;备注&quot;,&#10;  &quot;createTime&quot;: &quot;创建时间&quot;,&#10;  &quot;updateTime&quot;: &quot;修改时间&quot;,&#10;  &quot;gmtDeleted&quot;: &quot;No comment,Value =2024-06-26 00:00:00&quot;&#10;}" />
+              <option name="method" value="save" />
+              <option name="methodDescription" value="save" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/user/save" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;code&quot;:&quot;返回码&quot;,&quot;message&quot;:&quot;返回消息&quot;,&quot;data&quot;:{&quot;userId&quot;:&quot;用户ID&quot;,&quot;deptId&quot;:&quot;部门ID&quot;,&quot;userName&quot;:&quot;用户账号&quot;,&quot;nickName&quot;:&quot;用户昵称&quot;,&quot;userType&quot;:&quot;用户类型（sys_user系统用户）&quot;,&quot;email&quot;:&quot;用户邮箱&quot;,&quot;phonenumber&quot;:&quot;手机号码&quot;,&quot;sex&quot;:&quot;用户性别&quot;,&quot;avatar&quot;:&quot;用户头像&quot;,&quot;password&quot;:&quot;密码&quot;,&quot;status&quot;:&quot;帐号状态（0正常 1停用）&quot;,&quot;delFlag&quot;:&quot;删除标志（0代表存在 2代表删除）&quot;,&quot;loginIp&quot;:&quot;最后登录IP&quot;,&quot;loginDate&quot;:&quot;最后登录时间&quot;,&quot;remark&quot;:&quot;备注&quot;,&quot;createTime&quot;:&quot;创建时间&quot;,&quot;updateTime&quot;:&quot;修改时间&quot;,&quot;gmtDeleted&quot;:&quot;No comment,Type =String&quot;},&quot;requestId&quot;:&quot;请求ID&quot;}" />
+              <option name="url" value="/user/save" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8081/user/save&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Fast Request/2024.1.5.1&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Content-Length: 328&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&quot;nickName&quot;:&quot;nickName_b2x9o&quot;,&quot;sex&quot;:&quot;sex_pwgbj&quot;,&quot;deptId&quot;:1,&quot;phonenumber&quot;:&quot;phonenumber_my1lt&quot;,&quot;loginDate&quot;:&quot;2024-06-26 14:23:18&quot;,&quot;remark&quot;:&quot;remark_qn4ll&quot;,&quot;avatar&quot;:1,&quot;userName&quot;:&quot;userName_fqlme&quot;,&quot;userId&quot;:1,&quot;password&quot;:&quot;password_bnij8&quot;,&quot;loginIp&quot;:&quot;loginIp_hlq1u&quot;,&quot;userType&quot;:&quot;userType_q6toh&quot;,&quot;email&quot;:&quot;email_1da80&quot;,&quot;status&quot;:&quot;status_3dp8x&quot;}&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2024-06-26T07:06:55.114+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/user/save&quot;}" />
+          <option name="url" value="/user/save" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="org.zang.controller.UserController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="inference" />
+          <option name="method" value="save" />
+          <option name="methodType" value="POST" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="{&#10;  &quot;userId&quot;: 1,&#10;  &quot;deptId&quot;: 1,&#10;  &quot;userName&quot;: &quot;userName_fqlme&quot;,&#10;  &quot;nickName&quot;: &quot;nickName_b2x9o&quot;,&#10;  &quot;userType&quot;: &quot;userType_q6toh&quot;,&#10;  &quot;email&quot;: &quot;email_1da80&quot;,&#10;  &quot;phonenumber&quot;: &quot;phonenumber_my1lt&quot;,&#10;  &quot;sex&quot;: &quot;sex_pwgbj&quot;,&#10;  &quot;avatar&quot;: 1,&#10;  &quot;password&quot;: &quot;password_bnij8&quot;,&#10;  &quot;status&quot;: &quot;status_3dp8x&quot;,&#10;  &quot;loginIp&quot;: &quot;loginIp_hlq1u&quot;,&#10;  &quot;loginDate&quot;: &quot;2024-06-26 14:23:18&quot;,&#10;  &quot;remark&quot;: &quot;remark_qn4ll&quot;,&#10;}" />
+              <option name="className" value="org.zang.controller.UserController" />
+              <option name="jsonDocument" value="{&#10;  &quot;userId&quot;: &quot;用户ID&quot;,&#10;  &quot;deptId&quot;: &quot;部门ID&quot;,&#10;  &quot;userName&quot;: &quot;用户账号&quot;,&#10;  &quot;nickName&quot;: &quot;用户昵称&quot;,&#10;  &quot;userType&quot;: &quot;用户类型（sys_user系统用户）&quot;,&#10;  &quot;email&quot;: &quot;用户邮箱&quot;,&#10;  &quot;phonenumber&quot;: &quot;手机号码&quot;,&#10;  &quot;sex&quot;: &quot;用户性别&quot;,&#10;  &quot;avatar&quot;: &quot;用户头像&quot;,&#10;  &quot;password&quot;: &quot;密码&quot;,&#10;  &quot;status&quot;: &quot;帐号状态（0正常 1停用）&quot;,&#10;  &quot;delFlag&quot;: &quot;删除标志（0代表存在 2代表删除）&quot;,&#10;  &quot;loginIp&quot;: &quot;最后登录IP&quot;,&#10;  &quot;loginDate&quot;: &quot;最后登录时间&quot;,&#10;  &quot;remark&quot;: &quot;备注&quot;,&#10;  &quot;createTime&quot;: &quot;创建时间&quot;,&#10;  &quot;updateTime&quot;: &quot;修改时间&quot;,&#10;  &quot;gmtDeleted&quot;: &quot;No comment,Value =2024-06-26 00:00:00&quot;&#10;}" />
+              <option name="method" value="save" />
+              <option name="methodDescription" value="save" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/user/save" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;code&quot;:&quot;返回码&quot;,&quot;message&quot;:&quot;返回消息&quot;,&quot;data&quot;:{&quot;userId&quot;:&quot;用户ID&quot;,&quot;deptId&quot;:&quot;部门ID&quot;,&quot;userName&quot;:&quot;用户账号&quot;,&quot;nickName&quot;:&quot;用户昵称&quot;,&quot;userType&quot;:&quot;用户类型（sys_user系统用户）&quot;,&quot;email&quot;:&quot;用户邮箱&quot;,&quot;phonenumber&quot;:&quot;手机号码&quot;,&quot;sex&quot;:&quot;用户性别&quot;,&quot;avatar&quot;:&quot;用户头像&quot;,&quot;password&quot;:&quot;密码&quot;,&quot;status&quot;:&quot;帐号状态（0正常 1停用）&quot;,&quot;delFlag&quot;:&quot;删除标志（0代表存在 2代表删除）&quot;,&quot;loginIp&quot;:&quot;最后登录IP&quot;,&quot;loginDate&quot;:&quot;最后登录时间&quot;,&quot;remark&quot;:&quot;备注&quot;,&quot;createTime&quot;:&quot;创建时间&quot;,&quot;updateTime&quot;:&quot;修改时间&quot;,&quot;gmtDeleted&quot;:&quot;No comment,Type =String&quot;},&quot;requestId&quot;:&quot;请求ID&quot;}" />
+              <option name="url" value="/user/save" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8081/user/save&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Fast Request/2024.1.5.1&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Content-Length: 328&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&quot;nickName&quot;:&quot;nickName_b2x9o&quot;,&quot;sex&quot;:&quot;sex_pwgbj&quot;,&quot;deptId&quot;:1,&quot;phonenumber&quot;:&quot;phonenumber_my1lt&quot;,&quot;loginDate&quot;:&quot;2024-06-26 14:23:18&quot;,&quot;remark&quot;:&quot;remark_qn4ll&quot;,&quot;avatar&quot;:1,&quot;userName&quot;:&quot;userName_fqlme&quot;,&quot;userId&quot;:1,&quot;password&quot;:&quot;password_bnij8&quot;,&quot;loginIp&quot;:&quot;loginIp_hlq1u&quot;,&quot;userType&quot;:&quot;userType_q6toh&quot;,&quot;email&quot;:&quot;email_1da80&quot;,&quot;status&quot;:&quot;status_3dp8x&quot;}&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2024-06-26T07:05:03.557+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/user/save&quot;}" />
+          <option name="url" value="/user/save" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="org.zang.controller.UserController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="inference" />
+          <option name="method" value="save" />
+          <option name="methodType" value="POST" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="{&#10;  &quot;userId&quot;: 1,&#10;  &quot;deptId&quot;: 1,&#10;  &quot;userName&quot;: &quot;userName_fqlme&quot;,&#10;  &quot;nickName&quot;: &quot;nickName_b2x9o&quot;,&#10;  &quot;userType&quot;: &quot;userType_q6toh&quot;,&#10;  &quot;email&quot;: &quot;email_1da80&quot;,&#10;  &quot;phonenumber&quot;: &quot;phonenumber_my1lt&quot;,&#10;  &quot;sex&quot;: &quot;sex_pwgbj&quot;,&#10;  &quot;avatar&quot;: 1,&#10;  &quot;password&quot;: &quot;password_bnij8&quot;,&#10;  &quot;status&quot;: &quot;status_3dp8x&quot;,&#10;  &quot;loginIp&quot;: &quot;loginIp_hlq1u&quot;,&#10;  &quot;loginDate&quot;: &quot;2024-06-26 14:23:18&quot;,&#10;  &quot;remark&quot;: &quot;remark_qn4ll&quot;,&#10;}" />
+              <option name="className" value="org.zang.controller.UserController" />
+              <option name="jsonDocument" value="{&#10;  &quot;userId&quot;: &quot;用户ID&quot;,&#10;  &quot;deptId&quot;: &quot;部门ID&quot;,&#10;  &quot;userName&quot;: &quot;用户账号&quot;,&#10;  &quot;nickName&quot;: &quot;用户昵称&quot;,&#10;  &quot;userType&quot;: &quot;用户类型（sys_user系统用户）&quot;,&#10;  &quot;email&quot;: &quot;用户邮箱&quot;,&#10;  &quot;phonenumber&quot;: &quot;手机号码&quot;,&#10;  &quot;sex&quot;: &quot;用户性别&quot;,&#10;  &quot;avatar&quot;: &quot;用户头像&quot;,&#10;  &quot;password&quot;: &quot;密码&quot;,&#10;  &quot;status&quot;: &quot;帐号状态（0正常 1停用）&quot;,&#10;  &quot;delFlag&quot;: &quot;删除标志（0代表存在 2代表删除）&quot;,&#10;  &quot;loginIp&quot;: &quot;最后登录IP&quot;,&#10;  &quot;loginDate&quot;: &quot;最后登录时间&quot;,&#10;  &quot;remark&quot;: &quot;备注&quot;,&#10;  &quot;createTime&quot;: &quot;创建时间&quot;,&#10;  &quot;updateTime&quot;: &quot;修改时间&quot;,&#10;  &quot;gmtDeleted&quot;: &quot;No comment,Value =2024-06-26 00:00:00&quot;&#10;}" />
+              <option name="method" value="save" />
+              <option name="methodDescription" value="save" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/user/save" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;code&quot;:&quot;返回码&quot;,&quot;message&quot;:&quot;返回消息&quot;,&quot;data&quot;:{&quot;userId&quot;:&quot;用户ID&quot;,&quot;deptId&quot;:&quot;部门ID&quot;,&quot;userName&quot;:&quot;用户账号&quot;,&quot;nickName&quot;:&quot;用户昵称&quot;,&quot;userType&quot;:&quot;用户类型（sys_user系统用户）&quot;,&quot;email&quot;:&quot;用户邮箱&quot;,&quot;phonenumber&quot;:&quot;手机号码&quot;,&quot;sex&quot;:&quot;用户性别&quot;,&quot;avatar&quot;:&quot;用户头像&quot;,&quot;password&quot;:&quot;密码&quot;,&quot;status&quot;:&quot;帐号状态（0正常 1停用）&quot;,&quot;delFlag&quot;:&quot;删除标志（0代表存在 2代表删除）&quot;,&quot;loginIp&quot;:&quot;最后登录IP&quot;,&quot;loginDate&quot;:&quot;最后登录时间&quot;,&quot;remark&quot;:&quot;备注&quot;,&quot;createTime&quot;:&quot;创建时间&quot;,&quot;updateTime&quot;:&quot;修改时间&quot;,&quot;gmtDeleted&quot;:&quot;No comment,Type =String&quot;},&quot;requestId&quot;:&quot;请求ID&quot;}" />
+              <option name="url" value="/user/save" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8081/user/save&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Fast Request/2024.1.5.1&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Content-Length: 328&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&quot;nickName&quot;:&quot;nickName_b2x9o&quot;,&quot;sex&quot;:&quot;sex_pwgbj&quot;,&quot;deptId&quot;:1,&quot;phonenumber&quot;:&quot;phonenumber_my1lt&quot;,&quot;loginDate&quot;:&quot;2024-06-26 14:23:18&quot;,&quot;remark&quot;:&quot;remark_qn4ll&quot;,&quot;avatar&quot;:1,&quot;userName&quot;:&quot;userName_fqlme&quot;,&quot;userId&quot;:1,&quot;password&quot;:&quot;password_bnij8&quot;,&quot;loginIp&quot;:&quot;loginIp_hlq1u&quot;,&quot;userType&quot;:&quot;userType_q6toh&quot;,&quot;email&quot;:&quot;email_1da80&quot;,&quot;status&quot;:&quot;status_3dp8x&quot;}&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2024-06-26T07:04:38.768+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/user/save&quot;}" />
+          <option name="url" value="/user/save" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="org.zang.controller.UserController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="inference" />
+          <option name="method" value="save" />
+          <option name="methodType" value="POST" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="{&#10;  &quot;userId&quot;: 1,&#10;  &quot;deptId&quot;: 1,&#10;  &quot;userName&quot;: &quot;userName_fqlme&quot;,&#10;  &quot;nickName&quot;: &quot;nickName_b2x9o&quot;,&#10;  &quot;userType&quot;: &quot;userType_q6toh&quot;,&#10;  &quot;email&quot;: &quot;email_1da80&quot;,&#10;  &quot;phonenumber&quot;: &quot;phonenumber_my1lt&quot;,&#10;  &quot;sex&quot;: &quot;sex_pwgbj&quot;,&#10;  &quot;avatar&quot;: 1,&#10;  &quot;password&quot;: &quot;password_bnij8&quot;,&#10;  &quot;status&quot;: &quot;status_3dp8x&quot;,&#10;  &quot;loginIp&quot;: &quot;loginIp_hlq1u&quot;,&#10;  &quot;loginDate&quot;: &quot;2024-06-26 14:23:18&quot;,&#10;  &quot;remark&quot;: &quot;remark_qn4ll&quot;,&#10;}" />
+              <option name="className" value="org.zang.controller.UserController" />
+              <option name="jsonDocument" value="{&#10;  &quot;userId&quot;: &quot;用户ID&quot;,&#10;  &quot;deptId&quot;: &quot;部门ID&quot;,&#10;  &quot;userName&quot;: &quot;用户账号&quot;,&#10;  &quot;nickName&quot;: &quot;用户昵称&quot;,&#10;  &quot;userType&quot;: &quot;用户类型（sys_user系统用户）&quot;,&#10;  &quot;email&quot;: &quot;用户邮箱&quot;,&#10;  &quot;phonenumber&quot;: &quot;手机号码&quot;,&#10;  &quot;sex&quot;: &quot;用户性别&quot;,&#10;  &quot;avatar&quot;: &quot;用户头像&quot;,&#10;  &quot;password&quot;: &quot;密码&quot;,&#10;  &quot;status&quot;: &quot;帐号状态（0正常 1停用）&quot;,&#10;  &quot;delFlag&quot;: &quot;删除标志（0代表存在 2代表删除）&quot;,&#10;  &quot;loginIp&quot;: &quot;最后登录IP&quot;,&#10;  &quot;loginDate&quot;: &quot;最后登录时间&quot;,&#10;  &quot;remark&quot;: &quot;备注&quot;,&#10;  &quot;createTime&quot;: &quot;创建时间&quot;,&#10;  &quot;updateTime&quot;: &quot;修改时间&quot;,&#10;  &quot;gmtDeleted&quot;: &quot;No comment,Value =2024-06-26 00:00:00&quot;&#10;}" />
+              <option name="method" value="save" />
+              <option name="methodDescription" value="save" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/user/save" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;code&quot;:&quot;返回码&quot;,&quot;message&quot;:&quot;返回消息&quot;,&quot;data&quot;:{&quot;userId&quot;:&quot;用户ID&quot;,&quot;deptId&quot;:&quot;部门ID&quot;,&quot;userName&quot;:&quot;用户账号&quot;,&quot;nickName&quot;:&quot;用户昵称&quot;,&quot;userType&quot;:&quot;用户类型（sys_user系统用户）&quot;,&quot;email&quot;:&quot;用户邮箱&quot;,&quot;phonenumber&quot;:&quot;手机号码&quot;,&quot;sex&quot;:&quot;用户性别&quot;,&quot;avatar&quot;:&quot;用户头像&quot;,&quot;password&quot;:&quot;密码&quot;,&quot;status&quot;:&quot;帐号状态（0正常 1停用）&quot;,&quot;delFlag&quot;:&quot;删除标志（0代表存在 2代表删除）&quot;,&quot;loginIp&quot;:&quot;最后登录IP&quot;,&quot;loginDate&quot;:&quot;最后登录时间&quot;,&quot;remark&quot;:&quot;备注&quot;,&quot;createTime&quot;:&quot;创建时间&quot;,&quot;updateTime&quot;:&quot;修改时间&quot;,&quot;gmtDeleted&quot;:&quot;No comment,Type =String&quot;},&quot;requestId&quot;:&quot;请求ID&quot;}" />
+              <option name="url" value="/user/save" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8081/user/save&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Fast Request/2024.1.5.1&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Content-Length: 328&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&quot;nickName&quot;:&quot;nickName_b2x9o&quot;,&quot;sex&quot;:&quot;sex_pwgbj&quot;,&quot;deptId&quot;:1,&quot;phonenumber&quot;:&quot;phonenumber_my1lt&quot;,&quot;loginDate&quot;:&quot;2024-06-26 14:23:18&quot;,&quot;remark&quot;:&quot;remark_qn4ll&quot;,&quot;avatar&quot;:1,&quot;userName&quot;:&quot;userName_fqlme&quot;,&quot;userId&quot;:1,&quot;password&quot;:&quot;password_bnij8&quot;,&quot;loginIp&quot;:&quot;loginIp_hlq1u&quot;,&quot;userType&quot;:&quot;userType_q6toh&quot;,&quot;email&quot;:&quot;email_1da80&quot;,&quot;status&quot;:&quot;status_3dp8x&quot;}&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2024-06-26T07:01:09.077+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/user/save&quot;}" />
+          <option name="url" value="/user/save" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="org.zang.controller.UserController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="inference" />
+          <option name="method" value="save" />
+          <option name="methodType" value="POST" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="{&#10;  &quot;userId&quot;: 1,&#10;  &quot;deptId&quot;: 1,&#10;  &quot;userName&quot;: &quot;userName_fqlme&quot;,&#10;  &quot;nickName&quot;: &quot;nickName_b2x9o&quot;,&#10;  &quot;userType&quot;: &quot;userType_q6toh&quot;,&#10;  &quot;email&quot;: &quot;email_1da80&quot;,&#10;  &quot;phonenumber&quot;: &quot;phonenumber_my1lt&quot;,&#10;  &quot;sex&quot;: &quot;sex_pwgbj&quot;,&#10;  &quot;avatar&quot;: 1,&#10;  &quot;password&quot;: &quot;password_bnij8&quot;,&#10;  &quot;status&quot;: &quot;status_3dp8x&quot;,&#10;  &quot;loginIp&quot;: &quot;loginIp_hlq1u&quot;,&#10;  &quot;loginDate&quot;: &quot;2024-06-26 14:23:18&quot;,&#10;  &quot;remark&quot;: &quot;remark_qn4ll&quot;,&#10;}" />
+              <option name="className" value="org.zang.controller.UserController" />
+              <option name="jsonDocument" value="{&#10;  &quot;userId&quot;: &quot;用户ID&quot;,&#10;  &quot;deptId&quot;: &quot;部门ID&quot;,&#10;  &quot;userName&quot;: &quot;用户账号&quot;,&#10;  &quot;nickName&quot;: &quot;用户昵称&quot;,&#10;  &quot;userType&quot;: &quot;用户类型（sys_user系统用户）&quot;,&#10;  &quot;email&quot;: &quot;用户邮箱&quot;,&#10;  &quot;phonenumber&quot;: &quot;手机号码&quot;,&#10;  &quot;sex&quot;: &quot;用户性别&quot;,&#10;  &quot;avatar&quot;: &quot;用户头像&quot;,&#10;  &quot;password&quot;: &quot;密码&quot;,&#10;  &quot;status&quot;: &quot;帐号状态（0正常 1停用）&quot;,&#10;  &quot;delFlag&quot;: &quot;删除标志（0代表存在 2代表删除）&quot;,&#10;  &quot;loginIp&quot;: &quot;最后登录IP&quot;,&#10;  &quot;loginDate&quot;: &quot;最后登录时间&quot;,&#10;  &quot;remark&quot;: &quot;备注&quot;,&#10;  &quot;createTime&quot;: &quot;创建时间&quot;,&#10;  &quot;updateTime&quot;: &quot;修改时间&quot;,&#10;  &quot;gmtDeleted&quot;: &quot;No comment,Value =2024-06-26 00:00:00&quot;&#10;}" />
+              <option name="method" value="save" />
+              <option name="methodDescription" value="save" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/user/save" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;code&quot;:&quot;返回码&quot;,&quot;message&quot;:&quot;返回消息&quot;,&quot;data&quot;:{&quot;userId&quot;:&quot;用户ID&quot;,&quot;deptId&quot;:&quot;部门ID&quot;,&quot;userName&quot;:&quot;用户账号&quot;,&quot;nickName&quot;:&quot;用户昵称&quot;,&quot;userType&quot;:&quot;用户类型（sys_user系统用户）&quot;,&quot;email&quot;:&quot;用户邮箱&quot;,&quot;phonenumber&quot;:&quot;手机号码&quot;,&quot;sex&quot;:&quot;用户性别&quot;,&quot;avatar&quot;:&quot;用户头像&quot;,&quot;password&quot;:&quot;密码&quot;,&quot;status&quot;:&quot;帐号状态（0正常 1停用）&quot;,&quot;delFlag&quot;:&quot;删除标志（0代表存在 2代表删除）&quot;,&quot;loginIp&quot;:&quot;最后登录IP&quot;,&quot;loginDate&quot;:&quot;最后登录时间&quot;,&quot;remark&quot;:&quot;备注&quot;,&quot;createTime&quot;:&quot;创建时间&quot;,&quot;updateTime&quot;:&quot;修改时间&quot;,&quot;gmtDeleted&quot;:&quot;No comment,Type =String&quot;},&quot;requestId&quot;:&quot;请求ID&quot;}" />
+              <option name="url" value="/user/save" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8081/user/save&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Fast Request/2024.1.5.1&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Content-Length: 328&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&quot;nickName&quot;:&quot;nickName_b2x9o&quot;,&quot;sex&quot;:&quot;sex_pwgbj&quot;,&quot;deptId&quot;:1,&quot;phonenumber&quot;:&quot;phonenumber_my1lt&quot;,&quot;loginDate&quot;:&quot;2024-06-26 14:23:18&quot;,&quot;remark&quot;:&quot;remark_qn4ll&quot;,&quot;avatar&quot;:1,&quot;userName&quot;:&quot;userName_fqlme&quot;,&quot;userId&quot;:1,&quot;password&quot;:&quot;password_bnij8&quot;,&quot;loginIp&quot;:&quot;loginIp_hlq1u&quot;,&quot;userType&quot;:&quot;userType_q6toh&quot;,&quot;email&quot;:&quot;email_1da80&quot;,&quot;status&quot;:&quot;status_3dp8x&quot;}&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2024-06-26T07:00:18.497+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/user/save&quot;}" />
+          <option name="url" value="/user/save" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="org.zang.controller.UserController" />
+          <option name="code" value="400" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="inference" />
+          <option name="method" value="save" />
+          <option name="methodType" value="POST" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="{&#10;  &quot;userId&quot;: 1,&#10;  &quot;deptId&quot;: 1,&#10;  &quot;userName&quot;: &quot;userName_fqlme&quot;,&#10;  &quot;nickName&quot;: &quot;nickName_b2x9o&quot;,&#10;  &quot;userType&quot;: &quot;userType_q6toh&quot;,&#10;  &quot;email&quot;: &quot;email_1da80&quot;,&#10;  &quot;phonenumber&quot;: &quot;phonenumber_my1lt&quot;,&#10;  &quot;sex&quot;: &quot;sex_pwgbj&quot;,&#10;  &quot;avatar&quot;: 1,&#10;  &quot;password&quot;: &quot;password_bnij8&quot;,&#10;  &quot;status&quot;: &quot;status_3dp8x&quot;,&#10;  &quot;delFlag&quot;: &quot;delFlag_os56o&quot;,&#10;  &quot;loginIp&quot;: &quot;loginIp_hlq1u&quot;,&#10;  &quot;loginDate&quot;: &quot;2024-06-26 14:23:18&quot;,&#10;  &quot;remark&quot;: &quot;remark_qn4ll&quot;,&#10;}" />
+              <option name="className" value="org.zang.controller.UserController" />
+              <option name="jsonDocument" value="{&#10;  &quot;userId&quot;: &quot;用户ID&quot;,&#10;  &quot;deptId&quot;: &quot;部门ID&quot;,&#10;  &quot;userName&quot;: &quot;用户账号&quot;,&#10;  &quot;nickName&quot;: &quot;用户昵称&quot;,&#10;  &quot;userType&quot;: &quot;用户类型（sys_user系统用户）&quot;,&#10;  &quot;email&quot;: &quot;用户邮箱&quot;,&#10;  &quot;phonenumber&quot;: &quot;手机号码&quot;,&#10;  &quot;sex&quot;: &quot;用户性别&quot;,&#10;  &quot;avatar&quot;: &quot;用户头像&quot;,&#10;  &quot;password&quot;: &quot;密码&quot;,&#10;  &quot;status&quot;: &quot;帐号状态（0正常 1停用）&quot;,&#10;  &quot;delFlag&quot;: &quot;删除标志（0代表存在 2代表删除）&quot;,&#10;  &quot;loginIp&quot;: &quot;最后登录IP&quot;,&#10;  &quot;loginDate&quot;: &quot;最后登录时间&quot;,&#10;  &quot;remark&quot;: &quot;备注&quot;,&#10;  &quot;createTime&quot;: &quot;创建时间&quot;,&#10;  &quot;updateTime&quot;: &quot;修改时间&quot;,&#10;  &quot;gmtDeleted&quot;: &quot;No comment,Value =2024-06-26 00:00:00&quot;&#10;}" />
+              <option name="method" value="save" />
+              <option name="methodDescription" value="save" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/user/save" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;code&quot;:&quot;返回码&quot;,&quot;message&quot;:&quot;返回消息&quot;,&quot;data&quot;:{&quot;userId&quot;:&quot;用户ID&quot;,&quot;deptId&quot;:&quot;部门ID&quot;,&quot;userName&quot;:&quot;用户账号&quot;,&quot;nickName&quot;:&quot;用户昵称&quot;,&quot;userType&quot;:&quot;用户类型（sys_user系统用户）&quot;,&quot;email&quot;:&quot;用户邮箱&quot;,&quot;phonenumber&quot;:&quot;手机号码&quot;,&quot;sex&quot;:&quot;用户性别&quot;,&quot;avatar&quot;:&quot;用户头像&quot;,&quot;password&quot;:&quot;密码&quot;,&quot;status&quot;:&quot;帐号状态（0正常 1停用）&quot;,&quot;delFlag&quot;:&quot;删除标志（0代表存在 2代表删除）&quot;,&quot;loginIp&quot;:&quot;最后登录IP&quot;,&quot;loginDate&quot;:&quot;最后登录时间&quot;,&quot;remark&quot;:&quot;备注&quot;,&quot;createTime&quot;:&quot;创建时间&quot;,&quot;updateTime&quot;:&quot;修改时间&quot;,&quot;gmtDeleted&quot;:&quot;No comment,Type =String&quot;},&quot;requestId&quot;:&quot;请求ID&quot;}" />
+              <option name="url" value="/user/save" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8081/user/save&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Fast Request/2024.1.5.1&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Content-Length: 354&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&quot;nickName&quot;:&quot;nickName_b2x9o&quot;,&quot;sex&quot;:&quot;sex_pwgbj&quot;,&quot;deptId&quot;:1,&quot;phonenumber&quot;:&quot;phonenumber_my1lt&quot;,&quot;loginDate&quot;:&quot;2024-06-26 14:23:18&quot;,&quot;remark&quot;:&quot;remark_qn4ll&quot;,&quot;avatar&quot;:1,&quot;userName&quot;:&quot;userName_fqlme&quot;,&quot;delFlag&quot;:&quot;delFlag_os56o&quot;,&quot;userId&quot;:1,&quot;password&quot;:&quot;password_bnij8&quot;,&quot;loginIp&quot;:&quot;loginIp_hlq1u&quot;,&quot;userType&quot;:&quot;userType_q6toh&quot;,&quot;email&quot;:&quot;email_1da80&quot;,&quot;status&quot;:&quot;status_3dp8x&quot;}&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2024-06-26T06:55:42.855+00:00&quot;,&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;path&quot;:&quot;/user/save&quot;}" />
+          <option name="url" value="/user/save" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="org.zang.controller.UserController" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="inference" />
+          <option name="method" value="save" />
+          <option name="methodType" value="POST" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="{&#10;  &quot;userId&quot;: 1,&#10;  &quot;deptId&quot;: 1,&#10;  &quot;userName&quot;: &quot;userName_fqlme&quot;,&#10;  &quot;nickName&quot;: &quot;nickName_b2x9o&quot;,&#10;  &quot;userType&quot;: &quot;userType_q6toh&quot;,&#10;  &quot;email&quot;: &quot;email_1da80&quot;,&#10;  &quot;phonenumber&quot;: &quot;phonenumber_my1lt&quot;,&#10;  &quot;sex&quot;: &quot;sex_pwgbj&quot;,&#10;  &quot;avatar&quot;: 1,&#10;  &quot;password&quot;: &quot;password_bnij8&quot;,&#10;  &quot;status&quot;: &quot;status_3dp8x&quot;,&#10;  &quot;delFlag&quot;: &quot;delFlag_os56o&quot;,&#10;  &quot;loginIp&quot;: &quot;loginIp_hlq1u&quot;,&#10;  &quot;loginDate&quot;: &quot;2024-06-26 14:23:18&quot;,&#10;  &quot;remark&quot;: &quot;remark_qn4ll&quot;,&#10;}" />
+              <option name="className" value="org.zang.controller.UserController" />
+              <option name="jsonDocument" value="{&#10;  &quot;userId&quot;: &quot;用户ID&quot;,&#10;  &quot;deptId&quot;: &quot;部门ID&quot;,&#10;  &quot;userName&quot;: &quot;用户账号&quot;,&#10;  &quot;nickName&quot;: &quot;用户昵称&quot;,&#10;  &quot;userType&quot;: &quot;用户类型（sys_user系统用户）&quot;,&#10;  &quot;email&quot;: &quot;用户邮箱&quot;,&#10;  &quot;phonenumber&quot;: &quot;手机号码&quot;,&#10;  &quot;sex&quot;: &quot;用户性别&quot;,&#10;  &quot;avatar&quot;: &quot;用户头像&quot;,&#10;  &quot;password&quot;: &quot;密码&quot;,&#10;  &quot;status&quot;: &quot;帐号状态（0正常 1停用）&quot;,&#10;  &quot;delFlag&quot;: &quot;删除标志（0代表存在 2代表删除）&quot;,&#10;  &quot;loginIp&quot;: &quot;最后登录IP&quot;,&#10;  &quot;loginDate&quot;: &quot;最后登录时间&quot;,&#10;  &quot;remark&quot;: &quot;备注&quot;,&#10;  &quot;createTime&quot;: &quot;创建时间&quot;,&#10;  &quot;updateTime&quot;: &quot;修改时间&quot;,&#10;  &quot;gmtDeleted&quot;: &quot;No comment,Value =2024-06-26 00:00:00&quot;&#10;}" />
+              <option name="method" value="save" />
+              <option name="methodDescription" value="save" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/user/save" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;code&quot;:&quot;返回码&quot;,&quot;message&quot;:&quot;返回消息&quot;,&quot;data&quot;:{&quot;userId&quot;:&quot;用户ID&quot;,&quot;deptId&quot;:&quot;部门ID&quot;,&quot;userName&quot;:&quot;用户账号&quot;,&quot;nickName&quot;:&quot;用户昵称&quot;,&quot;userType&quot;:&quot;用户类型（sys_user系统用户）&quot;,&quot;email&quot;:&quot;用户邮箱&quot;,&quot;phonenumber&quot;:&quot;手机号码&quot;,&quot;sex&quot;:&quot;用户性别&quot;,&quot;avatar&quot;:&quot;用户头像&quot;,&quot;password&quot;:&quot;密码&quot;,&quot;status&quot;:&quot;帐号状态（0正常 1停用）&quot;,&quot;delFlag&quot;:&quot;删除标志（0代表存在 2代表删除）&quot;,&quot;loginIp&quot;:&quot;最后登录IP&quot;,&quot;loginDate&quot;:&quot;最后登录时间&quot;,&quot;remark&quot;:&quot;备注&quot;,&quot;createTime&quot;:&quot;创建时间&quot;,&quot;updateTime&quot;:&quot;修改时间&quot;,&quot;gmtDeleted&quot;:&quot;No comment,Type =String&quot;},&quot;requestId&quot;:&quot;请求ID&quot;}" />
+              <option name="url" value="/user/save" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8080/user/save&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Fast Request/2024.1.5.1&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Content-Length: 354&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&quot;nickName&quot;:&quot;nickName_b2x9o&quot;,&quot;sex&quot;:&quot;sex_pwgbj&quot;,&quot;deptId&quot;:1,&quot;phonenumber&quot;:&quot;phonenumber_my1lt&quot;,&quot;loginDate&quot;:&quot;2024-06-26 14:23:18&quot;,&quot;remark&quot;:&quot;remark_qn4ll&quot;,&quot;avatar&quot;:1,&quot;userName&quot;:&quot;userName_fqlme&quot;,&quot;delFlag&quot;:&quot;delFlag_os56o&quot;,&quot;userId&quot;:1,&quot;password&quot;:&quot;password_bnij8&quot;,&quot;loginIp&quot;:&quot;loginIp_hlq1u&quot;,&quot;userType&quot;:&quot;userType_q6toh&quot;,&quot;email&quot;:&quot;email_1da80&quot;,&quot;status&quot;:&quot;status_3dp8x&quot;}&#13;&#10;" />
+          <option name="response" value="ConnectException: Connection refused" />
+          <option name="url" value="/user/save" />
+        </ResponseHistory>
+      </list>
+    </option>
+  </component>
+</project>

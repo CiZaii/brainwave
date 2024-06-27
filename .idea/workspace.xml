@@ -4,16 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f51813c9-514b-41f1-83a3-1dfd75b02a18" name="更改" comment="feat(ai-sdk): add OpenAI session factory and related classes&#10;&#10;Implement OpenAiSessionFactory and associated classes to support creationof OpenAiSession instances. This includes the introduction of new session&#10;configuration options and the refactoring of existing AI SDK components to&#10;integrate with the session factory.">
-      <change afterPath="$PROJECT_DIR$/inference/src/main/java/org/zang/controller/UserController.java" afterDir="false" />
+    <list default="true" id="f51813c9-514b-41f1-83a3-1dfd75b02a18" name="更改" comment="feat(common): add spring-core dependencyIntroduce the spring-core dependency to the common module with a specified version&#10;to leverage the Spring framework functionalities.">
+      <change afterPath="$PROJECT_DIR$/.idea/fastRequest/fastRequestCollection.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/fastRequest/fastRequestCurrentParamGroup.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/fastRequest/fastRequestHistoryConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/inference/src/main/resources/application-zsl.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.fastRequest/config/fastRequestCurrentProjectConfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/.fastRequest/config/fastRequestCurrentProjectConfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1246a388-2df9-4145-8092-1fa65e338091.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1246a388-2df9-4145-8092-1fa65e338091.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1246a388-2df9-4145-8092-1fa65e338091/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1246a388-2df9-4145-8092-1fa65e338091/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1246a388-2df9-4145-8092-1fa65e338091/storage_v2/_src_/database/zang.IO84AA/schema/NexusAI.R3BR0Q.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1246a388-2df9-4145-8092-1fa65e338091/storage_v2/_src_/database/zang.IO84AA/schema/NexusAI.R3BR0Q.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1246a388-2df9-4145-8092-1fa65e338091/storage_v2/_src_/database/zang.IO84AA/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1246a388-2df9-4145-8092-1fa65e338091/storage_v2/_src_/database/zang.IO84AA/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1246a388-2df9-4145-8092-1fa65e338091/storage_v2/_src_/database/zang.IO84AA/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1246a388-2df9-4145-8092-1fa65e338091/storage_v2/_src_/database/zang.IO84AA/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/fastRequest/fastRequestCurrentProjectLocalConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fastRequest/fastRequestCurrentProjectLocalConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inference/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/inference/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inference/src/main/java/org/zang/InferenceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/inference/src/main/java/org/zang/InferenceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inference/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/inference/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,13 +93,13 @@
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "openjdk-21 (2)",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/zang/Documents/IDEA/BrainWave/ai-common/ai-common-tenant",
+    "last_opened_file_path": "/Users/zang/Documents/IDEA/BrainWave/inference/src/main/java/org/zang/mybatis/core",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "/Users/zang/Documents/IDEA/BrainWave/ai-common/ai-common-tenant/src/main/java/org/zang/Main.java",
+    "onboarding.tips.debug.path": "/Users/zang/Documents/IDEA/BrainWave/common/src/main/java/org/zang/Main.java",
     "settings.editor.selected.configurable": "settings.sync",
     "vue.rearranger.settings.migration": "true"
   },
@@ -109,6 +114,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/inference/src/main/java/org/zang/mybatis/core" />
       <recent name="$PROJECT_DIR$/ai-common/ai-common-tenant" />
       <recent name="$PROJECT_DIR$/ai-common" />
     </key>
@@ -123,6 +129,7 @@
     <configuration name="InferenceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="inference" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.zang.InferenceApplication" />
+      <option name="VM_PARAMETERS" value="--add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.lang.invoke=ALL-UNNAMED" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.zang.*" />
@@ -146,6 +153,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.InferenceApplication" />
+      <item itemvalue="Spring Boot.ShortLinkAdminApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.InferenceApplication" />
@@ -172,7 +183,7 @@
       <workItem from="1719237415154" duration="5824000" />
       <workItem from="1719284153834" duration="640000" />
       <workItem from="1719364471656" duration="2977000" />
-      <workItem from="1719367481546" duration="6113000" />
+      <workItem from="1719367481546" duration="25449000" />
     </task>
     <task id="LOCAL-00001" summary="feat(ai-sdk): add OpenAI session factory and related classes&#10;&#10;Implement OpenAiSessionFactory and associated classes to support creationof OpenAiSession instances. This includes the introduction of new session&#10;configuration options and the refactoring of existing AI SDK components to&#10;integrate with the session factory.">
       <option name="closed" value="true" />
@@ -222,18 +233,73 @@
       <option name="project" value="LOCAL" />
       <updated>1719370325778</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="&#10;367/10000&#10;AI翻译&#10;划译&#10;feat(inference)：初始化项目结构和配置Sa-Token&#10; &#10;- 为推理模块建立初始项目结构。- 集成Sa-Token进行身份验证和授权管理。&#10;- 使用Redis配置Sa-Token进行会话管理。&#10;- 添加基本的异常处理和结果包装类。&#10;- 使用示例方法实现用户控制器。">
+      <option name="closed" value="true" />
+      <created>1719381362450</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1719381362450</updated>
+    </task>
+    <task id="LOCAL-00008" summary="&#10;367/10000&#10;AI翻译&#10;划译&#10;feat(inference)：初始化项目结构和配置Sa-Token&#10; &#10;- 为推理模块建立初始项目结构。- 集成Sa-Token进行身份验证和授权管理。&#10;- 使用Redis配置Sa-Token进行会话管理。&#10;- 添加基本的异常处理和结果包装类。&#10;- 使用示例方法实现用户控制器。">
+      <option name="closed" value="true" />
+      <created>1719381369042</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1719381369042</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat(inference)：配置MyBatis-Plus并添加初始REST控制器-为数据库模式设置MyBatis-Plus全局配置。&#10;- 介绍初始的 StreamQuery MyBatis-Plus 配置。&#10;- 在DO类中为日期字段添加JSON格式注释。&#10;- 从SysUserDO和UserController中删除删除标记逻辑。&#10;- 使用数据库插件在UserController中实现基本的CRUD操作。&#10;- 修改 application.yml 包含新的 MyBatis-Plus 和 StreamQuery 设置。">
+      <option name="closed" value="true" />
+      <created>1719388506171</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1719388506171</updated>
+    </task>
+    <task id="LOCAL-00010" summary="refactor(inference): rename packages and update dependencies-将包从org.zang.mybatis重命名为org.zang.convention以反映&#10;&#10;新的封装结构。&#10;-将异常类和结果类移动到公共模块。&#10;-更新依赖项并添加新的ChatConversationsDO和ChatUsageStatsDO类。&#10;-从SysUserDO和pojo包中删除BaseDO导入。&#10;-介绍用于元对象处理的MyMetaObjectHandler。-根据更改调整控制器和服务层。">
+      <option name="closed" value="true" />
+      <created>1719416614308</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1719416614308</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat(common): add spring-core dependencyIntroduce the spring-core dependency to the common module with a specified version&#10;to leverage the Spring framework functionalities.">
+      <option name="closed" value="true" />
+      <created>1719416710468</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1719416710468</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="refactor(build): move dependencies from ai-sdk to parent pom&#10;&#10;Moved common dependencies from the ai-sdk module's pom.xml to the &#10;parent pom.xml to ensure dependency consistency across modules." />
     <MESSAGE value="refactor(build): move dependencies from ai-sdk to parent pom&#10;&#10;Moved common dependencies from the ai-sdk module's pom.xml to the&#10;parent pom.xml to ensure dependency consistency across modules." />
     <MESSAGE value="refactor(inference): rename ShortLinkAdminApplication to InferenceApplication&#10;&#10;Change the name of the main application class in the inference module to&#10;better reflect its purpose as the entry point for inference operations." />
     <MESSAGE value="feat(ai-sdk): add OpenAI session factory and related classes&#10;&#10;Implement OpenAiSessionFactory and associated classes to support creationof OpenAiSession instances. This includes the introduction of new session&#10;configuration options and the refactoring of existing AI SDK components to&#10;integrate with the session factory." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(ai-sdk): add OpenAI session factory and related classes&#10;&#10;Implement OpenAiSessionFactory and associated classes to support creationof OpenAiSession instances. This includes the introduction of new session&#10;configuration options and the refactoring of existing AI SDK components to&#10;integrate with the session factory." />
+    <MESSAGE value="&#10;367/10000&#10;AI翻译&#10;划译&#10;feat(inference)：初始化项目结构和配置Sa-Token&#10; &#10;- 为推理模块建立初始项目结构。- 集成Sa-Token进行身份验证和授权管理。&#10;- 使用Redis配置Sa-Token进行会话管理。&#10;- 添加基本的异常处理和结果包装类。&#10;- 使用示例方法实现用户控制器。" />
+    <MESSAGE value="feat(inference)：配置MyBatis-Plus并添加初始REST控制器-为数据库模式设置MyBatis-Plus全局配置。&#10;- 介绍初始的 StreamQuery MyBatis-Plus 配置。&#10;- 在DO类中为日期字段添加JSON格式注释。&#10;- 从SysUserDO和UserController中删除删除标记逻辑。&#10;- 使用数据库插件在UserController中实现基本的CRUD操作。&#10;- 修改 application.yml 包含新的 MyBatis-Plus 和 StreamQuery 设置。" />
+    <MESSAGE value="refactor(inference): rename packages and update dependencies-将包从org.zang.mybatis重命名为org.zang.convention以反映&#10;&#10;新的封装结构。&#10;-将异常类和结果类移动到公共模块。&#10;-更新依赖项并添加新的ChatConversationsDO和ChatUsageStatsDO类。&#10;-从SysUserDO和pojo包中删除BaseDO导入。&#10;-介绍用于元对象处理的MyMetaObjectHandler。-根据更改调整控制器和服务层。" />
+    <MESSAGE value="feat(common): add spring-core dependencyIntroduce the spring-core dependency to the common module with a specified version&#10;to leverage the Spring framework functionalities." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(common): add spring-core dependencyIntroduce the spring-core dependency to the common module with a specified version&#10;to leverage the Spring framework functionalities." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

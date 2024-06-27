@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="fastRequestCurrentParamGroup">
+    <option name="bodyParamMap">
+      <map>
+        <entry key="sysUserDO">
+          <value>
+            <Object />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="className" value="org.zang.controller.UserController" />
+    <option name="filePath" value="" />
+    <option name="method" value="save" />
+    <option name="methodType" value="POST" />
+    <option name="module" value="inference" />
+    <option name="originUrl" value="/user/save" />
+    <option name="responseParamMap">
+      <map>
+        <entry key="return">
+          <value>
+            <Object />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="returnDocument" value="{&quot;code&quot;:&quot;返回码&quot;,&quot;message&quot;:&quot;返回消息&quot;,&quot;data&quot;:{&quot;userId&quot;:&quot;用户ID&quot;,&quot;deptId&quot;:&quot;部门ID&quot;,&quot;userName&quot;:&quot;用户账号&quot;,&quot;nickName&quot;:&quot;用户昵称&quot;,&quot;userType&quot;:&quot;用户类型（sys_user系统用户）&quot;,&quot;email&quot;:&quot;用户邮箱&quot;,&quot;phonenumber&quot;:&quot;手机号码&quot;,&quot;sex&quot;:&quot;用户性别&quot;,&quot;avatar&quot;:&quot;用户头像&quot;,&quot;password&quot;:&quot;密码&quot;,&quot;status&quot;:&quot;帐号状态（0正常 1停用）&quot;,&quot;delFlag&quot;:&quot;删除标志（0代表存在 2代表删除）&quot;,&quot;loginIp&quot;:&quot;最后登录IP&quot;,&quot;loginDate&quot;:&quot;最后登录时间&quot;,&quot;remark&quot;:&quot;备注&quot;,&quot;createTime&quot;:&quot;创建时间&quot;,&quot;updateTime&quot;:&quot;修改时间&quot;,&quot;gmtDeleted&quot;:&quot;No comment,Type =String&quot;},&quot;requestId&quot;:&quot;请求ID&quot;}" />
+    <option name="url" value="/user/save" />
+  </component>
+</project>
