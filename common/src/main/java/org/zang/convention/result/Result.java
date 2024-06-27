@@ -5,6 +5,7 @@ package org.zang.convention.result;
 import java.io.Serial;
 import java.io.Serializable;
 
+import lombok.Builder;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
@@ -13,6 +14,7 @@ import lombok.experimental.Accessors;
  */
 @Data
 @Accessors(chain = true)
+@Builder
 public class Result<T> implements Serializable {
 
     @Serial

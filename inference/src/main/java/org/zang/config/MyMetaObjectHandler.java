@@ -10,7 +10,7 @@ import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 /**
  * @author Eliauk，微信：Cizai_，邮箱：zang.dromara.org <br/>
  * @date 2024/6/26 <br/>
- * @Copyright 博客：https://eliauku.gitee.io/  ||  per aspera and astra <br/>
+ * &#064;Copyright  博客：<a href="https://eliauku.gitee.io/">...</a>  ||  per aspera and astra <br/>
  */
 @Component
 public class MyMetaObjectHandler implements MetaObjectHandler {

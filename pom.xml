@@ -26,6 +26,7 @@
         <p6spy.version>3.9.1</p6spy.version>
         <dynamic-datasource.version>4.3.1</dynamic-datasource.version>
         <satoken.version>1.38.0</satoken.version>
+        <captcha.version>1.4.1</captcha.version>
     </properties>
 
     <dependencyManagement>
@@ -71,6 +72,13 @@
                 <groupId>com.baomidou</groupId>
                 <artifactId>dynamic-datasource-spring-boot3-starter</artifactId>
                 <version>${dynamic-datasource.version}</version>
+            </dependency>
+
+            <!--验证码组件-->
+            <dependency>
+                <groupId>cloud.tianai.captcha</groupId>
+                <artifactId>tianai-captcha-springboot-starter</artifactId>
+                <version>${captcha.version}</version>
             </dependency>
 
             <dependency>
