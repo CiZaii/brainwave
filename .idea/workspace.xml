@@ -4,21 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f51813c9-514b-41f1-83a3-1dfd75b02a18" name="更改" comment="feat(common): add spring-core dependencyIntroduce the spring-core dependency to the common module with a specified version&#10;to leverage the Spring framework functionalities.">
-      <change afterPath="$PROJECT_DIR$/.idea/fastRequest/fastRequestCollection.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/fastRequest/fastRequestCurrentParamGroup.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/fastRequest/fastRequestHistoryConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="f51813c9-514b-41f1-83a3-1dfd75b02a18" name="更改" comment="refactor(inference): 将CaptchaServiceImpl移动到user包下并移除未使用的导入&#10;&#10;将CaptchaServiceImpl类从serviceImpl包移动到serviceImpl.user包下以更好&#10;地组织代码结构。同时，移除了未使用的ThreadLocalRandom导入，优化了&#10;代码的清洁度和可维护性。">
+      <change afterPath="$PROJECT_DIR$/inference/src/main/java/org/zang/config/openai/OpenAiSessionConfiguration.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/inference/src/main/resources/application-zsl.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.fastRequest/config/fastRequestCurrentProjectConfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/.fastRequest/config/fastRequestCurrentProjectConfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1246a388-2df9-4145-8092-1fa65e338091.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1246a388-2df9-4145-8092-1fa65e338091.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1246a388-2df9-4145-8092-1fa65e338091/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1246a388-2df9-4145-8092-1fa65e338091/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1246a388-2df9-4145-8092-1fa65e338091/storage_v2/_src_/database/zang.IO84AA/schema/NexusAI.R3BR0Q.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1246a388-2df9-4145-8092-1fa65e338091/storage_v2/_src_/database/zang.IO84AA/schema/NexusAI.R3BR0Q.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1246a388-2df9-4145-8092-1fa65e338091/storage_v2/_src_/database/zang.IO84AA/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1246a388-2df9-4145-8092-1fa65e338091/storage_v2/_src_/database/zang.IO84AA/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1246a388-2df9-4145-8092-1fa65e338091/storage_v2/_src_/database/zang.IO84AA/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1246a388-2df9-4145-8092-1fa65e338091/storage_v2/_src_/database/zang.IO84AA/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/fastRequest/fastRequestCurrentProjectLocalConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fastRequest/fastRequestCurrentProjectLocalConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/fastRequest/fastRequestCurrentParamGroup.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fastRequest/fastRequestCurrentParamGroup.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/fastRequest/fastRequestHistoryConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fastRequest/fastRequestHistoryConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-sdk/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ai-sdk/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-sdk/src/main/java/org/zang/aisdk/client/session/OpenAiSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-sdk/src/main/java/org/zang/aisdk/client/session/OpenAiSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-sdk/src/main/java/org/zang/aisdk/client/session/defaults/DefaultOpenAiSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-sdk/src/main/java/org/zang/aisdk/client/session/defaults/DefaultOpenAiSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/org/zang/convention/result/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/org/zang/convention/result/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/org/zang/convention/result/Results.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/org/zang/convention/result/Results.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inference/src/main/java/org/zang/controller/rag/RagController.java" beforeDir="false" afterPath="$PROJECT_DIR$/inference/src/main/java/org/zang/controller/rag/RagController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,37 +76,37 @@
     <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven.BrainWave [clean].executor": "Run",
-    "Maven.BrainWave [install].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.InferenceApplication.executor": "Debug",
-    "Spring Boot.ShortLinkAdminApplication.executor": "Debug",
-    "git-widget-placeholder": "main",
-    "jdk.selected.JAVA_MODULE": "openjdk-21 (2)",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/zang/Documents/IDEA/BrainWave/inference/src/main/java/org/zang/mybatis/core",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "/Users/zang/Documents/IDEA/BrainWave/common/src/main/java/org/zang/Main.java",
-    "settings.editor.selected.configurable": "settings.sync",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven.BrainWave [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.BrainWave [install].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.InferenceApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.ShortLinkAdminApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-21 (2)&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/zang/Documents/IDEA/BrainWave/inference/src/main/java/org/zang/mybatis/core&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/zang/Documents/IDEA/BrainWave/common/src/main/java/org/zang/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -184,6 +182,8 @@
       <workItem from="1719284153834" duration="640000" />
       <workItem from="1719364471656" duration="2977000" />
       <workItem from="1719367481546" duration="25449000" />
+      <workItem from="1719456682811" duration="3996000" />
+      <workItem from="1719474758086" duration="5032000" />
     </task>
     <task id="LOCAL-00001" summary="feat(ai-sdk): add OpenAI session factory and related classes&#10;&#10;Implement OpenAiSessionFactory and associated classes to support creationof OpenAiSession instances. This includes the introduction of new session&#10;configuration options and the refactoring of existing AI SDK components to&#10;integrate with the session factory.">
       <option name="closed" value="true" />
@@ -273,7 +273,39 @@
       <option name="project" value="LOCAL" />
       <updated>1719416710468</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="垃圾文件push">
+      <option name="closed" value="true" />
+      <created>1719456947013</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1719456947013</updated>
+    </task>
+    <task id="LOCAL-00013" summary="feat(captcha)：实现验证码服务和控制器&#10; &#10;添加新的验证码功能，包括实施验证码服务&#10;该变化引入了生成和检查验证码的能力，&#10;利用Tianai验证码库。&#10; &#10;重大变化：验证码实现可能会影响现有的工作流程&#10;不要指望验证码验证到位。">
+      <option name="closed" value="true" />
+      <created>1719476422789</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1719476422789</updated>
+    </task>
+    <task id="LOCAL-00014" summary="feat(inference)：在application.yml中添加验证码配置&#10; &#10;在application.yml文件中引入新的验证码配置&#10;支持滑块验证码功能。这包括缓存设置，&#10;到期和二次验证。">
+      <option name="closed" value="true" />
+      <created>1719476481482</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1719476481482</updated>
+    </task>
+    <task id="LOCAL-00015" summary="refactor(inference): 将CaptchaServiceImpl移动到user包下并移除未使用的导入&#10;&#10;将CaptchaServiceImpl类从serviceImpl包移动到serviceImpl.user包下以更好&#10;地组织代码结构。同时，移除了未使用的ThreadLocalRandom导入，优化了&#10;代码的清洁度和可维护性。">
+      <option name="closed" value="true" />
+      <created>1719476557163</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1719476557163</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,7 +331,11 @@
     <MESSAGE value="feat(inference)：配置MyBatis-Plus并添加初始REST控制器-为数据库模式设置MyBatis-Plus全局配置。&#10;- 介绍初始的 StreamQuery MyBatis-Plus 配置。&#10;- 在DO类中为日期字段添加JSON格式注释。&#10;- 从SysUserDO和UserController中删除删除标记逻辑。&#10;- 使用数据库插件在UserController中实现基本的CRUD操作。&#10;- 修改 application.yml 包含新的 MyBatis-Plus 和 StreamQuery 设置。" />
     <MESSAGE value="refactor(inference): rename packages and update dependencies-将包从org.zang.mybatis重命名为org.zang.convention以反映&#10;&#10;新的封装结构。&#10;-将异常类和结果类移动到公共模块。&#10;-更新依赖项并添加新的ChatConversationsDO和ChatUsageStatsDO类。&#10;-从SysUserDO和pojo包中删除BaseDO导入。&#10;-介绍用于元对象处理的MyMetaObjectHandler。-根据更改调整控制器和服务层。" />
     <MESSAGE value="feat(common): add spring-core dependencyIntroduce the spring-core dependency to the common module with a specified version&#10;to leverage the Spring framework functionalities." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(common): add spring-core dependencyIntroduce the spring-core dependency to the common module with a specified version&#10;to leverage the Spring framework functionalities." />
+    <MESSAGE value="垃圾文件push" />
+    <MESSAGE value="feat(captcha)：实现验证码服务和控制器&#10; &#10;添加新的验证码功能，包括实施验证码服务&#10;该变化引入了生成和检查验证码的能力，&#10;利用Tianai验证码库。&#10; &#10;重大变化：验证码实现可能会影响现有的工作流程&#10;不要指望验证码验证到位。" />
+    <MESSAGE value="feat(inference)：在application.yml中添加验证码配置&#10; &#10;在application.yml文件中引入新的验证码配置&#10;支持滑块验证码功能。这包括缓存设置，&#10;到期和二次验证。" />
+    <MESSAGE value="refactor(inference): 将CaptchaServiceImpl移动到user包下并移除未使用的导入&#10;&#10;将CaptchaServiceImpl类从serviceImpl包移动到serviceImpl.user包下以更好&#10;地组织代码结构。同时，移除了未使用的ThreadLocalRandom导入，优化了&#10;代码的清洁度和可维护性。" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor(inference): 将CaptchaServiceImpl移动到user包下并移除未使用的导入&#10;&#10;将CaptchaServiceImpl类从serviceImpl包移动到serviceImpl.user包下以更好&#10;地组织代码结构。同时，移除了未使用的ThreadLocalRandom导入，优化了&#10;代码的清洁度和可维护性。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -326,5 +362,10 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/BrainWave$InferenceApplication.ic" NAME="InferenceApplication 覆盖结果" MODIFIED="1719457563304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>org.zang.*</FILTER>
+    </SUITE>
   </component>
 </project>

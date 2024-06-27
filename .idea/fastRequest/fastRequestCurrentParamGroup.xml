@@ -3,19 +3,19 @@
   <component name="fastRequestCurrentParamGroup">
     <option name="bodyParamMap">
       <map>
-        <entry key="sysUserDO">
+        <entry key="chatCompletionRequestDTO">
           <value>
             <Object />
           </value>
         </entry>
       </map>
     </option>
-    <option name="className" value="org.zang.controller.UserController" />
-    <option name="filePath" value="" />
-    <option name="method" value="save" />
+    <option name="className" value="org.zang.controller.rag.RagController" />
+    <option name="filePath" value="/.fastRequest/collections/Root/inference/RagController~rag.rapi" />
+    <option name="method" value="rag" />
     <option name="methodType" value="POST" />
     <option name="module" value="inference" />
-    <option name="originUrl" value="/user/save" />
+    <option name="originUrl" value="/rag/stream_chat" />
     <option name="responseParamMap">
       <map>
         <entry key="return">
@@ -25,7 +25,8 @@
         </entry>
       </map>
     </option>
-    <option name="returnDocument" value="{&quot;code&quot;:&quot;返回码&quot;,&quot;message&quot;:&quot;返回消息&quot;,&quot;data&quot;:{&quot;userId&quot;:&quot;用户ID&quot;,&quot;deptId&quot;:&quot;部门ID&quot;,&quot;userName&quot;:&quot;用户账号&quot;,&quot;nickName&quot;:&quot;用户昵称&quot;,&quot;userType&quot;:&quot;用户类型（sys_user系统用户）&quot;,&quot;email&quot;:&quot;用户邮箱&quot;,&quot;phonenumber&quot;:&quot;手机号码&quot;,&quot;sex&quot;:&quot;用户性别&quot;,&quot;avatar&quot;:&quot;用户头像&quot;,&quot;password&quot;:&quot;密码&quot;,&quot;status&quot;:&quot;帐号状态（0正常 1停用）&quot;,&quot;delFlag&quot;:&quot;删除标志（0代表存在 2代表删除）&quot;,&quot;loginIp&quot;:&quot;最后登录IP&quot;,&quot;loginDate&quot;:&quot;最后登录时间&quot;,&quot;remark&quot;:&quot;备注&quot;,&quot;createTime&quot;:&quot;创建时间&quot;,&quot;updateTime&quot;:&quot;修改时间&quot;,&quot;gmtDeleted&quot;:&quot;No comment,Type =String&quot;},&quot;requestId&quot;:&quot;请求ID&quot;}" />
-    <option name="url" value="/user/save" />
+    <option name="returnDocument" value="{&quot;timeout&quot;:&quot;No comment,Type =Number&quot;,&quot;handler&quot;:{},&quot;earlySendAttempts&quot;:[{&quot;data&quot;:{},&quot;mediaType&quot;:{&quot;type&quot;:&quot;No comment,Type =String&quot;,&quot;subtype&quot;:&quot;No comment,Type =String&quot;,&quot;parameters&quot;:{},&quot;toStringValue&quot;:&quot;No comment,Type =String&quot;}}],&quot;complete&quot;:&quot;No comment,Type =Boolean&quot;,&quot;failure&quot;:{&quot;detailMessage&quot;:&quot;No comment,Type =String&quot;,&quot;cause&quot;:{&quot;detailMessage&quot;:&quot;No comment,Type =String&quot;,&quot;stackTrace&quot;:[{&quot;classLoaderName&quot;:&quot;No comment,Type =String&quot;,&quot;moduleName&quot;:&quot;No comment,Type =String&quot;,&quot;moduleVersion&quot;:&quot;No comment,Type =String&quot;,&quot;declaringClass&quot;:&quot;No comment,Type =String&quot;,&quot;methodName&quot;:&quot;No comment,Type =String&quot;,&quot;fileName&quot;:&quot;No comment,Type =String&quot;,&quot;lineNumber&quot;:&quot;No comment,Type =Number&quot;,&quot;format&quot;:&quot;No comment,Type =Number&quot;}],&quot;suppressedExceptions&quot;:[{&quot;detailMessage&quot;:&quot;No comment,Type =String&quot;,&quot;stackTrace&quot;:[{&quot;classLoaderName&quot;:&quot;classLoaderName_k8wmj&quot;,&quot;moduleName&quot;:&quot;moduleName_uuz9w&quot;,&quot;moduleVersion&quot;:&quot;moduleVersion_y6pmq&quot;,&quot;declaringClass&quot;:&quot;declaringClass_be808&quot;,&quot;methodName&quot;:&quot;methodName_m12ec&quot;,&quot;fileName&quot;:&quot;fileName_79brr&quot;,&quot;lineNumber&quot;:1,&quot;format&quot;:1}],&quot;suppressedExceptions&quot;:[{&quot;detailMessage&quot;:&quot;detailMessage_23juv&quot;}]}]},&quot;stackTrace&quot;:[{&quot;classLoaderName&quot;:&quot;No comment,Type =String&quot;,&quot;moduleName&quot;:&quot;No comment,Type =String&quot;,&quot;moduleVersion&quot;:&quot;No comment,Type =String&quot;,&quot;declaringClass&quot;:&quot;No comment,Type =String&quot;,&quot;methodName&quot;:&quot;No comment,Type =String&quot;,&quot;fileName&quot;:&quot;No comment,Type =String&quot;,&quot;lineNumber&quot;:&quot;No comment,Type =Number&quot;,&quot;format&quot;:&quot;No comment,Type =Number&quot;}],&quot;suppressedExceptions&quot;:[{&quot;detailMessage&quot;:&quot;No comment,Type =String&quot;}]},&quot;sendFailed&quot;:&quot;No comment,Type =Boolean&quot;,&quot;timeoutCallback&quot;:{&quot;delegate&quot;:{}},&quot;errorCallback&quot;:{&quot;delegate&quot;:{}},&quot;completionCallback&quot;:{&quot;delegate&quot;:{}}}" />
+    <option name="tempId" value="" />
+    <option name="url" value="/rag/stream_chat" />
   </component>
 </project>

@@ -1,5 +1,6 @@
 package org.zang.aisdk.client.session.defaults;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
@@ -10,6 +11,7 @@ import org.dromara.hutool.json.JSONUtil;
 
 import org.dromara.streamquery.stream.core.optional.Opp;
 import org.jetbrains.annotations.NotNull;
+import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 import org.zang.aisdk.client.LLMClient;
 import org.zang.aisdk.client.session.Configuration;
 import org.zang.aisdk.client.session.OpenAiSession;
@@ -78,7 +80,7 @@ public class DefaultOpenAiSession implements OpenAiSession {
         // 构建请求信息
         Request request = new Request.Builder()
                 // url: https://api.openai.com/v1/chat/completions - 通过 IOpenAiApi 配置的 POST 接口，用这样的方式从统一的地方获取配置信息
-                .url(apiHost.concat(LLMClient.V3_COMPLETIONS))
+                .url(apiHost.concat(LLMClient.V1_COMPLETIONS))
                 .addHeader("apikey", apiKey)
                 // 封装请求参数信息，如果使用了 Fastjson 也可以替换 ObjectMapper 转换对象
                 .post(RequestBody.create(MediaType.parse(ContentType.JSON.getValue()), new ObjectMapper().writeValueAsString(chatCompletionRequest)))
@@ -94,22 +96,24 @@ public class DefaultOpenAiSession implements OpenAiSession {
     }
 
     @Override
-    public CompletableFuture<String> chatCompletions(ChatCompletionRequestDTO chatCompletionRequestDTO) throws InterruptedException, JsonProcessingException {
+    public SseEmitter chatCompletions(ChatCompletionRequestDTO chatCompletionRequestDTO) throws InterruptedException, JsonProcessingException {
+
+        final SseEmitter sseEmitter = new SseEmitter(Long.MAX_VALUE);
 
         // 使用虚拟线程执行异步任务
         CompletableFuture<String> future = new CompletableFuture<>();
 
         // 开始异步任务
         VIRTUAL_THREAD_EXECUTOR.submit(() -> {
-            StringBuffer dataBuffer = new StringBuffer();
 
             try {
                 chatCompletions(chatCompletionRequestDTO, new EventSourceListener() {
                     @Override
                     public void onEvent(@NotNull EventSource eventSource, String id, String type, @NotNull String data) {
                         if ("[DONE]".equalsIgnoreCase(data)) {
+
                             onClosed(eventSource);
-                            future.complete(dataBuffer.toString());
+                            // 后续处理逻辑
                         }
 
                         ChatCompletionResponseDTO chatCompletionResponse = JSONUtil.toBean(data, ChatCompletionResponseDTO.class);
@@ -129,7 +133,7 @@ public class DefaultOpenAiSession implements OpenAiSession {
 
                             // 发送信息
                             try {
-                                dataBuffer.append(delta.getContent());
+                                sseEmitter.send(data);
                             } catch (Exception e) {
                                 future.completeExceptionally(new RuntimeException("Request closed before completion"));
                             }
@@ -138,7 +142,7 @@ public class DefaultOpenAiSession implements OpenAiSession {
 
                     @Override
                     public void onClosed(@NotNull EventSource eventSource) {
-                        future.complete(dataBuffer.toString());
+                        // 结束逻辑处理
                     }
 
                     @Override
@@ -151,6 +155,6 @@ public class DefaultOpenAiSession implements OpenAiSession {
             }
         });
 
-        return future;
+        return sseEmitter;
     }
 }

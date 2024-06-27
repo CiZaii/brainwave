@@ -3,6 +3,7 @@ package org.zang.aisdk.client.session;
 import java.util.concurrent.CompletableFuture;
 
 
+import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 import org.zang.aisdk.dto.req.ChatCompletionRequestDTO;
 import org.zang.aisdk.dto.req.ChatCompletionResponseDTO;
 
@@ -54,6 +55,6 @@ public interface OpenAiSession {
      * @param chatCompletionRequestDTO 请求信息
      * @return 应答结果
      */
-    CompletableFuture<String> chatCompletions(ChatCompletionRequestDTO chatCompletionRequestDTO) throws InterruptedException, JsonProcessingException;
+    SseEmitter chatCompletions(ChatCompletionRequestDTO chatCompletionRequestDTO) throws InterruptedException, JsonProcessingException;
 
 }

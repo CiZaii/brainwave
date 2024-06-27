@@ -6,6 +6,11 @@ import java.util.Optional;
 import org.zang.convention.errorcode.BaseErrorCode;
 import org.zang.convention.exception.AbstractException;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.experimental.Accessors;
+
 
 /**
  * 全局返回对象构造器

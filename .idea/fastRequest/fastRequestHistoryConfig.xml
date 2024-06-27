@@ -4,6 +4,137 @@
     <option name="historyList">
       <list>
         <ResponseHistory>
+          <option name="className" value="org.zang.controller.rag.RagController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="inference" />
+          <option name="method" value="rag" />
+          <option name="methodType" value="POST" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="{&#10;  &quot;model&quot;: &quot;glm4&quot;,&#10;  &quot;messages&quot;: [&#10;    {&#10;      &quot;role&quot;: &quot;user&quot;,&#10;      &quot;content&quot;: &quot;你好&quot;,&#10;      &quot;name&quot;: &quot;name_13dqx&quot;&#10;    }&#10;  ],&#10;  &quot;temperature&quot;: 1.0,&#10;  &quot;top_p&quot;: 1.0,&#10;  &quot;n&quot;: 1,&#10;  &quot;stream&quot;: true,&#10;  &quot;stop&quot;: [&#10;    &quot;stop_md3nt&quot;&#10;  ],&#10;  &quot;max_tokens&quot;: 1,&#10;  &quot;frequency_penalty&quot;: 1.0,&#10;  &quot;presence_penalty&quot;: 1.0,&#10;  &quot;logit_bias&quot;: {},&#10;  &quot;user&quot;: &quot;user_n4rg6&quot;&#10;}" />
+              <option name="className" value="org.zang.controller.rag.RagController" />
+              <option name="jsonDocument" value="{&#10;  &quot;model&quot;: &quot;默认模型&quot;,&#10;  &quot;messages&quot;: [&#10;    {&#10;      &quot;role&quot;: &quot;角色&quot;,&#10;      &quot;content&quot;: &quot;内容&quot;,&#10;      &quot;name&quot;: &quot;No comment,Value =name_13dqx&quot;&#10;    }&#10;  ],&#10;  &quot;temperature&quot;: &quot;控制温度【随机性】；0到2之间。较高的值(如0.8)将使输出更加随机，而较低的值(如0.2)将使输出更加集中和确定&quot;,&#10;  &quot;top_p&quot;: &quot;多样性控制；使用温度采样的替代方法称为核心采样，其中模型考虑具有top_p概率质量的令牌的结果。因此，0.1 意味着只考虑包含前 10% 概率质量的代币&quot;,&#10;  &quot;n&quot;: &quot;为每个提示生成的完成次数&quot;,&#10;  &quot;stream&quot;: &quot;是否为流式输出；就是一蹦一蹦的，出来结果&quot;,&#10;  &quot;stop&quot;: [&#10;    &quot;停止输出标识&quot;&#10;  ],&#10;  &quot;max_tokens&quot;: &quot;输出字符串限制；0 ~ 4096&quot;,&#10;  &quot;frequency_penalty&quot;: &quot;频率惩罚；降低模型重复同一行的可能性&quot;,&#10;  &quot;presence_penalty&quot;: &quot;存在惩罚；增强模型谈论新话题的可能性&quot;,&#10;  &quot;logit_bias&quot;: {},&#10;  &quot;user&quot;: &quot;调用标识，避免重复调用&quot;&#10;}" />
+              <option name="method" value="rag" />
+              <option name="methodDescription" value="rag" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/rag/stream_chat" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;timeout&quot;:&quot;No comment,Type =Number&quot;,&quot;handler&quot;:{},&quot;earlySendAttempts&quot;:[{&quot;data&quot;:{},&quot;mediaType&quot;:{&quot;type&quot;:&quot;No comment,Type =String&quot;,&quot;subtype&quot;:&quot;No comment,Type =String&quot;,&quot;parameters&quot;:{},&quot;toStringValue&quot;:&quot;No comment,Type =String&quot;}}],&quot;complete&quot;:&quot;No comment,Type =Boolean&quot;,&quot;failure&quot;:{&quot;detailMessage&quot;:&quot;No comment,Type =String&quot;,&quot;cause&quot;:{&quot;detailMessage&quot;:&quot;No comment,Type =String&quot;,&quot;stackTrace&quot;:[{&quot;classLoaderName&quot;:&quot;No comment,Type =String&quot;,&quot;moduleName&quot;:&quot;No comment,Type =String&quot;,&quot;moduleVersion&quot;:&quot;No comment,Type =String&quot;,&quot;declaringClass&quot;:&quot;No comment,Type =String&quot;,&quot;methodName&quot;:&quot;No comment,Type =String&quot;,&quot;fileName&quot;:&quot;No comment,Type =String&quot;,&quot;lineNumber&quot;:&quot;No comment,Type =Number&quot;,&quot;format&quot;:&quot;No comment,Type =Number&quot;}],&quot;suppressedExceptions&quot;:[{&quot;detailMessage&quot;:&quot;No comment,Type =String&quot;,&quot;stackTrace&quot;:[{&quot;classLoaderName&quot;:&quot;classLoaderName_k8wmj&quot;,&quot;moduleName&quot;:&quot;moduleName_uuz9w&quot;,&quot;moduleVersion&quot;:&quot;moduleVersion_y6pmq&quot;,&quot;declaringClass&quot;:&quot;declaringClass_be808&quot;,&quot;methodName&quot;:&quot;methodName_m12ec&quot;,&quot;fileName&quot;:&quot;fileName_79brr&quot;,&quot;lineNumber&quot;:1,&quot;format&quot;:1}],&quot;suppressedExceptions&quot;:[{&quot;detailMessage&quot;:&quot;detailMessage_23juv&quot;}]}]},&quot;stackTrace&quot;:[{&quot;classLoaderName&quot;:&quot;No comment,Type =String&quot;,&quot;moduleName&quot;:&quot;No comment,Type =String&quot;,&quot;moduleVersion&quot;:&quot;No comment,Type =String&quot;,&quot;declaringClass&quot;:&quot;No comment,Type =String&quot;,&quot;methodName&quot;:&quot;No comment,Type =String&quot;,&quot;fileName&quot;:&quot;No comment,Type =String&quot;,&quot;lineNumber&quot;:&quot;No comment,Type =Number&quot;,&quot;format&quot;:&quot;No comment,Type =Number&quot;}],&quot;suppressedExceptions&quot;:[{&quot;detailMessage&quot;:&quot;No comment,Type =String&quot;}]},&quot;sendFailed&quot;:&quot;No comment,Type =Boolean&quot;,&quot;timeoutCallback&quot;:{&quot;delegate&quot;:{}},&quot;errorCallback&quot;:{&quot;delegate&quot;:{}},&quot;completionCallback&quot;:{&quot;delegate&quot;:{}}}" />
+              <option name="url" value="/rag/stream_chat" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8081/rag/stream_chat&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Fast Request/2024.1.5.1&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Content-Length: 254&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&quot;top_p&quot;:1.0,&quot;frequency_penalty&quot;:1.0,&quot;logit_bias&quot;:{},&quot;stop&quot;:[&quot;stop_md3nt&quot;],&quot;stream&quot;:true,&quot;max_tokens&quot;:1,&quot;presence_penalty&quot;:1.0,&quot;temperature&quot;:1.0,&quot;messages&quot;:[{&quot;role&quot;:&quot;user&quot;,&quot;name&quot;:&quot;name_13dqx&quot;,&quot;content&quot;:&quot;你好&quot;}],&quot;model&quot;:&quot;glm4&quot;,&quot;user&quot;:&quot;user_n4rg6&quot;,&quot;n&quot;:1}&#13;&#10;" />
+          <option name="response" value="data:你好，我是人工智能助手，请问有什么我可以帮助你的吗？&#10;&#10;" />
+          <option name="url" value="/rag/stream_chat" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="org.zang.controller.rag.RagController" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="inference" />
+          <option name="method" value="rag" />
+          <option name="methodType" value="POST" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="bodyKeyValueListJson" value="{&#10;  &quot;model&quot;: &quot;glm4&quot;,&#10;  &quot;messages&quot;: [&#10;    {&#10;      &quot;role&quot;: &quot;user&quot;,&#10;      &quot;content&quot;: &quot;你好&quot;,&#10;      &quot;name&quot;: &quot;name_13dqx&quot;&#10;    }&#10;  ],&#10;  &quot;temperature&quot;: 1.0,&#10;  &quot;top_p&quot;: 1.0,&#10;  &quot;n&quot;: 1,&#10;  &quot;stream&quot;: true,&#10;  &quot;stop&quot;: [&#10;    &quot;stop_md3nt&quot;&#10;  ],&#10;  &quot;max_tokens&quot;: 1,&#10;  &quot;frequency_penalty&quot;: 1.0,&#10;  &quot;presence_penalty&quot;: 1.0,&#10;  &quot;logit_bias&quot;: {},&#10;  &quot;user&quot;: &quot;user_n4rg6&quot;&#10;}" />
+              <option name="className" value="org.zang.controller.rag.RagController" />
+              <option name="jsonDocument" value="{&#10;  &quot;model&quot;: &quot;默认模型&quot;,&#10;  &quot;messages&quot;: [&#10;    {&#10;      &quot;role&quot;: &quot;角色&quot;,&#10;      &quot;content&quot;: &quot;内容&quot;,&#10;      &quot;name&quot;: &quot;No comment,Value =name_13dqx&quot;&#10;    }&#10;  ],&#10;  &quot;temperature&quot;: &quot;控制温度【随机性】；0到2之间。较高的值(如0.8)将使输出更加随机，而较低的值(如0.2)将使输出更加集中和确定&quot;,&#10;  &quot;top_p&quot;: &quot;多样性控制；使用温度采样的替代方法称为核心采样，其中模型考虑具有top_p概率质量的令牌的结果。因此，0.1 意味着只考虑包含前 10% 概率质量的代币&quot;,&#10;  &quot;n&quot;: &quot;为每个提示生成的完成次数&quot;,&#10;  &quot;stream&quot;: &quot;是否为流式输出；就是一蹦一蹦的，出来结果&quot;,&#10;  &quot;stop&quot;: [&#10;    &quot;停止输出标识&quot;&#10;  ],&#10;  &quot;max_tokens&quot;: &quot;输出字符串限制；0 ~ 4096&quot;,&#10;  &quot;frequency_penalty&quot;: &quot;频率惩罚；降低模型重复同一行的可能性&quot;,&#10;  &quot;presence_penalty&quot;: &quot;存在惩罚；增强模型谈论新话题的可能性&quot;,&#10;  &quot;logit_bias&quot;: {},&#10;  &quot;user&quot;: &quot;调用标识，避免重复调用&quot;&#10;}" />
+              <option name="method" value="rag" />
+              <option name="methodDescription" value="rag" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/rag/stream_chat" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;timeout&quot;:&quot;No comment,Type =Number&quot;,&quot;handler&quot;:{},&quot;earlySendAttempts&quot;:[{&quot;data&quot;:{},&quot;mediaType&quot;:{&quot;type&quot;:&quot;No comment,Type =String&quot;,&quot;subtype&quot;:&quot;No comment,Type =String&quot;,&quot;parameters&quot;:{},&quot;toStringValue&quot;:&quot;No comment,Type =String&quot;}}],&quot;complete&quot;:&quot;No comment,Type =Boolean&quot;,&quot;failure&quot;:{&quot;detailMessage&quot;:&quot;No comment,Type =String&quot;,&quot;cause&quot;:{&quot;detailMessage&quot;:&quot;No comment,Type =String&quot;,&quot;stackTrace&quot;:[{&quot;classLoaderName&quot;:&quot;No comment,Type =String&quot;,&quot;moduleName&quot;:&quot;No comment,Type =String&quot;,&quot;moduleVersion&quot;:&quot;No comment,Type =String&quot;,&quot;declaringClass&quot;:&quot;No comment,Type =String&quot;,&quot;methodName&quot;:&quot;No comment,Type =String&quot;,&quot;fileName&quot;:&quot;No comment,Type =String&quot;,&quot;lineNumber&quot;:&quot;No comment,Type =Number&quot;,&quot;format&quot;:&quot;No comment,Type =Number&quot;}],&quot;suppressedExceptions&quot;:[{&quot;detailMessage&quot;:&quot;No comment,Type =String&quot;,&quot;stackTrace&quot;:[{&quot;classLoaderName&quot;:&quot;classLoaderName_k8wmj&quot;,&quot;moduleName&quot;:&quot;moduleName_uuz9w&quot;,&quot;moduleVersion&quot;:&quot;moduleVersion_y6pmq&quot;,&quot;declaringClass&quot;:&quot;declaringClass_be808&quot;,&quot;methodName&quot;:&quot;methodName_m12ec&quot;,&quot;fileName&quot;:&quot;fileName_79brr&quot;,&quot;lineNumber&quot;:1,&quot;format&quot;:1}],&quot;suppressedExceptions&quot;:[{&quot;detailMessage&quot;:&quot;detailMessage_23juv&quot;}]}]},&quot;stackTrace&quot;:[{&quot;classLoaderName&quot;:&quot;No comment,Type =String&quot;,&quot;moduleName&quot;:&quot;No comment,Type =String&quot;,&quot;moduleVersion&quot;:&quot;No comment,Type =String&quot;,&quot;declaringClass&quot;:&quot;No comment,Type =String&quot;,&quot;methodName&quot;:&quot;No comment,Type =String&quot;,&quot;fileName&quot;:&quot;No comment,Type =String&quot;,&quot;lineNumber&quot;:&quot;No comment,Type =Number&quot;,&quot;format&quot;:&quot;No comment,Type =Number&quot;}],&quot;suppressedExceptions&quot;:[{&quot;detailMessage&quot;:&quot;No comment,Type =String&quot;}]},&quot;sendFailed&quot;:&quot;No comment,Type =Boolean&quot;,&quot;timeoutCallback&quot;:{&quot;delegate&quot;:{}},&quot;errorCallback&quot;:{&quot;delegate&quot;:{}},&quot;completionCallback&quot;:{&quot;delegate&quot;:{}}}" />
+              <option name="url" value="/rag/stream_chat" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8081/rag/stream_chat&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Fast Request/2024.1.5.1&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Content-Length: 254&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&quot;top_p&quot;:1.0,&quot;frequency_penalty&quot;:1.0,&quot;logit_bias&quot;:{},&quot;stop&quot;:[&quot;stop_md3nt&quot;],&quot;stream&quot;:true,&quot;max_tokens&quot;:1,&quot;presence_penalty&quot;:1.0,&quot;temperature&quot;:1.0,&quot;messages&quot;:[{&quot;role&quot;:&quot;user&quot;,&quot;name&quot;:&quot;name_13dqx&quot;,&quot;content&quot;:&quot;你好&quot;}],&quot;model&quot;:&quot;glm4&quot;,&quot;user&quot;:&quot;user_n4rg6&quot;,&quot;n&quot;:1}&#13;&#10;" />
+          <option name="response" value="Read timed out" />
+          <option name="url" value="/rag/stream_chat" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="org.zang.controller.rag.RagController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="inference" />
+          <option name="method" value="genCaptcha" />
+          <option name="methodType" value="GET" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="org.zang.controller.rag.RagController" />
+              <option name="method" value="genCaptcha" />
+              <option name="methodDescription" value="genCaptcha" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/rag/gen" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;id&quot;:&quot;No comment,Type =String&quot;,&quot;captcha&quot;:{&quot;type&quot;:&quot;No comment,Type =String&quot;,&quot;backgroundImage&quot;:&quot;No comment,Type =String&quot;,&quot;templateImage&quot;:&quot;No comment,Type =String&quot;,&quot;backgroundImageTag&quot;:&quot;No comment,Type =String&quot;,&quot;templateImageTag&quot;:&quot;No comment,Type =String&quot;,&quot;backgroundImageWidth&quot;:&quot;No comment,Type =Number&quot;,&quot;backgroundImageHeight&quot;:&quot;No comment,Type =Number&quot;,&quot;templateImageWidth&quot;:&quot;No comment,Type =Number&quot;,&quot;templateImageHeight&quot;:&quot;No comment,Type =Number&quot;,&quot;data&quot;:{}}}" />
+              <option name="url" value="/rag/gen" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[{&quot;comment&quot;:&quot;&quot;,&quot;customFlag&quot;:2,&quot;enabled&quot;:true,&quot;key&quot;:&quot;type&quot;,&quot;type&quot;:&quot;String&quot;,&quot;value&quot;:&quot;RANDOM&quot;}]" />
+              <option name="urlParamsKeyValueListText" value="type=RANDOM" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8081/rag/gen?type=%52%41%4E%44%4F%4D&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Fast Request/2024.1.5.1&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2024-06-27T05:32:17.063+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/rag/gen&quot;}" />
+          <option name="url" value="/rag/gen" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="org.zang.controller.rag.RagController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="inference" />
+          <option name="method" value="test" />
+          <option name="methodType" value="POST" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="org.zang.controller.rag.RagController" />
+              <option name="method" value="test" />
+              <option name="methodDescription" value="test" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/rag/slider" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/rag/slider" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8081/rag/slider&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Fast Request/2024.1.5.1&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2024-06-27T03:34:28.051+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/rag/slider&quot;}" />
+          <option name="url" value="/rag/slider" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="org.zang.controller.rag.RagController" />
+          <option name="code" value="500" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="inference" />
+          <option name="method" value="test" />
+          <option name="methodType" value="POST" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="org.zang.controller.rag.RagController" />
+              <option name="method" value="test" />
+              <option name="methodDescription" value="test" />
+              <option name="methodType" value="POST" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/rag/slider" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="/rag/slider" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8081/rag/slider&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Fast Request/2024.1.5.1&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="{&quot;timestamp&quot;:&quot;2024-06-27T03:30:39.088+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/rag/slider&quot;}" />
+          <option name="url" value="/rag/slider" />
+        </ResponseHistory>
+        <ResponseHistory>
           <option name="className" value="org.zang.controller.UserController" />
           <option name="code" value="200" />
           <option name="enableEnv" value="local" />
