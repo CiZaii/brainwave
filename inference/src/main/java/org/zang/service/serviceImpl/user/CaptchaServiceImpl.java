@@ -7,7 +7,7 @@ import org.dromara.hutool.core.convert.Convert;
 import org.springframework.stereotype.Service;
 import org.zang.convention.result.Result;
 import org.zang.convention.result.Results;
-import org.zang.dto.req.ImageCaptchaReqDTO;
+import org.zang.dto.req.user.ImageCaptchaReqDTO;
 import org.zang.service.user.CaptchaService;
 
 import cloud.tianai.captcha.common.constant.CaptchaTypeConstant;

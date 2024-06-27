@@ -1,7 +1,7 @@
 package org.zang.service.user;
 
 import org.zang.convention.result.Result;
-import org.zang.dto.req.ImageCaptchaReqDTO;
+import org.zang.dto.req.user.ImageCaptchaReqDTO;
 
 import cloud.tianai.captcha.spring.vo.CaptchaResponse;
 import cloud.tianai.captcha.spring.vo.ImageCaptchaVO;

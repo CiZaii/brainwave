@@ -39,7 +39,6 @@ public class DefaultOpenAiSession implements OpenAiSession {
 
     private static final ExecutorService VIRTUAL_THREAD_EXECUTOR = Executors.newSingleThreadExecutor();
 
-
     /**
      * 配置信息
      */

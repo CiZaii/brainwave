@@ -4,19 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f51813c9-514b-41f1-83a3-1dfd75b02a18" name="更改" comment="refactor(inference): 将CaptchaServiceImpl移动到user包下并移除未使用的导入&#10;&#10;将CaptchaServiceImpl类从serviceImpl包移动到serviceImpl.user包下以更好&#10;地组织代码结构。同时，移除了未使用的ThreadLocalRandom导入，优化了&#10;代码的清洁度和可维护性。">
-      <change afterPath="$PROJECT_DIR$/inference/src/main/java/org/zang/config/openai/OpenAiSessionConfiguration.java" afterDir="false" />
+    <list default="true" id="f51813c9-514b-41f1-83a3-1dfd75b02a18" name="更改" comment="feat(ai-sdk): 引入OpenAI会话配置和控制器的初步支持&#10;&#10;- 添加OpenAiSessionConfiguration类以配置OpenAI会话。- 在RagController中整合OpenAiSession以支持聊天完成请求。- 会话工厂和会话配置现在可以正确地初始化和使用。&#10;- 移除了一些冗余的导入和过时的代码。此变更引入了对OpenAI API会话的基础支持，为后续的AI功能开发打下了基础。">
       <change afterPath="$PROJECT_DIR$/inference/src/main/resources/application-zsl.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.fastRequest/config/fastRequestCurrentProjectConfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/.fastRequest/config/fastRequestCurrentProjectConfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/fastRequest/fastRequestCurrentParamGroup.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fastRequest/fastRequestCurrentParamGroup.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/fastRequest/fastRequestHistoryConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fastRequest/fastRequestHistoryConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-sdk/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ai-sdk/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai-sdk/src/main/java/org/zang/aisdk/client/session/OpenAiSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-sdk/src/main/java/org/zang/aisdk/client/session/OpenAiSession.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai-sdk/src/main/java/org/zang/aisdk/client/session/defaults/DefaultOpenAiSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/ai-sdk/src/main/java/org/zang/aisdk/client/session/defaults/DefaultOpenAiSession.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/org/zang/convention/result/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/org/zang/convention/result/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/org/zang/convention/result/Results.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/org/zang/convention/result/Results.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inference/src/main/java/org/zang/controller/rag/RagController.java" beforeDir="false" afterPath="$PROJECT_DIR$/inference/src/main/java/org/zang/controller/rag/RagController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +56,9 @@
         <option name="userSettingsFile" value="/Applications/user/apache-maven-3.9.4/conf/settings.xml" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="PerforceDirect.Settings">
+    <option name="CHARSET" value="无" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -183,7 +177,7 @@
       <workItem from="1719364471656" duration="2977000" />
       <workItem from="1719367481546" duration="25449000" />
       <workItem from="1719456682811" duration="3996000" />
-      <workItem from="1719474758086" duration="5032000" />
+      <workItem from="1719474758086" duration="7039000" />
     </task>
     <task id="LOCAL-00001" summary="feat(ai-sdk): add OpenAI session factory and related classes&#10;&#10;Implement OpenAiSessionFactory and associated classes to support creationof OpenAiSession instances. This includes the introduction of new session&#10;configuration options and the refactoring of existing AI SDK components to&#10;integrate with the session factory.">
       <option name="closed" value="true" />
@@ -305,7 +299,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719476557163</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="feat(ai-sdk): 引入OpenAI会话配置和控制器的初步支持&#10;&#10;- 添加OpenAiSessionConfiguration类以配置OpenAI会话。- 在RagController中整合OpenAiSession以支持聊天完成请求。- 会话工厂和会话配置现在可以正确地初始化和使用。&#10;- 移除了一些冗余的导入和过时的代码。此变更引入了对OpenAI API会话的基础支持，为后续的AI功能开发打下了基础。">
+      <option name="closed" value="true" />
+      <created>1719480187126</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1719480187126</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,7 +337,8 @@
     <MESSAGE value="feat(captcha)：实现验证码服务和控制器&#10; &#10;添加新的验证码功能，包括实施验证码服务&#10;该变化引入了生成和检查验证码的能力，&#10;利用Tianai验证码库。&#10; &#10;重大变化：验证码实现可能会影响现有的工作流程&#10;不要指望验证码验证到位。" />
     <MESSAGE value="feat(inference)：在application.yml中添加验证码配置&#10; &#10;在application.yml文件中引入新的验证码配置&#10;支持滑块验证码功能。这包括缓存设置，&#10;到期和二次验证。" />
     <MESSAGE value="refactor(inference): 将CaptchaServiceImpl移动到user包下并移除未使用的导入&#10;&#10;将CaptchaServiceImpl类从serviceImpl包移动到serviceImpl.user包下以更好&#10;地组织代码结构。同时，移除了未使用的ThreadLocalRandom导入，优化了&#10;代码的清洁度和可维护性。" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor(inference): 将CaptchaServiceImpl移动到user包下并移除未使用的导入&#10;&#10;将CaptchaServiceImpl类从serviceImpl包移动到serviceImpl.user包下以更好&#10;地组织代码结构。同时，移除了未使用的ThreadLocalRandom导入，优化了&#10;代码的清洁度和可维护性。" />
+    <MESSAGE value="feat(ai-sdk): 引入OpenAI会话配置和控制器的初步支持&#10;&#10;- 添加OpenAiSessionConfiguration类以配置OpenAI会话。- 在RagController中整合OpenAiSession以支持聊天完成请求。- 会话工厂和会话配置现在可以正确地初始化和使用。&#10;- 移除了一些冗余的导入和过时的代码。此变更引入了对OpenAI API会话的基础支持，为后续的AI功能开发打下了基础。" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(ai-sdk): 引入OpenAI会话配置和控制器的初步支持&#10;&#10;- 添加OpenAiSessionConfiguration类以配置OpenAI会话。- 在RagController中整合OpenAiSession以支持聊天完成请求。- 会话工厂和会话配置现在可以正确地初始化和使用。&#10;- 移除了一些冗余的导入和过时的代码。此变更引入了对OpenAI API会话的基础支持，为后续的AI功能开发打下了基础。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

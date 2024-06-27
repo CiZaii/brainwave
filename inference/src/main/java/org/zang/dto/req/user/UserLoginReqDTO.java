@@ -1,6 +1,6 @@
-package org.zang.dto.req;
+package org.zang.dto.req.user;
 
-import cloud.tianai.captcha.validator.common.model.dto.ImageCaptchaTrack;
+import cn.dev33.satoken.stp.SaLoginModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,7 +13,11 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ImageCaptchaReqDTO {
-    private String  id;
-    private ImageCaptchaTrack data;
+public class UserLoginReqDTO {
+
+    private String userName;
+
+    private String passWord;
+
+    private SaLoginModel saLoginModel;
 }

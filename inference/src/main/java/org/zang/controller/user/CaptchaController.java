@@ -1,10 +1,5 @@
 package org.zang.controller.user;
 
-import java.util.Collections;
-import java.util.concurrent.ThreadLocalRandom;
-
-import org.apache.commons.lang3.StringUtils;
-import org.dromara.hutool.core.convert.Convert;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,13 +7,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.zang.convention.result.Result;
-import org.zang.convention.result.Results;
-import org.zang.dto.req.ImageCaptchaReqDTO;
+import org.zang.dto.req.user.ImageCaptchaReqDTO;
 import org.zang.service.user.CaptchaService;
 
-import cloud.tianai.captcha.common.constant.CaptchaTypeConstant;
-import cloud.tianai.captcha.common.response.ApiResponse;
-import cloud.tianai.captcha.spring.application.ImageCaptchaApplication;
 import cloud.tianai.captcha.spring.vo.CaptchaResponse;
 import cloud.tianai.captcha.spring.vo.ImageCaptchaVO;
 import lombok.RequiredArgsConstructor;
