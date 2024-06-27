@@ -1,7 +1,6 @@
-package org.zang.service.serviceImpl;
+package org.zang.service.serviceImpl.user;
 
 import java.util.Collections;
-import java.util.concurrent.ThreadLocalRandom;
 
 import org.apache.commons.lang3.StringUtils;
 import org.dromara.hutool.core.convert.Convert;
