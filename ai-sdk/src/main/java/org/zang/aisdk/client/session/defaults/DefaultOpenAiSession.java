@@ -1,6 +1,5 @@
 package org.zang.aisdk.client.session.defaults;
 
-import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
@@ -34,7 +33,7 @@ import okhttp3.sse.EventSourceListener;
 /**
  * @author Eliauk，微信：Cizai_，邮箱：zang.dromara.org <br/>
  * @date 2024/6/10 <br/>
- * @Copyright 博客：https://eliauku.gitee.io/  ||  per aspera and astra <br/>
+ * &#064;Copyright  博客：<a href="https://eliauku.gitee.io/">...</a>  ||  per aspera and astra <br/>
  */
 public class DefaultOpenAiSession implements OpenAiSession {
 
@@ -96,7 +95,7 @@ public class DefaultOpenAiSession implements OpenAiSession {
     }
 
     @Override
-    public SseEmitter chatCompletions(ChatCompletionRequestDTO chatCompletionRequestDTO) throws InterruptedException, JsonProcessingException {
+    public SseEmitter chatCompletions(ChatCompletionRequestDTO chatCompletionRequestDTO)  {
 
         final SseEmitter sseEmitter = new SseEmitter(Long.MAX_VALUE);
 
@@ -113,7 +112,7 @@ public class DefaultOpenAiSession implements OpenAiSession {
                         if ("[DONE]".equalsIgnoreCase(data)) {
 
                             onClosed(eventSource);
-                            // 后续处理逻辑
+                            // TODO 后续处理逻辑
                         }
 
                         ChatCompletionResponseDTO chatCompletionResponse = JSONUtil.toBean(data, ChatCompletionResponseDTO.class);
