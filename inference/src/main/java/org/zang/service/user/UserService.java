@@ -2,6 +2,7 @@ package org.zang.service.user;
 
 import org.zang.convention.result.Result;
 import org.zang.dto.req.user.UserLoginReqDTO;
+import org.zang.dto.req.user.UserRegisterReqDTO;
 
 import cn.dev33.satoken.stp.SaTokenInfo;
 
@@ -17,4 +18,13 @@ public interface UserService {
      */
     Result<SaTokenInfo> login(UserLoginReqDTO userLoginReqDTO);
 
+    /**
+     * 用户注册
+     */
+    Result<Void> register(UserRegisterReqDTO registerReqDTO);
+
+    /**
+     * 判断用户名是否存在
+     */
+    Boolean hasUsername(String userName);
 }
