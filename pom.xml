@@ -12,6 +12,7 @@
         <module>ai-sdk</module>
         <module>inference</module>
         <module>common</module>
+        <module>file-process</module>
     </modules>
 
     <properties>
