@@ -2,6 +2,96 @@ spring:
   profiles:
     active: zsl
 
+  rabbitmq:
+    host: xxxxx # RabbitMQ 服务的地址
+    port: 5672 # RabbitMQ 服务的端口
+    username: xxxx # RabbitMQ 服务的账号
+    password: xxxxxx # RabbitMQ 服务的密码
+    listener:
+      direct:
+        acknowledge-mode: manual  # 手动确认消息
+        default-requeue-rejected: true
+        retry:
+          enabled: true
+          max-attempts: 3
+          initial-interval: 3000
+      simple:
+        default-requeue-rejected: true
+        acknowledge-mode: manual  # 手动确认消息
+        retry:
+          enabled: true
+          max-attempts: 3
+          initial-interval: 3000
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    dynamic:
+      p6spy: true
+      primary: postgres
+      strict: true
+      datasource:
+        postgres:
+          type: ${spring.datasource.type}
+          driverClassName: org.postgresql.Driver
+          url: jdbc:postgresql://xxxxxxx:5432/zang?useSSL=true&autoReconnect=true&currentSchema=NexusAI
+          username: xxxx
+          password: xxxxx
+      hikari:
+        # 最大连接池数量
+        maxPoolSize: 20
+        # 最小空闲线程数量
+        minIdle: 10
+        # 配置获取连接等待超时的时间
+        connectionTimeout: 30000
+        # 校验超时时间
+        validationTimeout: 5000
+        # 空闲连接存活最大时间，默认10分钟
+        idleTimeout: 600000
+        # 此属性控制池中连接的最长生命周期，值0表示无限生命周期，默认30分钟
+        maxLifetime: 1800000
+        # 多久检查一次连接的活性
+        keepaliveTime: 30000
+spring.data:
+  redis:
+    # 地址
+    host: xxxx
+    # 端口，默认为6379
+    port: xxxxx
+    # 数据库索引
+    database: 0
+    # 密码(如没有密码请注释掉)
+    password: xxxxx
+    # 连接超时时间
+    timeout: 10s
+    # 是否开启ssl
+    ssl.enabled: false
+logging:
+  level:
+    root: info
+    org.dromara.streamquery.stream.plugin.mybatisplus.dynamicMapper: debug
+
+  # redisson 配置
+redisson:
+  # redis key前缀
+  keyPrefix:
+  # 线程池数量
+  threads: 4
+  # Netty线程池数量
+  nettyThreads: 8
+  # 单节点配置
+  singleServerConfig:
+    # 客户端名称
+    clientName: ${rush.name}
+    # 最小空闲连接数
+    connectionMinimumIdleSize: 8
+    # 连接池大小
+    connectionPoolSize: 32
+    # 连接空闲超时，单位：毫秒
+    idleConnectionTimeout: 10000
+    # 命令等待超时，单位：毫秒
+    timeout: 3000
+    # 发布和订阅连接池大小
+    subscriptionConnectionPoolSize: 50
+
 server:
   # 端口
   port: 8081
@@ -63,3 +153,5 @@ captcha:
 ai:
   host:
   key:
+
+
