@@ -1,6 +1,7 @@
 package org.zang;
 
 import org.dromara.streamquery.stream.plugin.mybatisplus.engine.annotation.EnableMybatisPlusPlugin;
+import org.dromara.x.file.storage.spring.EnableFileStorage;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -13,7 +14,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 // 点击装订区域中的 <icon src="AllIcons.Actions.Execute"/> 图标。
 @SpringBootApplication
 @EnableMybatisPlusPlugin(basePackages = "org.zang.pojo.**")
-
+@EnableFileStorage
 public class InferenceApplication {
 
     public static void main(String[] args) {

@@ -33,10 +33,24 @@
         <captcha.version>1.4.1</captcha.version>
         <redisson.version>3.27.2</redisson.version>
         <mapstruct-plus.version>1.4.0</mapstruct-plus.version>
+        <x-file-storage.version>2.2.0</x-file-storage.version>
+        <minio.version>8.5.2</minio.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+
+            <dependency>
+                <groupId>org.dromara.x-file-storage</groupId>
+                <artifactId>x-file-storage-spring</artifactId>
+                <version>${x-file-storage.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.minio</groupId>
+                <artifactId>minio</artifactId>
+                <version>${minio.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>io.github.linpeilie</groupId>
