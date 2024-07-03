@@ -7,7 +7,6 @@ import static org.zang.convention.errorcode.BaseErrorCode.USER_NAME_NULL;
 
 import java.util.List;
 
-import cn.dev33.satoken.util.SaResult;
 import org.dromara.streamquery.stream.core.optional.Opp;
 import org.dromara.streamquery.stream.plugin.mybatisplus.Database;
 import org.dromara.streamquery.stream.plugin.mybatisplus.One;
@@ -127,7 +126,7 @@ public class UserServiceImpl implements UserService, RedisCacheConstant {
         userUpdatePasswordReqDTO.setUserId(StpUtil.getLoginIdAsLong());
         final boolean save = Database.updateById(converter.convert(userUpdatePasswordReqDTO,SysUserDO.class));
         if (!save) {
-            throw  new ClientException(UserErrorCodeEnum.USER_SAVE_ERROR);
+            throw new ClientException(UserErrorCodeEnum.USER_SAVE_ERROR);
         }
 
         return Results.success();
@@ -139,7 +138,7 @@ public class UserServiceImpl implements UserService, RedisCacheConstant {
             StpUtil.logout();
             return true;
         } catch (Exception e) {
-//
+
             return false;
         }
     }
