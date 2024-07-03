@@ -1,8 +1,10 @@
 package org.zang.dto.req.role;
 
+import io.github.linpeilie.annotations.AutoMapper;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.zang.pojo.sys.SysRoleDO;
 
 /**
  * 删除用户的权限
@@ -14,7 +16,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@AutoMapper(target = SysRoleDO.class)
 public class RoleDeleteDTO {
     private Long roleId;
+    private String roleName;
 
 }

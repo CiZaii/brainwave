@@ -1,8 +1,11 @@
 package org.zang.dto.req.role;
 
+import io.github.linpeilie.annotations.AutoMapper;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.zang.pojo.sys.SysRoleDO;
+import org.zang.pojo.sys.SysUserRoleDO;
 
 /**
  * 关联用户和角色
@@ -14,6 +17,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@AutoMapper(target = SysUserRoleDO.class)
 public class RoleUserReqDTO {
     private Long roleId;
     private Long userId;

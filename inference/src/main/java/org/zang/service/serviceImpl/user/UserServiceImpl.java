@@ -115,8 +115,8 @@ public class UserServiceImpl implements UserService, RedisCacheConstant {
         }
 
         Opp.ofStr(userUpdatePasswordReqDTO.getOldPassWord()).ifPresent(newPassword -> {
-            final String olePassWord = One.of(SysUserDO::getUserId).eq(StpUtil.getLoginIdAsLong()).value(SysUserDO::getPassWord).query();
-            if (!BCrypt.checkpw(userUpdatePasswordReqDTO.getOldPassWord(), olePassWord)) {
+            final String oldPassWord = One.of(SysUserDO::getUserId).eq(StpUtil.getLoginIdAsLong()).value(SysUserDO::getPassWord).query();
+            if (!BCrypt.checkpw(userUpdatePasswordReqDTO.getOldPassWord(), oldPassWord)) {
                 throw new ServiceException(NEW_PASSWORD_EQUAL_ERROR);
             }
         }).orElseThrow(() -> new ServiceException(NEW_PASSWORD_NULL_ERROR));

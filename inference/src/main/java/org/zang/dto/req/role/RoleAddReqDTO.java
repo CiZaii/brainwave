@@ -1,8 +1,11 @@
 package org.zang.dto.req.role;
 
+import io.github.linpeilie.annotations.AutoMapper;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.zang.pojo.sys.SysRoleDO;
+import org.zang.pojo.sys.SysUserDO;
 
 /**
  * 增添权限
@@ -14,7 +17,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@AutoMapper(target = SysRoleDO.class)
 public class RoleAddReqDTO {
+    private int roleId;
     private String roleName;
     private String roleKey;
 }

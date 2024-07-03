@@ -27,6 +27,8 @@ public interface RoleService {
 
     Result<RoleInfoDTO> getRoleInfo(Long roleId);
 
+    public Boolean hasRoleName(String userName);
+
 
     // 角色-用户关联
     Result<Void> assignRoleToUser(RoleUserReqDTO roleUserReqDTO);

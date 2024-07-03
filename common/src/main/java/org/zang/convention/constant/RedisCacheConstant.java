@@ -16,4 +16,9 @@ public interface RedisCacheConstant {
      * 用户登录缓存标识
      */
     String USER_LOGIN_KEY = "short-link:login:";
+
+    /**
+     * 角色权限添加
+     */
+    String LOCK_ROLE_ADD_KEY = "short-link:lock_role_add";
 }
