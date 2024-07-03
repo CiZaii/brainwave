@@ -5,6 +5,7 @@ import org.zang.dto.req.user.UserLoginReqDTO;
 import org.zang.dto.req.user.UserRegisterReqDTO;
 
 import cn.dev33.satoken.stp.SaTokenInfo;
+import org.zang.dto.req.user.UserUpdatePasswordReqDTO;
 
 /**
  * @author Eliauk，微信：Cizai_，邮箱：zang.dromara.org <br/>
@@ -27,4 +28,11 @@ public interface UserService {
      * 判断用户名是否存在
      */
     Boolean hasUsername(String userName);
+
+    Result<Void> updatePassword(UserUpdatePasswordReqDTO userUpdatePasswordReqDTO);
+
+    /*
+    * 用户登出
+    */
+    Boolean logout();
 }
