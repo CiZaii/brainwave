@@ -8,13 +8,17 @@
     <artifactId>BrainWave</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
+
     <modules>
         <module>ai-sdk</module>
         <module>inference</module>
         <module>common</module>
+        <module>file-process</module>
     </modules>
 
     <properties>
+        <java.vaersion>21</java.vaersion>
+        <maven.complier.plugin>3.10.1</maven.complier.plugin>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -29,10 +33,24 @@
         <captcha.version>1.4.1</captcha.version>
         <redisson.version>3.27.2</redisson.version>
         <mapstruct-plus.version>1.4.0</mapstruct-plus.version>
+        <x-file-storage.version>2.2.0</x-file-storage.version>
+        <minio.version>8.5.2</minio.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+
+            <dependency>
+                <groupId>org.dromara.x-file-storage</groupId>
+                <artifactId>x-file-storage-spring</artifactId>
+                <version>${x-file-storage.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.minio</groupId>
+                <artifactId>minio</artifactId>
+                <version>${minio.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>io.github.linpeilie</groupId>
@@ -139,10 +157,11 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <version>${maven.complier.plugin}</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
                     <annotationProcessorPaths>
                         <path>
                             <groupId>org.projectlombok</groupId>
