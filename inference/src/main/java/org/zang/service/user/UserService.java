@@ -1,5 +1,7 @@
 package org.zang.service.user;
 
+import java.util.List;
+
 import org.zang.convention.result.Result;
 import org.zang.dto.req.user.UserLoginReqDTO;
 import org.zang.dto.req.user.UserRegisterReqDTO;
@@ -35,4 +37,9 @@ public interface UserService {
     * 用户登出
     */
     Boolean logout();
+
+    /**
+     * 获取用户当前的角色
+     */
+    List<String> getRole();
 }

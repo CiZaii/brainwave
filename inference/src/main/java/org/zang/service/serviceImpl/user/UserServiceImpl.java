@@ -1,7 +1,11 @@
 package org.zang.service.serviceImpl.user;
 
+import static org.zang.convention.errorcode.BaseErrorCode.NEW_PASSWORD_EQUAL_ERROR;
+import static org.zang.convention.errorcode.BaseErrorCode.NEW_PASSWORD_NULL_ERROR;
 import static org.zang.convention.errorcode.BaseErrorCode.PASSWORD_VERIFY_ERROR;
 import static org.zang.convention.errorcode.BaseErrorCode.USER_NAME_NULL;
+
+import java.util.List;
 
 import cn.dev33.satoken.util.SaResult;
 import org.dromara.streamquery.stream.core.optional.Opp;
@@ -55,7 +59,7 @@ public class UserServiceImpl implements UserService, RedisCacheConstant {
         // 用户名不存在
         Opp.of(sysUserDO).orElseThrow(() -> new ServiceException(USER_NAME_NULL));
         // 密码验证
-        if (!BCrypt.checkpw(userLoginReqDTO.getPassWord(), sysUserDO.getPassword())){
+        if (!BCrypt.checkpw(userLoginReqDTO.getPassWord(), sysUserDO.getPassWord())){
             throw new ServiceException(PASSWORD_VERIFY_ERROR);
         }
 
@@ -110,23 +114,22 @@ public class UserServiceImpl implements UserService, RedisCacheConstant {
         if (!hasUsername(userUpdatePasswordReqDTO.getUserName())){
             throw new ServiceException(USER_NAME_NULL);
         }
-        // 验证旧密码
-        // TODO 这里从数据库获取员工旧密码不知道怎么写查询语句
-        try{
-            if (!BCrypt.hashpw(userUpdatePasswordReqDTO.getOldPassWord()).equals("1234")) {
-                throw new ServiceException(PASSWORD_VERIFY_ERROR);
+
+        Opp.ofStr(userUpdatePasswordReqDTO.getOldPassWord()).ifPresent(newPassword -> {
+            final String olePassWord = One.of(SysUserDO::getUserId).eq(StpUtil.getLoginIdAsLong()).value(SysUserDO::getPassWord).query();
+            if (!BCrypt.checkpw(userUpdatePasswordReqDTO.getOldPassWord(), olePassWord)) {
+                throw new ServiceException(NEW_PASSWORD_EQUAL_ERROR);
             }
-            // 更新密码
-            final String newPassWord = BCrypt.hashpw(userUpdatePasswordReqDTO.getNewPassword());
-            userUpdatePasswordReqDTO.setNewPassword(newPassWord);
-            final boolean save = Database.save(converter.convert(userUpdatePasswordReqDTO,SysUserDO.class));
-            if (!save) {
-                throw  new ClientException(UserErrorCodeEnum.USER_SAVE_ERROR);
-            }
-            // TODO 这里该抛什么异常不太了解，这里整个 try catch 块是参考注册用户的方法写的
-        }catch (Exception e){
-            throw new RuntimeException();
+        }).orElseThrow(() -> new ServiceException(NEW_PASSWORD_NULL_ERROR));
+        // 更新密码
+        final String newPassWord = BCrypt.hashpw(userUpdatePasswordReqDTO.getNewPassword());
+        userUpdatePasswordReqDTO.setNewPassword(newPassWord);
+        userUpdatePasswordReqDTO.setUserId(StpUtil.getLoginIdAsLong());
+        final boolean save = Database.updateById(converter.convert(userUpdatePasswordReqDTO,SysUserDO.class));
+        if (!save) {
+            throw  new ClientException(UserErrorCodeEnum.USER_SAVE_ERROR);
         }
+
         return Results.success();
     }
 
@@ -139,5 +142,13 @@ public class UserServiceImpl implements UserService, RedisCacheConstant {
 //
             return false;
         }
+    }
+
+    /**
+     * 获取用户当前的角色
+     */
+    @Override
+    public List<String> getRole() {
+        return List.of();
     }
 }

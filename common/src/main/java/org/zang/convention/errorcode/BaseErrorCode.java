@@ -34,6 +34,8 @@ public enum BaseErrorCode implements IErrorCode {
     USER_NAME_NULL("A000114", "用户名不存在"),
     PASSWORD_VERIFY_ERROR("A000120", "密码校验失败"),
     PASSWORD_SHORT_ERROR("A000121", "密码长度不够"),
+    NEW_PASSWORD_NULL_ERROR("A000121", "新密码密码值不能为空"),
+    NEW_PASSWORD_EQUAL_ERROR("A000121", "新密码与旧密码不相等"),
     PHONE_VERIFY_ERROR("A000151", "手机格式校验失败"),
 
     // ========== 二级宏观错误码 系统请求缺少幂等Token ==========

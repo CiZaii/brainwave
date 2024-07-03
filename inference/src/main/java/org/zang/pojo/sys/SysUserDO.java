@@ -80,7 +80,7 @@ public class SysUserDO extends BaseDO {
         updateStrategy = FieldStrategy.NOT_EMPTY,
         whereStrategy = FieldStrategy.NOT_EMPTY
     )
-    private String password;
+    private String passWord;
 
     /**
      * 帐号状态（0正常 1停用）

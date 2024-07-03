@@ -1,5 +1,8 @@
 package org.zang.dto.req.user;
 
+import org.zang.pojo.sys.SysUserDO;
+
+import io.github.linpeilie.annotations.AutoMapper;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,10 +16,22 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@AutoMapper(target = SysUserDO.class)
 public class UserRegisterReqDTO {
 
+    /**
+     * 昵称
+     */
+    private String nickName;
+
+    /**
+     * 用户名
+     */
     private String userName;
 
+    /**
+     * 密码
+     */
     private String passWord;
 
 }

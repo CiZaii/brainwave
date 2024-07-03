@@ -32,7 +32,7 @@ import lombok.extern.slf4j.Slf4j;
 @RequiredArgsConstructor
 public class UserController {
 
-    private UserService userService;
+    private final UserService userService;
 
     @PostMapping("/login")
     public Result<SaTokenInfo> login (@RequestBody UserLoginReqDTO userLoginReqDTO) {
@@ -62,10 +62,13 @@ public class UserController {
         }
     }
 
-    @PostMapping("/update_password")
+    @PostMapping("/update-password")
     public Result<Void> updatePassword(@RequestBody UserUpdatePasswordReqDTO userUpdatePasswordReqDTO) {
         return userService.updatePassword(userUpdatePasswordReqDTO);
     }
+
+
+
 
 
 
