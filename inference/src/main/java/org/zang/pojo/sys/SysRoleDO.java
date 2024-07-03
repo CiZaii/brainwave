@@ -82,22 +82,12 @@ public class SysRoleDO extends BaseDO {
      */
     private Long createBy;
 
-    /**
-     *  创建时间
-     */
-    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss", timezone="GMT+8")
-    private Date creatTime;
 
     /**
      *  更新者
      */
     private Long updateBy;
 
-    /**
-     *  更新时间
-     */
-    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss", timezone="GMT+8")
-    private Date updateTime;
 
     /**
      *  备注

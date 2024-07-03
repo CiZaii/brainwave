@@ -14,6 +14,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+
 /**
  * 用户对象 sys_user
  *
@@ -76,9 +77,9 @@ public class SysUserDO extends BaseDO {
      * 密码
      */
     @TableField(
-        insertStrategy = FieldStrategy.NOT_EMPTY,
-        updateStrategy = FieldStrategy.NOT_EMPTY,
-        whereStrategy = FieldStrategy.NOT_EMPTY
+            insertStrategy = FieldStrategy.NOT_EMPTY,
+            updateStrategy = FieldStrategy.NOT_EMPTY,
+            whereStrategy = FieldStrategy.NOT_EMPTY
     )
     private String passWord;
 
