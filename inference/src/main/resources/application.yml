@@ -151,8 +151,8 @@ captcha:
     # 二次验证缓存key前缀，默认是 captcha:secondary
     keyPrefix: "captcha:secondary"
 ai:
-  host:
-  key:
+  host: http:10.2.22.2
+  key: sadsadasd
 
 dromara:
   x-file-storage: #文件存储配置
