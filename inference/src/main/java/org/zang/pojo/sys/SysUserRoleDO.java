@@ -19,15 +19,15 @@ import org.zang.pojo.BaseDO;
 @TableName("sys_user_role")
 public class SysUserRoleDO extends BaseDO {
 
-    /**
-     * 用户ID
-     */
-    @TableId(value = "user_id")
+//    /**
+//     * 用户ID
+//     */
+//    @TableId(value = "user_id")
     private Long userId;
 
-    /**
-     * 用户ID
-     */
-    @TableId(value = "user_id")
+//    /**
+//     * 用户ID
+//     */
+//    @TableId(value = "user_id")
     private Long roleId;
 }

@@ -19,15 +19,15 @@ import org.zang.pojo.BaseDO;
 @TableName("sys_role_dept")
 public class SysRoleDeptDO extends BaseDO {
 
-    /**
-     *  角色ID
-     */
-    @TableId(value = "role_id")
+//    /**
+//     *  角色ID
+//     */
+//    @TableId(value = "role_id")
     private Long roleId;
 
-    /**
-     *  部门ID
-     */
-    @TableId(value = "dept_id")
+//    /**
+//     *  部门ID
+//     */
+//    @TableId(value = "dept_id")
     private Long deptId;
 }
