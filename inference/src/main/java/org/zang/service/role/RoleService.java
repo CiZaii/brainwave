@@ -2,10 +2,7 @@ package org.zang.service.role;
 
 import cn.dev33.satoken.stp.SaTokenInfo;
 import org.zang.convention.result.Result;
-import org.zang.dto.req.role.RoleAddReqDTO;
-import org.zang.dto.req.role.RoleInfoDTO;
-import org.zang.dto.req.role.RoleUpdateReqDTO;
-import org.zang.dto.req.role.RoleUserReqDTO;
+import org.zang.dto.req.role.*;
 import org.zang.dto.req.user.UserLoginReqDTO;
 
 import java.util.List;
@@ -24,6 +21,7 @@ public interface RoleService {
     Result<Void> deleteRole(Long roleId);
 
     Result<Void> updateRole(RoleUpdateReqDTO roleUpdateReqDTO);
+    Result<Void> updateRole(RoleUpdateBatchDTO roleUpdateBatchDTO);
 
     Result<RoleInfoDTO> getRoleInfo(Long roleId);
 
