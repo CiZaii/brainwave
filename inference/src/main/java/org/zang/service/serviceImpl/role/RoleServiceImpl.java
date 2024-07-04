@@ -1,5 +1,6 @@
 package org.zang.service.serviceImpl.role;
 
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import io.github.linpeilie.Converter;
 import lombok.RequiredArgsConstructor;
 import org.dromara.streamquery.stream.core.optional.Opp;
@@ -86,7 +87,7 @@ public class RoleServiceImpl implements RoleService {
         Opp.of(sysRoleDO).orElseThrow(()->new ServiceException(USER_NAME_NULL));
         try {
             // TODO 这个我不是很会用
-            boolean deleteSuccess = Database.removeById(roleId);
+            boolean deleteSuccess = Database.removeById(sysRoleDO);
             if (!deleteSuccess) {
                 // TODO 这里我尝试往UserErrorCodeEnum增加一个 USER_DELETE_ERROR 的状态码
                 throw new ClientException(UserErrorCodeEnum.USER_DELETE_ERROT);
@@ -99,18 +100,39 @@ public class RoleServiceImpl implements RoleService {
 
     @Override
     public Result<Void> updateRole(RoleUpdateReqDTO roleUpdateReqDTO) {
-        return null;
+        final SysRoleDO sysRoleDO = One.of(SysRoleDO::getRoleId).eq(roleUpdateReqDTO.getRoleId()).query();
+        Opp.of(sysRoleDO).orElseThrow(()-> new ServiceException(USER_NAME_NULL));
+
+        try {
+            sysRoleDO.setRoleName(roleUpdateReqDTO.getRoleName());
+            sysRoleDO.setRoleKey(roleUpdateReqDTO.getRoleKey());
+
+            boolean updateSuccess = Database.update(sysRoleDO, Wrappers.lambdaQuery(SysRoleDO.class).eq(SysRoleDO::getRoleId, roleUpdateReqDTO.getRoleId()));
+            if(!updateSuccess){
+                throw new ClientException(UserErrorCodeEnum.USER_UPDATE_ERROR);
+            }
+        }catch (Exception e){
+            throw new ClientException(UserErrorCodeEnum.USER_UPDATE_ERROR);
+        }
+
+        return Results.success();
     }
 
     @Override
     public Result<RoleInfoDTO> getRoleInfo(Long roleId) {
-        return null;
+        final SysRoleDO sysRoleDO = One.of(SysRoleDO::getRoleId).eq(roleId).query();
+        Opp.of(sysRoleDO).orElseThrow(()-> new ServiceException(USER_NAME_NULL));
+
+        RoleInfoDTO roleInfoDTO = converter.convert(sysRoleDO, RoleInfoDTO.class);
+        return Results.success(roleInfoDTO);
     }
 
 
 
     @Override
     public Result<Void> assignRoleToUser(RoleUserReqDTO roleUserReqDTO) {
+        //TODO 这两个连表的我不太会写
+
         return null;
     }
 
