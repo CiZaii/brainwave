@@ -5,6 +5,8 @@ import org.dromara.x.file.storage.spring.EnableFileStorage;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.dtflys.forest.springboot.annotation.ForestScan;
+
 /**
  * @author Eliauk，微信：Cizai_，邮箱：zang.dromara.org <br/>
  * @date 2024/6/24 <br/>
@@ -15,6 +17,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 @EnableMybatisPlusPlugin(basePackages = "org.zang.pojo.**")
 @EnableFileStorage
+@ForestScan(basePackages = "org.zang")
 public class InferenceApplication {
 
     public static void main(String[] args) {
