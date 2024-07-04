@@ -16,16 +16,13 @@ import org.zang.convention.exception.ClientException;
 import org.zang.convention.exception.ServiceException;
 import org.zang.convention.result.Result;
 import org.zang.convention.result.Results;
-import org.zang.dto.req.role.RoleAddReqDTO;
-import org.zang.dto.req.role.RoleInfoDTO;
-import org.zang.dto.req.role.RoleUpdateReqDTO;
-import org.zang.dto.req.role.RoleUserReqDTO;
+import org.zang.dto.req.role.*;
 import org.zang.pojo.sys.SysRoleDO;
-import org.zang.pojo.sys.SysUserDO;
+
 import org.zang.service.role.RoleService;
 
-import java.util.List;
-import java.util.Optional;
+import java.util.Collections;
+
 
 import static org.zang.convention.constant.RedisCacheConstant.LOCK_ROLE_ADD_KEY;
 import static org.zang.convention.errorcode.BaseErrorCode.USER_NAME_NULL;
@@ -58,7 +55,7 @@ public class RoleServiceImpl implements RoleService {
             throw new ClientException(UserErrorCodeEnum.USER_NAME_EXIST);
         }
         try {
-            final String key = roleAddReqDTO.getRoleKey();
+
             final boolean save = Database.save(converter.convert(roleAddReqDTO, SysRoleDO.class));
             if (!save) {
                 throw new ClientException(UserErrorCodeEnum.USER_SAVE_ERROR);
@@ -75,9 +72,8 @@ public class RoleServiceImpl implements RoleService {
 
     @Override
     public Boolean hasRoleName(String roleName) {
-            //TODO 这里应该是在布隆过滤器检查这个权限角色是否已经存在，我参考 userService 写的不知道对不对
-        return roleRegisterCachePenetrationBloomFilter.contains(roleName);
-//        return userRegisterCachePenetrationBloomFilter.contains(userName);
+            //改成从数据库里查
+        return Opp.of(One.of(SysRoleDO::getRoleName).eq(roleName).query()).isEmpty();
 
     }
 
@@ -110,6 +106,30 @@ public class RoleServiceImpl implements RoleService {
             boolean updateSuccess = Database.update(sysRoleDO, Wrappers.lambdaQuery(SysRoleDO.class).eq(SysRoleDO::getRoleId, roleUpdateReqDTO.getRoleId()));
             if(!updateSuccess){
                 throw new ClientException(UserErrorCodeEnum.USER_UPDATE_ERROR);
+            }
+        }catch (Exception e){
+            throw new ClientException(UserErrorCodeEnum.USER_UPDATE_ERROR);
+        }
+
+        return Results.success();
+    }
+
+    @Override
+    public Result<Void> updateRole(RoleUpdateBatchDTO roleUpdateBatchDTO) {
+        // 先把这个名字下的所有行删除，我想不到更好的办法作比对修改
+        boolean remove = Database.removeByMap(Collections.singletonMap("role_name",roleUpdateBatchDTO.getRoleName()),RoleUpdateBatchDTO.class);
+        if (!remove) {
+            throw new ServiceException(USER_NAME_NULL);
+        }
+        try{
+            for (String roleKey : roleUpdateBatchDTO.getRoleKeys()) {
+                // TODO: 这里是往 DB 里插入一个行数据，一个权限就新增一行数据
+                // TODO：这里插入的时候 convert 里面我用了RoleAddReqDTO，用他关联了SysRoleDO，
+                //  这里的 role_id 我是随便填的，不知道这样行不行，我看佬你User 那里的 DTO 都没有@TableId这个注解，然后我这里也没加
+                final boolean save = Database.save(converter.convert(new RoleAddReqDTO(0, roleUpdateBatchDTO.getRoleName(), roleKey), SysRoleDO.class));
+                if ( !save ) {
+                    throw new ClientException(UserErrorCodeEnum.USER_SAVE_ERROR);
+                }
             }
         }catch (Exception e){
             throw new ClientException(UserErrorCodeEnum.USER_UPDATE_ERROR);

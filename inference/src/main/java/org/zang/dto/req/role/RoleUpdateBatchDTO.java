@@ -5,12 +5,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.zang.pojo.sys.SysRoleDO;
-import org.zang.pojo.sys.SysUserDO;
+
+import java.util.List;
 
 /**
- * 增添权限
  * brain-wave
- * 2024/7/3 17:00
+ * 2024/7/4 12:55
  *
  * @author Ben，微信：wz_Fung_Ben，邮箱：842609063@qq.con <br/>
  **/
@@ -18,9 +18,9 @@ import org.zang.pojo.sys.SysUserDO;
 @AllArgsConstructor
 @NoArgsConstructor
 @AutoMapper(target = SysRoleDO.class)
-public class RoleAddReqDTO {
+public class RoleUpdateBatchDTO {
 
-    private int roleId;
     private String roleName;
-    private String roleKey;
+    private List<String> roleKeys;
+
 }

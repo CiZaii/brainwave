@@ -30,7 +30,7 @@ public class SysRoleDO extends BaseDO {
     /**
      *  租户编号
      */
-    private String tenantId;
+    private Long tenantId;
 
     /**
      *  角色名称
@@ -43,39 +43,10 @@ public class SysRoleDO extends BaseDO {
     private String roleKey;
 
     /**
-     *  显示顺序
+     * 权限描述
      */
-    private Long roleSort;
+    private String keyDesc;
 
-    /**
-     *  数据范围（1：全部数据权限 2：自定数据权限 3：本部门数据权限 4：本部门及以下数据权限）
-     */
-    private String dataScope;
-
-    /**
-     *  菜单树选择项是否关联显示
-     */
-    private boolean menuCheckStr;
-
-    /**
-     *  部门树选择项是否关联显示
-     */
-    private boolean deptCheckStri;
-
-    /**
-     *  角色状态（0 正常 1 停用）
-     */
-    private String status;
-
-    /**
-     *  删除标志（0 代表存在 2 代表删除）
-     */
-    private String delFlag;
-
-    /**
-     *  创建部门
-     */
-    private Long createDept;
 
     /**
      *  创建者
