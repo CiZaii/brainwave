@@ -2,6 +2,7 @@ package org.zang.strategy.chat;
 
 import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 import org.zang.aisdk.dto.req.ChatCompletionRequestDTO;
+import org.zang.aisdk.dto.resp.ChatCompletionResponseDTO;
 import org.zang.aisdk.enums.config.ModelEnum;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -15,4 +16,6 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 public interface ChatStrategy {
 
     SseEmitter chatCompletions(ModelEnum model, ChatCompletionRequestDTO chatCompletionRequestDTO) throws JsonProcessingException;
+
+    ChatCompletionResponseDTO chat(ModelEnum model, ChatCompletionRequestDTO chatCompletionRequestDTO);
 }

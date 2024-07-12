@@ -2,7 +2,6 @@ package org.zang.strategy.chat.impl;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -13,13 +12,12 @@ import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 import org.zang.aisdk.client.session.OpenAiSession;
 import org.zang.aisdk.domain.chat.ChatChoice;
 import org.zang.aisdk.dto.req.ChatCompletionRequestDTO;
-import org.zang.aisdk.dto.req.ChatCompletionResponseDTO;
+import org.zang.aisdk.dto.resp.ChatCompletionResponseDTO;
 import org.zang.aisdk.dto.req.MessagesDTO;
 import org.zang.aisdk.enums.config.ModelEnum;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 
-import cn.hutool.core.bean.BeanUtil;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import okhttp3.Response;
@@ -39,7 +37,8 @@ public class SiliconCloudChatStrategyImpl extends AbstractChatStrategyImpl{
     private final OpenAiSession openAiSession;
 
     private static final ExecutorService VIRTUAL_THREAD_EXECUTOR = Executors.newSingleThreadExecutor();
-    public SseEmitter chatCompletions(ModelEnum model, ChatCompletionRequestDTO chatCompletionRequestDTO) throws JsonProcessingException {
+    @Override
+    public SseEmitter chatCompletions(ModelEnum model, ChatCompletionRequestDTO chatCompletionRequestDTO) {
 
         final SseEmitter sseEmitter = new SseEmitter();
 
@@ -102,6 +101,11 @@ public class SiliconCloudChatStrategyImpl extends AbstractChatStrategyImpl{
         });
 
         return sseEmitter;
+    }
+
+    @Override
+    public ChatCompletionResponseDTO chat(ModelEnum model, ChatCompletionRequestDTO chatCompletionRequestDTO) {
+        return openAiSession.completions(chatCompletionRequestDTO);
     }
 
     // Ensure thread-safe completion of SseEmitter

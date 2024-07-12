@@ -16,7 +16,7 @@ import org.zang.aisdk.client.session.Configuration;
 import org.zang.aisdk.client.session.OpenAiSession;
 import org.zang.aisdk.domain.chat.ChatChoice;
 import org.zang.aisdk.dto.req.ChatCompletionRequestDTO;
-import org.zang.aisdk.dto.req.ChatCompletionResponseDTO;
+import org.zang.aisdk.dto.resp.ChatCompletionResponseDTO;
 import org.zang.aisdk.dto.req.MessagesDTO;
 import org.zang.aisdk.records.Role;
 

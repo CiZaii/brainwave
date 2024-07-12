@@ -1,4 +1,4 @@
-package org.zang.aisdk.dto.req;
+package org.zang.aisdk.dto.resp;
 
 
 import java.io.Serializable;

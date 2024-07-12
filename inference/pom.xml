@@ -17,6 +17,43 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <finalName>brain-wave</finalName>
+                    <outputDirectory>../target</outputDirectory>
+                    <addResources>true</addResources>
+                </configuration>
+            </plugin>
+        </plugins>
+
+        <resources>
+            <resource>
+                <!--设置在java目录下的xml文件，能打进入包，也就是mapper.xml-->
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+            <resource>
+                <!--设置resources中properties、xml 能打进入包-->
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                    <include>**/*.png</include>
+                    <include>**/*.jpg</include>
+                    <include>**/*.yml</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
+
+
 
     <dependencies>
 
@@ -129,6 +166,11 @@
         </dependency>
 
         <dependency>
+            <groupId>com.doc-apis</groupId>
+            <artifactId>doc-apis-starter</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
         </dependency>
@@ -140,40 +182,5 @@
         </dependency>
     </dependencies>
 
-    <build>
-        <plugins>
-
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <finalName>brain-wave</finalName>
-                    <outputDirectory>../target</outputDirectory>
-                    <addResources>true</addResources>
-                </configuration>
-            </plugin>
-        </plugins>
-
-        <resources>
-            <resource>
-                <!--设置在java目录下的xml文件，能打进入包，也就是mapper.xml-->
-                <directory>src/main/java</directory>
-                <includes>
-                    <include>**/*.xml</include>
-                </includes>
-            </resource>
-            <resource>
-                <!--设置resources中properties、xml 能打进入包-->
-                <directory>src/main/resources</directory>
-                <includes>
-                    <include>**/*.properties</include>
-                    <include>**/*.xml</include>
-                    <include>**/*.png</include>
-                    <include>**/*.jpg</include>
-                    <include>**/*.yml</include>
-                </includes>
-            </resource>
-        </resources>
-    </build>
 
 </project>

@@ -6,6 +6,7 @@ import java.util.Map;
 import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 import org.zang.aisdk.dto.req.ChatCompletionRequestDTO;
+import org.zang.aisdk.dto.resp.ChatCompletionResponseDTO;
 import org.zang.aisdk.enums.config.ModelEnum;
 import org.zang.convention.exception.ChatException;
 import org.zang.strategy.chat.ChatStrategy;
@@ -43,5 +44,20 @@ public class ChatStrategyContent {
         }
 
         return modelChatStrategyMap.get(strategy).chatCompletions(model, chatCompletionRequestDTO);
+    }
+
+    public ChatCompletionResponseDTO chat(ModelEnum model, ChatCompletionRequestDTO chatCompletionRequestDTO) {
+
+        final String modelName = model.getCode();
+        final String strategy = model.getStrategy();
+
+        log.info("当前使用的模型为{}", modelName);
+
+        if (ObjectUtil.isEmpty(modelChatStrategyMap.get(strategy))) {
+            log.error("不存在对应的策略，当前想使用的模型为『{}』" , modelName);
+            throw new ChatException("不存在对应的策略，当前想使用的模型为『" + modelName + "』");
+        }
+
+        return modelChatStrategyMap.get(strategy).chat(model, chatCompletionRequestDTO);
     }
 }

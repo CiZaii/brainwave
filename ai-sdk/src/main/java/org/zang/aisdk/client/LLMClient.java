@@ -2,7 +2,7 @@ package org.zang.aisdk.client;
 
 
 import org.zang.aisdk.dto.req.ChatCompletionRequestDTO;
-import org.zang.aisdk.dto.req.ChatCompletionResponseDTO;
+import org.zang.aisdk.dto.resp.ChatCompletionResponseDTO;
 
 import io.reactivex.Single;
 import retrofit2.http.Body;

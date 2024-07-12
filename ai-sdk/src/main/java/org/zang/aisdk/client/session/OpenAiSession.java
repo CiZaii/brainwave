@@ -1,11 +1,9 @@
 package org.zang.aisdk.client.session;
 
-import java.util.concurrent.CompletableFuture;
-
 
 import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 import org.zang.aisdk.dto.req.ChatCompletionRequestDTO;
-import org.zang.aisdk.dto.req.ChatCompletionResponseDTO;
+import org.zang.aisdk.dto.resp.ChatCompletionResponseDTO;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 

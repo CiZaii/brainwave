@@ -22,4 +22,13 @@ public enum ModelEnum {
     ;
     private String code;
     private String strategy;
+
+    public static ModelEnum getModelEnum(String code){
+        for (ModelEnum modelEnum : ModelEnum.values()) {
+            if (modelEnum.getCode().equals(code)){
+                return modelEnum;
+            }
+        }
+        return null;
+    }
 }
