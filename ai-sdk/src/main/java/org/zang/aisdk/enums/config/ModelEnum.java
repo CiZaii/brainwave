@@ -12,6 +12,7 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum ModelEnum {
     THUDM("THUDM/glm-4-9b-chat","siliconCloudChatStrategyImpl"),
+    QWEN2_7B("Qwen/Qwen2-7B-Instruct","siliconCloudChatStrategyImpl"),
     /** gpt-3.5-turbo */
     GPT_3_5_TURBO("gpt-3.5-turbo",""),
     /** GPT4.0 */
