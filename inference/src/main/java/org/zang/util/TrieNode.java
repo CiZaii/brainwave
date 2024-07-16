@@ -2,6 +2,7 @@ package org.zang.util;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * brain-wave
@@ -10,12 +11,13 @@ import java.util.Map;
  * @author Ben，微信：wz_Fung_Ben，邮箱：842609063@qq.con <br/>
  **/
 public class TrieNode {
-    public Map<Character, TrieNode> children;
+    public ConcurrentHashMap<Character, TrieNode> children;
     public boolean isEndOfWord;
-    public int index;  // 存储单词的起始下标
+    // 存储单词的起始下标
+    public int index;
 
     public TrieNode() {
-        children = new HashMap<>();
+        children = new ConcurrentHashMap<>();
         isEndOfWord = false;
         index = -1;
     }

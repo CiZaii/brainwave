@@ -1,12 +1,15 @@
 package org.zang.dto.resp.ie;
 
+import java.util.List;
+
+import org.zang.processor.IePredicateResult;
+
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * 实体
+ * 最终返回值包装类
  * @author Eliauk，微信：Cizai_，邮箱：zang.dromara.org <br/>
  * @date 2024/6/26 <br/>
  * &#064;Copyright  博客：<a href="https://eliauku.gitee.io/">...</a>  ||  per aspera and astra <br/>
@@ -14,38 +17,30 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-public class IeInferItemDTO {
+public class IeInferResultRespDTO {
 
     /**
-     * 元数据
+     * 推理时间
      */
-    private String schema;
+    private Double time;
 
     /**
-     * 文本
+     * 进行推理语料
      */
-    private String text;
+    private String content;
 
     /**
-     * 开始位置
+     * 推理结果实体
      */
-    private String start;
+    private List<IeInferItemDTO> results;
 
     /**
-     * 结束坐标
+     * 推理结果关系
      */
-    private String end;
+    private List<IeInferRelationDTO> relations;
 
     /**
-     * 类型
+     * 算法返回结果
      */
-    private String type;
-
-    /**
-     * 唯一UUID
-     */
-    private String uuid;
-
-
+    private List<IePredicateResult> iePredicateResults;
 }

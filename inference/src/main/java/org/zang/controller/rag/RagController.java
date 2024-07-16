@@ -13,7 +13,10 @@ import org.zang.aisdk.dto.req.ChatCompletionRequestDTO;
 
 import org.zang.aisdk.dto.resp.ChatCompletionResponseDTO;
 
+import org.zang.convention.result.Result;
+import org.zang.convention.result.Results;
 import org.zang.dto.req.chat.ChatMetadataRequestDTO;
+import org.zang.dto.resp.ie.IeInferResultRespDTO;
 import org.zang.service.rag.RagChatService;
 
 import com.docapis.core.DocApi;
@@ -64,11 +67,11 @@ public class RagController {
      * @return ChatCompletionResponseDTO 抽取结果
      */
     @PostMapping("/extractMetaData")
-    public ChatCompletionResponseDTO extractMetaData(@RequestBody ChatMetadataRequestDTO chatMetadataRequestDTO) {
+    public Result<IeInferResultRespDTO> extractMetaData(@RequestBody ChatMetadataRequestDTO chatMetadataRequestDTO) {
         log.info("当前的请求参数为{}", chatMetadataRequestDTO);
         log.info("测试开始：请等待调用结果");
 
-        return ragChatService.extractMetaData(chatMetadataRequestDTO);
+        return Results.success(ragChatService.extractMetaData(chatMetadataRequestDTO));
 
         //return chatStrategyContent.chatSSE(ModelEnum.THUDM, chatCompletionRequestDTO);
 
