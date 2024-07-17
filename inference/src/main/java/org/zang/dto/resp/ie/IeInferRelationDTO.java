@@ -23,7 +23,7 @@ public class IeInferRelationDTO {
     /**
      * 结束坐标
      */
-    private String end;
+    private String end; 
 
     /**
      * 关系
