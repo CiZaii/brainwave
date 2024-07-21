@@ -15,6 +15,7 @@ import org.zang.util.TextMatchUtil;
 
 import com.huaban.analysis.jieba.JiebaSegmenter;
 import com.huaban.analysis.jieba.SegToken;
+import org.zang.util.Trie;
 
 /**
  * 坐标关系处理器
@@ -37,8 +38,9 @@ public class CoordinateRelationshipProcessor {
         final List<IeInferRelationDTO> relations = ieInferResultRespDTO.getRelations();
 
         JiebaSegmenter segmenter = new JiebaSegmenter();
-
-// 目标句子列表
+        // 这里先提前初始化一颗树，之后把这棵树传进去会减少初始化次数，只会在匹配谓语错误的时候重新生成树
+        Trie trie = TextMatchUtil.buildTree(content);
+        // 目标句子列表
         List<String> targetSentences = new ArrayList<>();
 
         Steam.of(iePredicateResults)
@@ -50,7 +52,7 @@ public class CoordinateRelationshipProcessor {
                     final List<IePredicatesVO> predicates = iePredicateResult.getPredicates();
 
                     predicates.stream().forEach(predicate -> {
-                        TextMatchUtil.getIndex(subject.getValue(),predicate.getObject(), content);
+                        TextMatchUtil.getIndex(subject.getValue(),predicate.getObject(),trie);
                         targetSentences.add(predicate.getObject());
                     });
                     TextMatchUtil.a(targetSentences,content);

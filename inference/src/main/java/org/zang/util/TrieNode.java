@@ -1,6 +1,8 @@
 package org.zang.util;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -13,12 +15,12 @@ import java.util.concurrent.ConcurrentHashMap;
 public class TrieNode {
     public ConcurrentHashMap<Character, TrieNode> children;
     public boolean isEndOfWord;
-    // 存储单词的起始下标
-    public int index;
+    // 存储单词的起始下标列表
+    public List<Integer> indices;
 
     public TrieNode() {
         children = new ConcurrentHashMap<>();
         isEndOfWord = false;
-        index = -1;
+        indices = new ArrayList<>();
     }
 }
