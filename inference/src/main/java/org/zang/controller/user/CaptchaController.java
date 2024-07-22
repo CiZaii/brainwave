@@ -16,7 +16,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * 验证码
+ * 验证码模块
  * @author Eliauk，微信：Cizai_，邮箱：zang.dromara.org <br/>
  * @date 2024/6/27 <br/>
  * &#064;Copyright  博客：<a href="https://eliauku.gitee.io/">...</a>  ||  per aspera and astra <br/>
@@ -30,12 +30,22 @@ public class CaptchaController {
 
     private final CaptchaService captchaService;
 
+    /**
+     * 生成验证码
+     * @param type 生成验证码类型
+     * @return CaptchaResponse<ImageCaptchaVO>  验证码
+     */
     @RequestMapping("/gen")
     @ResponseBody
     public Result<CaptchaResponse<ImageCaptchaVO>> genCaptcha(@RequestParam(value = "type", required = false)String type) {
         return captchaService.genCaptcha(type);
     }
 
+    /**
+     * 校验验证码
+     * @param imageCaptchaReqDTO 验证码校验请求
+     * @return 是否成功
+     */
     @PostMapping("/check")
     @ResponseBody
     public Result<?> checkCaptcha(@RequestBody ImageCaptchaReqDTO imageCaptchaReqDTO) {

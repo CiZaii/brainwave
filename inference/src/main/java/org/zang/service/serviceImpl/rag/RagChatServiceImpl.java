@@ -26,6 +26,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.reflect.TypeToken;
 
+import cn.hutool.core.date.DateUtil;
 import lombok.RequiredArgsConstructor;
 
 
@@ -46,6 +47,8 @@ public class RagChatServiceImpl implements RagChatService {
 
     @Override
     public IeInferResultRespDTO extractMetaData(ChatMetadataRequestDTO chatMetadataRequestDTO) {
+
+        Long start = DateUtil.current();
 
         // 获取所抽取语料
         final String content = chatMetadataRequestDTO.getContent();
@@ -77,7 +80,15 @@ public class RagChatServiceImpl implements RagChatService {
         Type listType = new TypeToken<List<IePredicateResult>>() {}.getType();
         List<IePredicateResult> iePredicateResult = gson.fromJson(resultArray, listType);
 
-        return coordinateRelationshipProcessor.process(content, iePredicateResult);
+        final IeInferResultRespDTO process = coordinateRelationshipProcessor.process(content, iePredicateResult);
+
+        Long end = DateUtil.current();
+
+        process.setTime((end - start) / 1000.0);
+
+        process.setIePredicateResults(iePredicateResult);
+
+        return process;
 
     }
 }

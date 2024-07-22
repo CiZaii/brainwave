@@ -11,15 +11,12 @@ import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 import org.zang.aisdk.client.session.OpenAiSession;
 import org.zang.aisdk.dto.req.ChatCompletionRequestDTO;
 
-import org.zang.aisdk.dto.resp.ChatCompletionResponseDTO;
-
 import org.zang.convention.result.Result;
 import org.zang.convention.result.Results;
 import org.zang.dto.req.chat.ChatMetadataRequestDTO;
 import org.zang.dto.resp.ie.IeInferResultRespDTO;
 import org.zang.service.rag.RagChatService;
 
-import com.docapis.core.DocApi;
 import com.fasterxml.jackson.core.JsonProcessingException;
 
 import lombok.RequiredArgsConstructor;
@@ -43,18 +40,12 @@ public class RagController {
 
 
     /**
-     * 测试rag
+     * 智能问答
      * @param chatCompletionRequestDTO 请求参数
      * @return SseEmitter
-     * @throws InterruptedException
-     * @throws JsonProcessingException
      */
     @PostMapping("stream_chat")
     public SseEmitter rag(@RequestBody ChatCompletionRequestDTO chatCompletionRequestDTO) throws InterruptedException, JsonProcessingException {
-
-        log.info("当前的请求参数为{}", chatCompletionRequestDTO);
-
-        log.info("测试开始：请等待调用结果");
 
         return openAiSession.chatCompletions(chatCompletionRequestDTO);
 
@@ -68,12 +59,8 @@ public class RagController {
      */
     @PostMapping("/extractMetaData")
     public Result<IeInferResultRespDTO> extractMetaData(@RequestBody ChatMetadataRequestDTO chatMetadataRequestDTO) {
-        log.info("当前的请求参数为{}", chatMetadataRequestDTO);
-        log.info("测试开始：请等待调用结果");
 
         return Results.success(ragChatService.extractMetaData(chatMetadataRequestDTO));
-
-        //return chatStrategyContent.chatSSE(ModelEnum.THUDM, chatCompletionRequestDTO);
 
     }
 
