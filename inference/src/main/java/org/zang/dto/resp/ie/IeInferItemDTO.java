@@ -39,6 +39,7 @@ public class IeInferItemDTO {
 
     /**
      * 类型
+     * @see org.zang.constant.IeType
      */
     private String type;
 

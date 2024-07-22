@@ -24,7 +24,7 @@ public class TextMatchUtil {
         String subject = "中华全国总工会关于印发《工会参与劳动争议处理办法》的通知";
         String predicate = "2023年12月28日";
 
-        TextMatchUtil.getIndex(subject, predicate, trie);
+
     }
     public static Trie buildTree(String content) {
         Trie trie = new Trie();
@@ -37,18 +37,18 @@ public class TextMatchUtil {
     }
 
     //TODO:这里其实不应该返回 void，我测试情况下看看结果对不对所以才这样做，具体返回什么佬你看看
-    public static void getIndex(String zhuyu, String weiyu, Trie trie) {
-        //找主语对应的 value 下标
-        String subjectValue = zhuyu;
-        final int[] subjectIndex = findBestMatchIndex(trie, subjectValue);
-        final int i = subjectIndex[0] + subjectIndex[1];
-        System.out.println("Subject index: " + subjectIndex[0] + ": " + i + ", Value: " + subjectValue );
-
+    public static int[] getPredicateIndex(int itemIndex, String weiyu, Trie trie) {
         //找到谓语对应的下标
-        String valueContent = weiyu;
-        final int[] valueIndex = findBestMatchIndexAfterSubject(trie, valueContent, subjectIndex[0]);
+        final int[] valueIndex = findBestMatchIndexAfterSubject(trie, weiyu, itemIndex);
         final int i1 = valueIndex[0] + valueIndex[1];
-        System.out.println("Predicate: " + weiyu + ", Value: " + valueContent + ", Index: " + valueIndex[0] + ":" + i1);
+        return new int[]{valueIndex[0], i1};
+    }
+
+    public static int[] getItemIndex(String zhuyu, Trie trie) {
+        //找主语对应的 value 下标
+        final int[] subjectIndex = findBestMatchIndex(trie, zhuyu);
+        final int i = subjectIndex[0] + subjectIndex[1];
+        return new int[]{subjectIndex[0], i};
     }
 
     private static int[] findBestMatchIndex(Trie trie, String target) {

@@ -1,5 +1,6 @@
 package org.zang.dto.resp.ie;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.zang.processor.IePredicateResult;
@@ -32,15 +33,15 @@ public class IeInferResultRespDTO {
     /**
      * 推理结果实体
      */
-    private List<IeInferItemDTO> results;
+    private List<IeInferItemDTO> results = new ArrayList<>();
 
     /**
      * 推理结果关系
      */
-    private List<IeInferRelationDTO> relations;
+    private List<IeInferRelationDTO> relations = new ArrayList<>();
 
     /**
      * 算法返回结果
      */
-    private List<IePredicateResult> iePredicateResults;
+    private List<IePredicateResult> iePredicateResults = new ArrayList<>();
 }
