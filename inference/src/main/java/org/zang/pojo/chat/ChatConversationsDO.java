@@ -17,7 +17,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 /**
- * 用户对话回话表
+ * 用户对话会话表
  * @author Eliauk，微信：Cizai_，邮箱：zang.dromara.org <br/>
  * @date 2024/6/26 <br/>
  * @Copyright 博客：https://eliauku.gitee.io/  ||  per aspera and astra <br/>

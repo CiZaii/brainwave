@@ -7,6 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.dtflys.forest.springboot.annotation.ForestScan;
 
+import cn.hutool.core.util.RuntimeUtil;
+
 /**
  * @author Eliauk，微信：Cizai_，邮箱：zang.dromara.org <br/>
  * @date 2024/6/24 <br/>
@@ -21,6 +23,7 @@ import com.dtflys.forest.springboot.annotation.ForestScan;
 public class InferenceApplication {
 
     public static void main(String[] args) {
+
         SpringApplication.run(InferenceApplication.class, args);
     }
 }

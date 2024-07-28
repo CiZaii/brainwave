@@ -5,8 +5,11 @@ import org.dromara.x.file.storage.core.FileStorageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
+import org.zang.convention.result.Result;
+import org.zang.service.file.FileUpService;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -25,14 +28,16 @@ import lombok.extern.slf4j.Slf4j;
 public class FileUpController {
 
 
-    private final FileStorageService fileStorageService;
+
+
+    private final FileUpService fileUpService;
 
     /**
      * 上传文件
      */
-    @PostMapping("/upload")
-    public FileInfo upload(MultipartFile file) {
-        return fileStorageService.of(file).upload();
+    @PostMapping("/uploadDocumentation")
+    public Result<Void> upload(@RequestParam("documentation") MultipartFile file) {
+        return fileUpService.upload(file);
     }
 
 }

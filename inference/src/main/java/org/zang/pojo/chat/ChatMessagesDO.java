@@ -56,7 +56,7 @@ public class ChatMessagesDO extends BaseDO implements Serializable {
      */
     private Integer tokensUsed;
     /**
-     *
+     * 对话id
      */
     private Integer conversationId;
 }
