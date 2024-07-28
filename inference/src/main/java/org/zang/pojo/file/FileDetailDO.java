@@ -1,5 +1,6 @@
 package org.zang.pojo.file;
 
+import org.zang.convention.constant.FileInitializeStatus;
 import org.zang.pojo.BaseDO;
 
 import com.baomidou.mybatisplus.annotation.IdType;
@@ -157,5 +158,11 @@ public class FileDetailDO extends BaseDO {
      * 用户ID
      */
     private Long userId;
+
+    /**
+     * 是否进行初始化
+     * @see org.zang.convention.constant.FileInitializeStatus
+     */
+    private String isInitialize;
 
 }

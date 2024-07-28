@@ -27,9 +27,6 @@ import lombok.extern.slf4j.Slf4j;
 @RequiredArgsConstructor
 public class FileUpController {
 
-
-
-
     private final FileUpService fileUpService;
 
     /**
@@ -38,6 +35,37 @@ public class FileUpController {
     @PostMapping("/uploadDocumentation")
     public Result<Void> upload(@RequestParam("documentation") MultipartFile file) {
         return fileUpService.upload(file);
+    }
+
+    /**
+     * 读取PDF内容
+     * @param documentId 文档ID
+     * @return PDF内容
+     */
+    @PostMapping("/readPdf")
+    public Result<String> readPdf(@RequestParam("documentId") String documentId) {
+
+        return fileUpService.readPdf(documentId);
+    }
+
+    /**
+     * 对文档进行初始化
+     * @param documentId 文档ID
+     * @return 初始化结果
+     */
+    @PostMapping("/initDocument")
+    public Result<Void> initDocument(@RequestParam("documentId") String documentId) {
+        return fileUpService.initDocument(documentId);
+    }
+
+    /**
+     * 删除指定文档
+     * @param documentId 文档ID
+     * @return 删除结果
+     */
+    @PostMapping("deleteByDocumentId")
+    public Result<Void> deleteByDocumentId(@RequestParam("documentId") String documentId) {
+        return fileUpService.deleteByDocumentId(documentId);
     }
 
 }

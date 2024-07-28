@@ -11,4 +11,10 @@ import org.zang.convention.result.Result;
 public interface FileUpService {
 
     Result<Void> upload(MultipartFile file);
+
+    Result<String> readPdf(String documentId);
+
+    Result<Void> initDocument(String documentId);
+
+    Result<Void> deleteByDocumentId(String documentId);
 }
