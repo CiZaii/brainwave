@@ -63,9 +63,10 @@ public class FileUpController {
      * @param documentId 文档ID
      * @return 删除结果
      */
-    @PostMapping("deleteByDocumentId")
+    @PostMapping("/deleteByDocumentId")
     public Result<Void> deleteByDocumentId(@RequestParam("documentId") String documentId) {
         return fileUpService.deleteByDocumentId(documentId);
     }
+
 
 }

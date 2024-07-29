@@ -55,5 +55,29 @@ public interface MetadataPrompt {
             请根据上述示例提取content中的相关元数据。
             """;
 
+    String DOCUMENT_QA_PROMPT = """
+                文档数据为:
+                {}
+                根据以上给出的内容来回答我下边的问题
+                返回结果要按条来说，并且要告诉我是根据哪页回答出来的结果的格式如下
+            [
+                {
+                    "pageNumber": 这里是第几页,
+                    "referenceSentence": "这里是根据哪句话回答的语料内容",
+                    "answer": "回答的答案是"
+                },
+                {
+                    "pageNumber": 这里是第几页,
+                    "referenceSentence": "这里是根据哪句话回答的语料内容。",
+                    "answer": "回答的答案是"
+                },
+                {
+                    "pageNumber": 这里是第几页,
+                    "referenceSentence": "这里是根据哪句话回答的语料内容。",
+                    "answer": "回答的答案是"
+                }
+            ]
+            """;
+
 
 }

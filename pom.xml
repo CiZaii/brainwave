@@ -39,10 +39,17 @@
         <forest.version>1.5.36</forest.version>
         <doc-apis.version>0.9.1</doc-apis.version>
         <gson.version>2.11.0</gson.version>
+        <pdf-box>3.0.2</pdf-box>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+
+            <dependency>
+                <groupId>org.apache.pdfbox</groupId>
+                <artifactId>pdfbox</artifactId>
+                <version>${pdf-box}</version>
+            </dependency>
 
             <dependency>
                 <groupId>com.google.code.gson</groupId>

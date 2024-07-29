@@ -14,6 +14,7 @@ import org.zang.aisdk.dto.req.ChatCompletionRequestDTO;
 import org.zang.convention.result.Result;
 import org.zang.convention.result.Results;
 import org.zang.dto.req.chat.ChatMetadataRequestDTO;
+import org.zang.dto.req.qa.DocumentQARequestDTO;
 import org.zang.dto.resp.ie.IeInferResultRespDTO;
 import org.zang.service.rag.RagChatService;
 
@@ -62,6 +63,17 @@ public class RagController {
 
         return Results.success(ragChatService.extractMetaData(chatMetadataRequestDTO));
 
+    }
+
+    /**
+     * 文档问答
+     * @param documentQARequestDTO 文档问答参数
+     * @return 文档问答结果
+     * @throws IOException
+     */
+    @PostMapping("/documentQa")
+    public Result<String> documentQa(@RequestBody DocumentQARequestDTO documentQARequestDTO) {
+        return Results.success(ragChatService.documentQa(documentQARequestDTO));
     }
 
 
