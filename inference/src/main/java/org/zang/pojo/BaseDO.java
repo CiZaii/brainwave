@@ -34,5 +34,5 @@ public class BaseDO {
     private Date updateTime;
 
     @TableLogic(value = "'2001-01-01 00:00:00'", delval = "NOW()")
-    private LocalDateTime gmtDeleted;
+    private Date gmtDeleted;
 }

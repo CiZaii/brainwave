@@ -30,6 +30,7 @@ import org.zang.service.user.UserService;
 import cn.dev33.satoken.secure.BCrypt;
 import cn.dev33.satoken.stp.SaTokenInfo;
 import cn.dev33.satoken.stp.StpUtil;
+import cn.hutool.core.bean.BeanUtil;
 import io.github.linpeilie.Converter;
 import lombok.RequiredArgsConstructor;
 
@@ -86,7 +87,8 @@ public class UserServiceImpl implements UserService, RedisCacheConstant {
         try {
             final String passWord = BCrypt.hashpw(registerReqDTO.getPassWord());
             registerReqDTO.setPassWord(passWord);
-            final boolean save = Database.save(converter.convert(registerReqDTO,SysUserDO.class));
+            final SysUserDO bean = BeanUtil.toBean(registerReqDTO, SysUserDO.class);
+            final boolean save = Database.save(bean);
             if ( !save ) {
                 throw new ClientException(UserErrorCodeEnum.USER_SAVE_ERROR);
             }

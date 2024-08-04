@@ -112,6 +112,9 @@ public class RagChatServiceImpl implements RagChatService {
                 .model(documentQARequestDTO.getModelFlag())
                 .messages(Collections.singletonList(MessagesDTO.builder().role("user").content(format).build()))
                 .build();
+
+        chatStrategyContent.chat(Objects.requireNonNull(ModelEnum.getModelEnum(documentQARequestDTO.getModelFlag())), chatCompletionRequestDTO);
+
         return "";
     }
 }

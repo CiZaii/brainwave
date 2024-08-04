@@ -15,6 +15,8 @@ import org.zang.dto.req.user.UserUpdatePasswordReqDTO;
 import org.zang.service.user.UserService;
 
 import cn.dev33.satoken.stp.SaTokenInfo;
+import cn.dev33.satoken.stp.StpUtil;
+import cn.dev33.satoken.util.SaResult;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -34,23 +36,42 @@ public class UserController {
 
     private final UserService userService;
 
+    /**
+     * 登录
+     * @param userLoginReqDTO 登录参数
+     * @return 返回数据
+     */
     @PostMapping("/login")
     public Result<SaTokenInfo> login (@RequestBody UserLoginReqDTO userLoginReqDTO) {
 
         return userService.login(userLoginReqDTO);
     }
 
+    /**
+     * 注册
+     * @param registerReqDTO 用户注册参数
+     * @return 返回数据
+     */
     @PostMapping("/register")
     public Result<Void> register (@RequestBody UserRegisterReqDTO registerReqDTO) {
 
         return userService.register(registerReqDTO);
     }
 
+    /**
+     * 验证用户名是否存在
+     * @param userName 用户名
+     * @return 是否存在
+     */
     @GetMapping("/has-username")
     public Result<Boolean> hasUsername(@RequestParam("userName") String userName) {
         return Results.success(userService.hasUsername(userName));
     }
 
+    /**
+     * 退出登录
+     * @return 返回数据
+     */
     @GetMapping("/logout")
     public Result<Void> logout () {
         Boolean result = userService.logout();
@@ -62,6 +83,11 @@ public class UserController {
         }
     }
 
+    /**
+     * 更新密码
+     * @param userUpdatePasswordReqDTO
+     * @return
+     */
     @PostMapping("/update-password")
     public Result<Void> updatePassword(@RequestBody UserUpdatePasswordReqDTO userUpdatePasswordReqDTO) {
         return userService.updatePassword(userUpdatePasswordReqDTO);

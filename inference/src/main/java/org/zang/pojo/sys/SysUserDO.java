@@ -76,11 +76,8 @@ public class SysUserDO extends BaseDO {
     /**
      * 密码
      */
-    @TableField(
-            insertStrategy = FieldStrategy.NOT_EMPTY,
-            updateStrategy = FieldStrategy.NOT_EMPTY,
-            whereStrategy = FieldStrategy.NOT_EMPTY
-    )
+
+    @TableField(value = "password")
     private String passWord;
 
     /**
