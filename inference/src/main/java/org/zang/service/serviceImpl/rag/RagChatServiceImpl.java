@@ -16,13 +16,16 @@ import org.zang.aisdk.dto.req.ChatCompletionRequestDTO;
 import org.zang.aisdk.dto.resp.ChatCompletionResponseDTO;
 import org.zang.aisdk.dto.req.MessagesDTO;
 import org.zang.aisdk.enums.config.ModelEnum;
+import org.zang.convention.exception.ServiceException;
 import org.zang.convention.prompt.MetadataPrompt;
 import org.zang.dto.req.chat.ChatMetadataRequestDTO;
+import org.zang.dto.req.chat.LLMMetadataRequestDTO;
 import org.zang.dto.req.qa.DocumentQARequestDTO;
 import org.zang.dto.resp.ie.IeInferResultRespDTO;
 import org.zang.pojo.file.DocumentUnitDO;
 import org.zang.processor.CoordinateRelationshipProcessor;
 import org.zang.processor.IePredicateResult;
+import org.zang.service.file.FileUpService;
 import org.zang.service.rag.RagChatService;
 import org.zang.strategy.chat.content.ChatStrategyContent;
 
@@ -51,6 +54,8 @@ public class RagChatServiceImpl implements RagChatService {
 
     private final ChatStrategyContent chatStrategyContent;
 
+    private final FileUpService fileUpService;
+
     @Override
     public IeInferResultRespDTO extractMetaData(ChatMetadataRequestDTO chatMetadataRequestDTO) {
 
@@ -61,7 +66,7 @@ public class RagChatServiceImpl implements RagChatService {
         // 元数据信息
         final String predicates = chatMetadataRequestDTO.getPredicates();
 
-        final String format = StrUtil.format(MetadataPrompt.METADATA_PROMPT, content,predicates);
+        final String format = StrUtil.format(MetadataPrompt.METADATA_PROMPT, predicates,content);
 
         chatMetadataRequestDTO.setModelFlag(ModelEnum.QWEN2_7B.getCode());
 
@@ -106,7 +111,7 @@ public class RagChatServiceImpl implements RagChatService {
         final List<String> contents = Many.of(DocumentUnitDO::getFileDetailId).eq(documentQARequestDTO.getDocumentId()).value(DocumentUnitDO::getContent).query();
 
         final List<String> list = Steam.of(contents).mapIdx((data, i) -> STR."当前是第\{i}页:数据为:\{data}").toList();
-        final String format = StrUtil.format(MetadataPrompt.DOCUMENT_QA_PROMPT, list);
+        final String format = StrUtil.format(MetadataPrompt.DOCUMENT_QA_PROMPT, list,documentQARequestDTO.getQuestion());
         final ChatCompletionRequestDTO chatCompletionRequestDTO = ChatCompletionRequestDTO.builder()
                 .maxTokens(4096)
                 .model(documentQARequestDTO.getModelFlag())
@@ -116,5 +121,54 @@ public class RagChatServiceImpl implements RagChatService {
         chatStrategyContent.chat(Objects.requireNonNull(ModelEnum.getModelEnum(documentQARequestDTO.getModelFlag())), chatCompletionRequestDTO);
 
         return "";
+    }
+
+    @Override
+    public String llmExtractMetaData(LLMMetadataRequestDTO llmMetadataRequestDTO) {
+
+        if (!fileUpService.isInitialize(llmMetadataRequestDTO.getDocumentId())) {
+            throw new ServiceException("当前文档未进行初始化");
+        }
+
+        llmMetadataRequestDTO.setModelFlag(ModelEnum.QWEN2_7B.getCode());
+
+        final List<String> contents = Many.of(DocumentUnitDO::getFileDetailId).eq(llmMetadataRequestDTO.getDocumentId()).value(DocumentUnitDO::getContent).query();
+
+        // 当前文件的语料
+        final StringBuffer corpus = new StringBuffer();
+        Steam.of(contents).forEach(corpus::append);
+
+        final String format = StrUtil.format(MetadataPrompt.GENERATE_PREDICATES, corpus);
+
+        final ChatCompletionRequestDTO chatCompletionRequestDTO = ChatCompletionRequestDTO.builder()
+                .maxTokens(4096)
+                .model(llmMetadataRequestDTO.getModelFlag())
+                .messages(Collections.singletonList(MessagesDTO.builder().role("user").content(format).build()))
+                .build();
+
+        final ChatCompletionResponseDTO metaDeta = chatStrategyContent.chat(Objects.requireNonNull(ModelEnum.getModelEnum(llmMetadataRequestDTO.getModelFlag())), chatCompletionRequestDTO);
+
+        final String content1 = metaDeta.getChoices().get(0).getMessage().getContent();
+
+        final String resultJson = content1.replaceAll("\n", "");
+
+        System.out.println(resultJson);
+        return resultJson;
+    }
+
+    @Override
+    public IeInferResultRespDTO extractMetaDataByDocument(String documentId) {
+
+        final List<String> contents = Many.of(DocumentUnitDO::getFileDetailId).eq(documentId).value(DocumentUnitDO::getContent).query();
+
+        // 当前文件的语料
+        final StringBuffer corpus = new StringBuffer();
+        Steam.of(contents).forEach(corpus::append);
+        final ChatMetadataRequestDTO chatMetadataRequestDTO = new ChatMetadataRequestDTO();
+        chatMetadataRequestDTO.setContent(corpus.toString());
+        chatMetadataRequestDTO.setPredicates(llmExtractMetaData(LLMMetadataRequestDTO.builder().documentId(documentId).build()));
+        final IeInferResultRespDTO ieInferResultRespDTO = extractMetaData(chatMetadataRequestDTO);
+        System.out.println(ieInferResultRespDTO);
+        return ieInferResultRespDTO;
     }
 }

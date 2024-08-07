@@ -1,5 +1,6 @@
 package org.zang;
 
+
 import org.dromara.streamquery.stream.plugin.mybatisplus.engine.annotation.EnableMybatisPlusPlugin;
 import org.dromara.x.file.storage.spring.EnableFileStorage;
 import org.springframework.boot.SpringApplication;
@@ -7,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.dtflys.forest.springboot.annotation.ForestScan;
 
-import cn.hutool.core.util.RuntimeUtil;
+
 
 /**
  * @author Eliauk，微信：Cizai_，邮箱：zang.dromara.org <br/>
@@ -20,6 +21,7 @@ import cn.hutool.core.util.RuntimeUtil;
 @EnableMybatisPlusPlugin(basePackages = "org.zang.pojo.**")
 @EnableFileStorage
 @ForestScan(basePackages = "org.zang")
+
 public class InferenceApplication {
 
     public static void main(String[] args) {

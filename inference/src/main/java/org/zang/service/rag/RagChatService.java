@@ -1,7 +1,9 @@
 package org.zang.service.rag;
 
+import org.zang.aisdk.dto.req.ChatCompletionRequestDTO;
 import org.zang.aisdk.dto.resp.ChatCompletionResponseDTO;
 import org.zang.dto.req.chat.ChatMetadataRequestDTO;
+import org.zang.dto.req.chat.LLMMetadataRequestDTO;
 import org.zang.dto.req.qa.DocumentQARequestDTO;
 import org.zang.dto.resp.ie.IeInferResultRespDTO;
 
@@ -20,4 +22,8 @@ public interface RagChatService {
     IeInferResultRespDTO extractMetaData(ChatMetadataRequestDTO chatMetadataRequestDTO);
 
     String documentQa(DocumentQARequestDTO documentQARequestDTO);
+
+    String llmExtractMetaData(LLMMetadataRequestDTO chatCompletionRequestDTO);
+
+    IeInferResultRespDTO extractMetaDataByDocument(String documentId);
 }
