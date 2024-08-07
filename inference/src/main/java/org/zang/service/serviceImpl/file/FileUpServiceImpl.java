@@ -11,9 +11,11 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.dromara.streamquery.stream.core.stream.Steam;
 import org.dromara.streamquery.stream.plugin.mybatisplus.Database;
+import org.dromara.streamquery.stream.plugin.mybatisplus.Many;
 import org.dromara.streamquery.stream.plugin.mybatisplus.One;
 import org.dromara.x.file.storage.core.FileInfo;
 import org.dromara.x.file.storage.core.FileStorageService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
@@ -23,6 +25,8 @@ import org.zang.convention.constant.FileInitializeStatus;
 import org.zang.convention.exception.ServiceException;
 import org.zang.convention.result.Result;
 import org.zang.convention.result.Results;
+import org.zang.dto.resp.file.FileDetailVO;
+import org.zang.layercheck.PDFLayerChecker;
 import org.zang.pojo.file.DocumentUnitDO;
 import org.zang.pojo.file.FileDetailDO;
 import org.zang.service.file.FileUpService;
@@ -48,6 +52,8 @@ public class FileUpServiceImpl implements FileUpService {
 
     private final PDF2String pdf2String;
 
+    private Converter converter;
+
 
     @Override
     public Result<Void> upload(MultipartFile file) {
@@ -59,6 +65,10 @@ public class FileUpServiceImpl implements FileUpService {
 
     @Override
     public Result<String> readPdf(String documentId) {
+
+        if(!PDFLayerChecker.isSingleLayerPDF(getDocumentFile(documentId))) {
+            throw new ServiceException("当前文件不是单层PDF，无法读取内容");
+        }
 
         final String pdfContent = pdf2String.readPdf(getDocumentFile(documentId));
 
@@ -114,12 +124,28 @@ public class FileUpServiceImpl implements FileUpService {
         return Results.success();
     }
 
+    @Override
+    public Result<List<FileDetailVO>> listFileByUser() {
+
+        final boolean isLogin = StpUtil.isLogin();
+
+        if (!isLogin) {
+            throw new ServiceException("当前用户暂未登录,无法获取文件信息");
+        }
+
+       return Results.success(Many.of(FileDetailDO::getUserId).eq(StpUtil.getLoginIdAsLong()).value(data -> converter.convert(data,FileDetailVO.class)).query());
+
+
+
+    }
+
     /**
      * 判断当前文档是否初始化
      * @param documentId 文档ID
      * @return 当前初始化状态
      */
-    private boolean isInitialize(String documentId) {
+    @Override
+    public boolean isInitialize(String documentId) {
 
         return ObjectUtil.equals(One.of(FileDetailDO::getId).eq(documentId).value(FileDetailDO::getIsInitialize).query(), FileInitializeStatus.INITIALIZED);
     }

@@ -1,14 +1,19 @@
 package org.zang.controller.file;
 
+import java.util.List;
+
 import org.dromara.x.file.storage.core.FileInfo;
 import org.dromara.x.file.storage.core.FileStorageService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import org.zang.convention.result.Result;
+import org.zang.dto.resp.file.FileDetailVO;
+import org.zang.pojo.file.FileDetailDO;
 import org.zang.service.file.FileUpService;
 
 import lombok.RequiredArgsConstructor;
@@ -66,6 +71,11 @@ public class FileUpController {
     @PostMapping("/deleteByDocumentId")
     public Result<Void> deleteByDocumentId(@RequestParam("documentId") String documentId) {
         return fileUpService.deleteByDocumentId(documentId);
+    }
+
+    @GetMapping("listFileByUser")
+    public Result<List<FileDetailVO>> listFileByUser() {
+        return fileUpService.listFileByUser();
     }
 
 

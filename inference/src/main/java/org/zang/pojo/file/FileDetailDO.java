@@ -1,6 +1,7 @@
 package org.zang.pojo.file;
 
 import org.zang.convention.constant.FileInitializeStatus;
+import org.zang.dto.resp.file.FileDetailVO;
 import org.zang.pojo.BaseDO;
 
 import com.baomidou.mybatisplus.annotation.IdType;
@@ -8,6 +9,7 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
+import io.github.linpeilie.annotations.AutoMapper;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,6 +23,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@AutoMapper(target = FileDetailVO.class)
 public class FileDetailDO extends BaseDO {
 
     /**

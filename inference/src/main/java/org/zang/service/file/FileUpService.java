@@ -1,7 +1,10 @@
 package org.zang.service.file;
 
+import java.util.List;
+
 import org.springframework.web.multipart.MultipartFile;
 import org.zang.convention.result.Result;
+import org.zang.dto.resp.file.FileDetailVO;
 
 /**
  * @author Eliauk，微信：Cizai_，邮箱：zang.dromara.org <br/>
@@ -17,4 +20,8 @@ public interface FileUpService {
     Result<Void> initDocument(String documentId);
 
     Result<Void> deleteByDocumentId(String documentId);
+
+    Result<List<FileDetailVO>> listFileByUser();
+
+    boolean isInitialize(String documentId);
 }
