@@ -5,12 +5,19 @@ import static org.zang.convention.errorcode.BaseErrorCode.NEW_PASSWORD_NULL_ERRO
 import static org.zang.convention.errorcode.BaseErrorCode.PASSWORD_VERIFY_ERROR;
 import static org.zang.convention.errorcode.BaseErrorCode.USER_NAME_NULL;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+import javax.management.relation.RoleList;
 
 import org.dromara.streamquery.stream.core.optional.Opp;
+import org.dromara.streamquery.stream.core.stream.Steam;
 import org.dromara.streamquery.stream.plugin.mybatisplus.Database;
 import org.dromara.streamquery.stream.plugin.mybatisplus.One;
 import org.dromara.streamquery.stream.plugin.mybatisplus.OneToMany;
+import org.dromara.streamquery.stream.plugin.mybatisplus.OneToManyToOne;
 import org.redisson.api.RBloomFilter;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
@@ -25,7 +32,9 @@ import org.zang.convention.result.Results;
 import org.zang.dto.req.user.UserLoginReqDTO;
 import org.zang.dto.req.user.UserRegisterReqDTO;
 import org.zang.dto.req.user.UserUpdatePasswordReqDTO;
+import org.zang.pojo.sys.SysRoleDO;
 import org.zang.pojo.sys.SysUserDO;
+import org.zang.pojo.sys.SysUserRoleDO;
 import org.zang.service.user.UserService;
 
 import cn.dev33.satoken.secure.BCrypt;
@@ -152,6 +161,12 @@ public class UserServiceImpl implements UserService, RedisCacheConstant {
     @Override
     public List<String> getRole(Long userId) {
 
-        return List.of();
+        return OneToManyToOne.of(SysUserRoleDO::getUserId)
+                .eq(userId)
+                .value(SysUserRoleDO::getRoleId)
+                .attachKey(SysRoleDO::getRoleId)
+                .attachValue(SysRoleDO::getRoleName)
+                .query((roleMap, n) -> Steam.of(n.values())
+                        .toList());
     }
 }
