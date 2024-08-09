@@ -10,6 +10,7 @@ import java.util.List;
 import org.dromara.streamquery.stream.core.optional.Opp;
 import org.dromara.streamquery.stream.plugin.mybatisplus.Database;
 import org.dromara.streamquery.stream.plugin.mybatisplus.One;
+import org.dromara.streamquery.stream.plugin.mybatisplus.OneToMany;
 import org.redisson.api.RBloomFilter;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
@@ -149,7 +150,8 @@ public class UserServiceImpl implements UserService, RedisCacheConstant {
      * 获取用户当前的角色
      */
     @Override
-    public List<String> getRole() {
+    public List<String> getRole(Long userId) {
+
         return List.of();
     }
 }

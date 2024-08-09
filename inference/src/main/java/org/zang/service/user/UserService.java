@@ -41,5 +41,5 @@ public interface UserService {
     /**
      * 获取用户当前的角色
      */
-    List<String> getRole();
+    List<String> getRole(Long userId);
 }

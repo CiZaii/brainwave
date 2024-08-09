@@ -28,15 +28,20 @@ public class TextMatchUtil {
     }
     public static Trie buildTree(String content) {
         Trie trie = new Trie();
+        StringBuilder sb = new StringBuilder();
+
         for (int i = 0; i < content.length(); i++) {
-            for (int j = i + 1; j <= content.length(); j++) {
-                trie.insert(content.substring(i, j), i);
+            sb.setLength(0);
+            for (int j = i; j < content.length(); j++) {
+                sb.append(content.charAt(j));
+                trie.insert(sb.toString(), i);
             }
         }
+
         return trie;
     }
 
-    //TODO:这里其实不应该返回 void，我测试情况下看看结果对不对所以才这样做，具体返回什么佬你看看
+    // TODO:这里其实不应该返回 void，我测试情况下看看结果对不对所以才这样做，具体返回什么佬你看看
     public static int[] getPredicateIndex(int itemIndex, String weiyu, Trie trie) {
         //找到谓语对应的下标
         final int[] valueIndex = findBestMatchIndexAfterSubject(trie, weiyu, itemIndex);

@@ -162,7 +162,7 @@ public class RagChatServiceImpl implements RagChatService {
         final List<String> contents = Many.of(DocumentUnitDO::getFileDetailId).eq(documentId).value(DocumentUnitDO::getContent).query();
 
         // 当前文件的语料
-        final StringBuffer corpus = new StringBuffer();
+        final StringBuilder corpus = new StringBuilder();
         Steam.of(contents).forEach(corpus::append);
         final ChatMetadataRequestDTO chatMetadataRequestDTO = new ChatMetadataRequestDTO();
         chatMetadataRequestDTO.setContent(corpus.toString());

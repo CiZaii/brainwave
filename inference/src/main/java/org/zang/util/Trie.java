@@ -3,12 +3,15 @@ package org.zang.util;
 import java.util.ArrayList;
 import java.util.List;
 
+import lombok.Data;
+
 /**
  * brain-wave
  * 2024/7/8 22:45
  *
  * @author Ben，微信：wz_Fung_Ben，邮箱：842609063@qq.con <br/>
  **/
+@Data
 public class Trie {
     private final TrieNode root;
     public Trie() {
