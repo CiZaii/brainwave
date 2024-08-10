@@ -41,7 +41,7 @@ public class CoordinateRelationshipProcessor implements IeTypeConstant {
         final List<IeInferRelationDTO> relations = Collections.synchronizedList(ieInferResultRespDTO.getRelations());
 
         // 一次性构建 Trie
-        Trie trie = TextMatchUtil.buildTree(content);
+        Trie trie = TextMatchUtil.buildTree(content,iePredicateResults);
 
         Steam.of(iePredicateResults).parallel(Boolean.TRUE)
                 .forEach(iePredicateResult -> {
