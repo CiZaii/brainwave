@@ -32,6 +32,7 @@ import org.zang.convention.result.Results;
 import org.zang.dto.req.user.UserLoginReqDTO;
 import org.zang.dto.req.user.UserRegisterReqDTO;
 import org.zang.dto.req.user.UserUpdatePasswordReqDTO;
+import org.zang.dto.resp.user.UserInfoRespDTO;
 import org.zang.pojo.sys.SysRoleDO;
 import org.zang.pojo.sys.SysUserDO;
 import org.zang.pojo.sys.SysUserRoleDO;
@@ -168,5 +169,20 @@ public class UserServiceImpl implements UserService, RedisCacheConstant {
                 .attachValue(SysRoleDO::getRoleName)
                 .query((roleMap, n) -> Steam.of(n.values())
                         .toList());
+    }
+
+    /**
+     * 获取用户信息
+     *
+     * @param loginIdAsLong 用户ID
+     * @return 用户信息
+     */
+    @Override
+    public Result<UserInfoRespDTO> userInfo(long loginIdAsLong) {
+
+        final SysUserDO sysUserDO = One.of(SysUserDO::getUserId).eq(loginIdAsLong).query();
+
+        return null;
+
     }
 }

@@ -11,18 +11,12 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public enum ModelEnum {
-    THUDM("THUDM/glm-4-9b-chat","siliconCloudChatStrategyImpl"),
-    QWEN2_7B("Qwen/Qwen2-7B-Instruct","siliconCloudChatStrategyImpl"),
-    /** gpt-3.5-turbo */
-    GPT_3_5_TURBO("gpt-3.5-turbo",""),
-    /** GPT4.0 */
-    GPT_4("gpt-4",""),
-    GPT_4o("gpt-4o",""),
-    /** GPT4.0 超长上下文 */
-    GPT_4_32K("gpt-4-32k",""),
+    THUDM("THUDM/glm-4-9b-chat","siliconCloudChatStrategyImpl","glm-4-9b-chat"),
+    QWEN2_7B("Qwen/Qwen2-7B-Instruct","123","Qwen2-7B-Instruct"),
     ;
-    private String code;
-    private String strategy;
+    private final String code;
+    private final String strategy;
+    private final String name;
 
     public static ModelEnum getModelEnum(String code){
         for (ModelEnum modelEnum : ModelEnum.values()) {

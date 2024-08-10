@@ -2,8 +2,10 @@ package org.zang.controller.rag;
 
 
 import java.io.IOException;
+import java.util.List;
 
 import org.apache.commons.lang3.BooleanUtils;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,6 +21,7 @@ import org.zang.dto.req.chat.ChatMetadataRequestDTO;
 import org.zang.dto.req.chat.LLMMetadataRequestDTO;
 import org.zang.dto.req.qa.DocumentQARequestDTO;
 import org.zang.dto.resp.ie.IeInferResultRespDTO;
+import org.zang.dto.resp.rag.ModelRespDTO;
 import org.zang.service.rag.RagChatService;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -100,6 +103,15 @@ public class RagController {
     @PostMapping("/documentQa")
     public SseEmitter documentQa(@RequestBody DocumentQARequestDTO documentQARequestDTO) throws IOException {
         return ragChatService.documentQa(documentQARequestDTO);
+    }
+
+    /**
+     * 获取模型列表
+     * @return 模型列表
+     */
+    @GetMapping("/models")
+    public Result<List<ModelRespDTO>> models() {
+        return Results.success(ragChatService.models());
     }
 
 

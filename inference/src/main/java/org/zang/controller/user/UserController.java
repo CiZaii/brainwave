@@ -12,6 +12,7 @@ import org.zang.convention.result.Results;
 import org.zang.dto.req.user.UserLoginReqDTO;
 import org.zang.dto.req.user.UserRegisterReqDTO;
 import org.zang.dto.req.user.UserUpdatePasswordReqDTO;
+import org.zang.dto.resp.user.UserInfoRespDTO;
 import org.zang.service.user.UserService;
 
 import cn.dev33.satoken.stp.SaTokenInfo;
@@ -91,6 +92,11 @@ public class UserController {
     @PostMapping("/update-password")
     public Result<Void> updatePassword(@RequestBody UserUpdatePasswordReqDTO userUpdatePasswordReqDTO) {
         return userService.updatePassword(userUpdatePasswordReqDTO);
+    }
+
+    @GetMapping("/userInfo")
+    public Result<UserInfoRespDTO> userInfo() {
+        return userService.userInfo(StpUtil.getLoginIdAsLong());
     }
 
 

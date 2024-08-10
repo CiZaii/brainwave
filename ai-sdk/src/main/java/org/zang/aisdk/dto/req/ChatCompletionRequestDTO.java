@@ -36,7 +36,7 @@ public class ChatCompletionRequestDTO implements Serializable {
     @Serial
     private static final long serialVersionUID = 4673604805983641138L;
     /** 默认模型 */
-    private String model = ModelEnum.GPT_3_5_TURBO.getCode();
+    private String model = ModelEnum.QWEN2_7B.getCode();
     /** 问题描述 */
     private List<MessagesDTO> messages;
     /** 控制温度【随机性】；0到2之间。较高的值(如0.8)将使输出更加随机，而较低的值(如0.2)将使输出更加集中和确定 */

@@ -1,6 +1,7 @@
 package org.zang.service.rag;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 import org.zang.aisdk.dto.req.ChatCompletionRequestDTO;
@@ -9,6 +10,7 @@ import org.zang.dto.req.chat.ChatMetadataRequestDTO;
 import org.zang.dto.req.chat.LLMMetadataRequestDTO;
 import org.zang.dto.req.qa.DocumentQARequestDTO;
 import org.zang.dto.resp.ie.IeInferResultRespDTO;
+import org.zang.dto.resp.rag.ModelRespDTO;
 
 /**
  * @author Eliauk，微信：Cizai_，邮箱：zang.dromara.org <br/>
@@ -45,4 +47,10 @@ public interface RagChatService {
      * @return ChatCompletionResponseDTO 抽取结果
      */
     IeInferResultRespDTO extractMetaDataByDocument(String documentId);
+
+    /**
+     * 获取所有模型
+     * @return
+     */
+    List<ModelRespDTO> models();
 }

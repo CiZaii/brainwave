@@ -8,6 +8,7 @@ import org.zang.dto.req.user.UserRegisterReqDTO;
 
 import cn.dev33.satoken.stp.SaTokenInfo;
 import org.zang.dto.req.user.UserUpdatePasswordReqDTO;
+import org.zang.dto.resp.user.UserInfoRespDTO;
 
 /**
  * @author Eliauk，微信：Cizai_，邮箱：zang.dromara.org <br/>
@@ -42,4 +43,11 @@ public interface UserService {
      * 获取用户当前的角色
      */
     List<String> getRole(Long userId);
+
+    /**
+     * 获取用户信息
+     * @param loginIdAsLong 用户ID
+     * @return 用户信息
+     */
+    Result<UserInfoRespDTO> userInfo(long loginIdAsLong);
 }

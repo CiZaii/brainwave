@@ -2,13 +2,18 @@ package org.zang.strategy.chat.content;
 
 import java.io.IOException;
 import java.util.Map;
+import java.util.Objects;
 
 import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 import org.zang.aisdk.dto.req.ChatCompletionRequestDTO;
 import org.zang.aisdk.dto.resp.ChatCompletionResponseDTO;
 import org.zang.aisdk.enums.config.ModelEnum;
+import org.zang.convention.enums.HandlerEnums;
 import org.zang.convention.exception.ChatException;
+import org.zang.dto.req.qa.DocumentQARequestDTO;
+import org.zang.handler.context.AbstractChainContext;
+import org.zang.handler.filter.RagModelChainFilter;
 import org.zang.strategy.chat.ChatStrategy;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -31,32 +36,24 @@ public class ChatStrategyContent {
     @Resource
     private Map<String, ChatStrategy> modelChatStrategyMap;
 
-    public SseEmitter chatSSE(ModelEnum model, ChatCompletionRequestDTO chatCompletionRequestDTO) throws IOException {
+    private final AbstractChainContext<ChatCompletionRequestDTO> requestDTORagModelChainFilter;
 
-        final String modelName = model.getCode();
-        final String strategy = model.getStrategy();
+    public SseEmitter chatSSE(ChatCompletionRequestDTO chatCompletionRequestDTO) throws IOException {
 
-        log.info("当前使用的模型为{}", modelName);
+        requestDTORagModelChainFilter.handler(HandlerEnums.MODEL_EXIST.getName(), chatCompletionRequestDTO);
 
-        if (ObjectUtil.isEmpty(modelChatStrategyMap.get(strategy))) {
-            log.error("不存在对应的策略，当前想使用的模型为『{}』" , modelName);
-            throw new ChatException("不存在对应的策略，当前想使用的模型为『" + modelName + "』");
-        }
+        final ModelEnum model = ModelEnum.getModelEnum(chatCompletionRequestDTO.getModel());
+
+        final String strategy = Objects.requireNonNull(model).getStrategy();
 
         return modelChatStrategyMap.get(strategy).chatCompletions(model, chatCompletionRequestDTO);
     }
 
     public ChatCompletionResponseDTO chat(ModelEnum model, ChatCompletionRequestDTO chatCompletionRequestDTO) {
 
-        final String modelName = model.getCode();
+        requestDTORagModelChainFilter.handler(HandlerEnums.MODEL_EXIST.getName(), chatCompletionRequestDTO);
+
         final String strategy = model.getStrategy();
-
-        log.info("当前使用的模型为{}", modelName);
-
-        if (ObjectUtil.isEmpty(modelChatStrategyMap.get(strategy))) {
-            log.error("不存在对应的策略，当前想使用的模型为『{}』" , modelName);
-            throw new ChatException("不存在对应的策略，当前想使用的模型为『" + modelName + "』");
-        }
 
         return modelChatStrategyMap.get(strategy).chat(model, chatCompletionRequestDTO);
     }

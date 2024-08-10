@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Objects;
 
 import org.dromara.hutool.core.text.StrUtil;
+import org.dromara.streamquery.stream.core.optional.Opp;
 import org.dromara.streamquery.stream.core.stream.Steam;
 import org.dromara.streamquery.stream.plugin.mybatisplus.Many;
 import org.springframework.stereotype.Service;
@@ -24,6 +25,7 @@ import org.zang.dto.req.chat.ChatMetadataRequestDTO;
 import org.zang.dto.req.chat.LLMMetadataRequestDTO;
 import org.zang.dto.req.qa.DocumentQARequestDTO;
 import org.zang.dto.resp.ie.IeInferResultRespDTO;
+import org.zang.dto.resp.rag.ModelRespDTO;
 import org.zang.pojo.file.DocumentUnitDO;
 import org.zang.processor.CoordinateRelationshipProcessor;
 import org.zang.processor.IePredicateResult;
@@ -108,20 +110,25 @@ public class RagChatServiceImpl implements RagChatService {
     @Override
     public SseEmitter documentQa(DocumentQARequestDTO documentQARequestDTO) throws IOException {
 
-        documentQARequestDTO.setModelFlag(ModelEnum.QWEN2_7B.getCode());
-
         final List<String> contents = Many.of(DocumentUnitDO::getFileDetailId).eq(documentQARequestDTO.getDocumentId()).value(DocumentUnitDO::getContent).query();
 
-        final List<String> list = Steam.of(contents).mapIdx((data, i) -> STR."当前是第\{i}页:数据为:\{data}").toList();
-        final String format = StrUtil.format(MetadataPrompt.DOCUMENT_QA_PROMPT, list,documentQARequestDTO.getQuestion());
-        final ChatCompletionRequestDTO chatCompletionRequestDTO = ChatCompletionRequestDTO.builder()
-                .maxTokens(4096)
-                .stream(true)
-                .model(documentQARequestDTO.getModelFlag())
-                .messages(Collections.singletonList(MessagesDTO.builder().role("user").content(format).build()))
-                .build();
+        String format = null;
+        if (Opp.ofColl(contents).isEmpty()) {
 
-        return chatStrategyContent.chatSSE(Objects.requireNonNull(ModelEnum.getModelEnum(documentQARequestDTO.getModelFlag())), chatCompletionRequestDTO);
+            format = documentQARequestDTO.getQuestion();
+        } else {
+            final List<String> list = Steam.of(contents).mapIdx((data, i) -> STR."当前是第\{i}页:数据为:\{data}").toList();
+
+            format = StrUtil.format(MetadataPrompt.DOCUMENT_QA_PROMPT, list, documentQARequestDTO.getQuestion());
+        }
+
+        return chatStrategyContent.chatSSE(
+                ChatCompletionRequestDTO.builder()
+                        .maxTokens(4096)
+                        .stream(true)
+                        .model(documentQARequestDTO.getModelFlag())
+                        .messages(Collections.singletonList(MessagesDTO.builder().role("user").content(format).build()))
+                        .build());
 
     }
 
@@ -172,5 +179,20 @@ public class RagChatServiceImpl implements RagChatService {
         final IeInferResultRespDTO ieInferResultRespDTO = extractMetaData(chatMetadataRequestDTO);
         System.out.println(ieInferResultRespDTO);
         return ieInferResultRespDTO;
+    }
+
+    /**
+     * 获取所有模型
+     *
+     * @return
+     */
+    @Override
+    public List<ModelRespDTO> models() {
+
+        return Steam.of(ModelEnum.values())
+                .map(model -> ModelRespDTO.builder()
+                        .name(model.getName())
+                        .strategy(model.getStrategy())
+                        .code(model.getCode()).build()).toList();
     }
 }

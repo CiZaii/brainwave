@@ -12,6 +12,7 @@ import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.zang.convention.exception.ChatException;
 import org.zang.convention.exception.ServiceException;
 import org.zang.convention.result.Result;
 import org.zang.convention.result.Results;
@@ -47,6 +48,12 @@ public class ServiceExceptionHandler {
 
     @ExceptionHandler(ServiceException.class)
     public Result<Void> serviceException(ServiceException e) {
+        log.error(e.getMessage(), e);
+        return Results.failure(e);
+    }
+
+    @ExceptionHandler(ChatException.class)
+    public Result<Void> chatCastException(ChatException e) {
         log.error(e.getMessage(), e);
         return Results.failure(e);
     }
