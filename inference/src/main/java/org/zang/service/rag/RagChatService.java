@@ -1,5 +1,8 @@
 package org.zang.service.rag;
 
+import java.io.IOException;
+
+import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 import org.zang.aisdk.dto.req.ChatCompletionRequestDTO;
 import org.zang.aisdk.dto.resp.ChatCompletionResponseDTO;
 import org.zang.dto.req.chat.ChatMetadataRequestDTO;
@@ -21,9 +24,25 @@ public interface RagChatService {
      */
     IeInferResultRespDTO extractMetaData(ChatMetadataRequestDTO chatMetadataRequestDTO);
 
-    String documentQa(DocumentQARequestDTO documentQARequestDTO);
+    /**
+     * 文档问答
+     * @param documentQARequestDTO 文档问答请求参数
+     * @return 文档问答结果
+     */
+    SseEmitter documentQa(DocumentQARequestDTO documentQARequestDTO) throws IOException;
 
+    /**
+     * 自动生成元数据提取
+     * @param chatCompletionRequestDTO 请求参数
+     * @return ChatCompletionResponseDTO 抽取结果
+     */
     String llmExtractMetaData(LLMMetadataRequestDTO chatCompletionRequestDTO);
 
+    /**
+     * 抽取文档内容
+     * @param documentId 请求参数
+     *
+     * @return ChatCompletionResponseDTO 抽取结果
+     */
     IeInferResultRespDTO extractMetaDataByDocument(String documentId);
 }

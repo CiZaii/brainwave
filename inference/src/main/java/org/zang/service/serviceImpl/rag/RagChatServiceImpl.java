@@ -2,6 +2,7 @@ package org.zang.service.serviceImpl.rag;
 
 import static java.lang.StringTemplate.STR;
 
+import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.Collections;
 import java.util.List;
@@ -11,6 +12,7 @@ import org.dromara.hutool.core.text.StrUtil;
 import org.dromara.streamquery.stream.core.stream.Steam;
 import org.dromara.streamquery.stream.plugin.mybatisplus.Many;
 import org.springframework.stereotype.Service;
+import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 import org.zang.aisdk.client.session.OpenAiSession;
 import org.zang.aisdk.dto.req.ChatCompletionRequestDTO;
 import org.zang.aisdk.dto.resp.ChatCompletionResponseDTO;
@@ -104,7 +106,7 @@ public class RagChatServiceImpl implements RagChatService {
     }
 
     @Override
-    public String documentQa(DocumentQARequestDTO documentQARequestDTO) {
+    public SseEmitter documentQa(DocumentQARequestDTO documentQARequestDTO) throws IOException {
 
         documentQARequestDTO.setModelFlag(ModelEnum.QWEN2_7B.getCode());
 
@@ -114,13 +116,13 @@ public class RagChatServiceImpl implements RagChatService {
         final String format = StrUtil.format(MetadataPrompt.DOCUMENT_QA_PROMPT, list,documentQARequestDTO.getQuestion());
         final ChatCompletionRequestDTO chatCompletionRequestDTO = ChatCompletionRequestDTO.builder()
                 .maxTokens(4096)
+                .stream(true)
                 .model(documentQARequestDTO.getModelFlag())
                 .messages(Collections.singletonList(MessagesDTO.builder().role("user").content(format).build()))
                 .build();
 
-        chatStrategyContent.chat(Objects.requireNonNull(ModelEnum.getModelEnum(documentQARequestDTO.getModelFlag())), chatCompletionRequestDTO);
+        return chatStrategyContent.chatSSE(Objects.requireNonNull(ModelEnum.getModelEnum(documentQARequestDTO.getModelFlag())), chatCompletionRequestDTO);
 
-        return "";
     }
 
     @Override

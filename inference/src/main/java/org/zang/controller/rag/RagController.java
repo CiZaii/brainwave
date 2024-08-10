@@ -98,8 +98,8 @@ public class RagController {
      * @throws IOException
      */
     @PostMapping("/documentQa")
-    public Result<String> documentQa(@RequestBody DocumentQARequestDTO documentQARequestDTO) {
-        return Results.success(ragChatService.documentQa(documentQARequestDTO));
+    public SseEmitter documentQa(@RequestBody DocumentQARequestDTO documentQARequestDTO) throws IOException {
+        return ragChatService.documentQa(documentQARequestDTO);
     }
 
 
