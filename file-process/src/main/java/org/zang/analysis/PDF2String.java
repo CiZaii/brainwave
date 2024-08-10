@@ -1,7 +1,10 @@
 package org.zang.analysis;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +14,15 @@ import org.apache.commons.logging.LogFactory;
 import org.apache.pdfbox.Loader;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
+import org.apache.tika.exception.TikaException;
+import org.apache.tika.metadata.Metadata;
+import org.apache.tika.parser.AutoDetectParser;
+import org.apache.tika.parser.ParseContext;
+import org.apache.tika.parser.Parser;
+import org.apache.tika.sax.BodyContentHandler;
 import org.springframework.stereotype.Service;
+import org.xml.sax.ContentHandler;
+import org.xml.sax.SAXException;
 
 /**
  * 读取pdf文档
@@ -57,7 +68,29 @@ public class PDF2String {
 
     }
 
-    public List<String> readPdfOfPage(File file) {
+    public List<String> readDocument(File file) throws IOException, TikaException, SAXException {
+        List<String> pagesText = new ArrayList<>();
+        String mimeType = Files.probeContentType(file.toPath());
+
+        try {
+            if ("application/pdf".equals(mimeType)) {
+                pagesText = readPdfOfPage(file);
+            } else if ("application/msword".equals(mimeType)) {
+                pagesText = readWordByPage(file);
+            } else if ("application/vnd.openxmlformats-officedocument.wordprocessingml.document".equals(mimeType)) {
+                pagesText = readWordByPage(file);
+            }
+        } finally {
+            deleteFile(file);
+        }
+
+        return pagesText;
+    }
+
+    public List<String> readPdfOfPage(File file) throws IOException {
+
+
+
         List<String> pagesText = new ArrayList<>();
 
         try (PDDocument document = Loader.loadPDF(file)) {
@@ -72,11 +105,36 @@ public class PDF2String {
                     pagesText.add(pageText);
                 }
             }
-        } catch (IOException e) {
-            log.error("读取文件失败", e);
+        }  finally {
+            deleteFile(file);
+        }
+        return pagesText;
+    }
+
+    public List<String> readWordByPage(File file) throws IOException, TikaException, SAXException {
+        List<String> pagesText = new ArrayList<>();
+
+        try (FileInputStream fis = new FileInputStream(file)) {
+            Metadata metadata = new Metadata();
+            ParseContext parseContext = new ParseContext();
+
+            Parser parser = new AutoDetectParser();
+            ContentHandler handler = new BodyContentHandler();
+
+            parser.parse(fis, handler, metadata, parseContext);
+
+            String content = handler.toString();
+            String[] pages = content.split("\\n\\s*\\n\\s*\\n");
+
+            for (String page : pages) {
+                if (!page.trim().isEmpty()) {
+                    pagesText.add(page.trim());
+                }
+            }
         } finally {
             deleteFile(file);
         }
+
         return pagesText;
     }
 

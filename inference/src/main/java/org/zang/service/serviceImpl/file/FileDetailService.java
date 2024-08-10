@@ -22,6 +22,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import cn.dev33.satoken.stp.StpUtil;
 import cn.hutool.core.lang.Dict;
 import lombok.SneakyThrows;
 
@@ -43,6 +44,7 @@ public class FileDetailService  implements FileRecorder {
     public boolean save(FileInfo info) {
         FileDetailDO detail = toFileDetailDO(info);
 
+        detail.setUserId(StpUtil.getLoginIdAsLong());
         boolean b = Database.save(detail);
         if (b) {
             info.setId(detail.getId());

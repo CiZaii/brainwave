@@ -21,4 +21,9 @@ public interface FileInitializeStatus {
      */
     String INITIALIZED = "已初始化";
 
+    /**
+     * 初始化失败
+     */
+    String INITIALIZATION_FAILED = "初始化失败";
+
 }

@@ -1,11 +1,9 @@
 package org.zang.service.serviceImpl.file;
 
 import java.io.File;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -15,7 +13,6 @@ import org.dromara.streamquery.stream.plugin.mybatisplus.Many;
 import org.dromara.streamquery.stream.plugin.mybatisplus.One;
 import org.dromara.x.file.storage.core.FileInfo;
 import org.dromara.x.file.storage.core.FileStorageService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
@@ -52,13 +49,18 @@ public class FileUpServiceImpl implements FileUpService {
 
     private final PDF2String pdf2String;
 
-    private Converter converter;
+    private final Converter converter;
 
 
     @Override
+    @Transactional
     public Result<Void> upload(MultipartFile file) {
 
-        fileStorageService.of(file).upload();
+        isDocument(file);
+
+        final FileInfo upload = fileStorageService.of(file).upload();
+
+        initDocument(upload.getId());
 
         return Results.success();
     }
@@ -66,14 +68,15 @@ public class FileUpServiceImpl implements FileUpService {
     @Override
     public Result<String> readPdf(String documentId) {
 
-        if(!PDFLayerChecker.isSingleLayerPDF(getDocumentFile(documentId))) {
+        final File documentFile = getDocumentFile(documentId);
+
+        if(!PDFLayerChecker.isSingleLayerPDF(documentFile)) {
             throw new ServiceException("当前文件不是单层PDF，无法读取内容");
         }
 
-        final String pdfContent = pdf2String.readPdf(getDocumentFile(documentId));
+        final String pdfContent = pdf2String.readPdf(documentFile);
 
         return Results.success(pdfContent);
-
 
     }
 
@@ -85,11 +88,20 @@ public class FileUpServiceImpl implements FileUpService {
             throw new ServiceException("当前文件已经初始化无需再次初始化！！！");
         }
 
-        final List<String> contentUnit = pdf2String.readPdfOfPage(getDocumentFile(documentId));
+        List<String> contentUnit = List.of();
+        try {
+            contentUnit = pdf2String.readDocument(getDocumentFile(documentId));
+        } catch (Exception e) {
+
+            final FileDetailDO fileDetailDO = One.of(FileDetailDO::getId).eq(documentId).query();
+            fileDetailDO.setIsInitialize(FileInitializeStatus.INITIALIZATION_FAILED);
+            Database.updateById(fileDetailDO);
+
+        }
 
         final ArrayList<DocumentUnitDO> documentUnitDoS = new ArrayList<>();
 
-        Steam.of(contentUnit).forEachOrderedIdx( (content, page) -> {
+        Steam.of(contentUnit).forEachOrderedIdx((content, page) -> {
             final DocumentUnitDO documentUnitDO = new DocumentUnitDO();
 
             documentUnitDO.setPage(page);
@@ -100,7 +112,7 @@ public class FileUpServiceImpl implements FileUpService {
 
         final boolean save = Database.saveBatch(documentUnitDoS);
 
-        if (save){
+        if (save) {
             final FileDetailDO fileDetailDO = One.of(FileDetailDO::getId).eq(documentId).query();
             fileDetailDO.setIsInitialize(FileInitializeStatus.INITIALIZED);
             Database.updateById(fileDetailDO);
@@ -135,8 +147,14 @@ public class FileUpServiceImpl implements FileUpService {
 
        return Results.success(Many.of(FileDetailDO::getUserId).eq(StpUtil.getLoginIdAsLong()).value(data -> converter.convert(data,FileDetailVO.class)).query());
 
+    }
 
+    private void isDocument(MultipartFile file) {
 
+        // 判断文件后缀只能上传pdf和word
+        if (!Objects.requireNonNull(file.getOriginalFilename()).endsWith(".pdf") && !file.getOriginalFilename().endsWith(".doc") && !file.getOriginalFilename().endsWith(".docx")) {
+            throw new ServiceException("文件必须为pdf和word格式");
+        }
     }
 
     /**
@@ -160,10 +178,10 @@ public class FileUpServiceImpl implements FileUpService {
         FileInfo fileInfo = fileStorageService.getFileInfoByUrl(fileDetailDO.getUrl());
 
         fileStorageService.download(fileInfo).setProgressListener((progressSize,allSize) ->
-                System.out.println("已下载 " + progressSize + " 总大小" + allSize)
-        ).file(s + "/" + fileDetailDO.getFilename());
+                System.out.println(STR."已下载 \{progressSize} 总大小\{allSize}")
+        ).file(STR."\{s}/\{fileDetailDO.getFilename()}");
 
-        return new File(s + "/" + fileDetailDO.getFilename());
+        return new File(STR."\{s}/\{fileDetailDO.getFilename()}");
     }
 
 }
