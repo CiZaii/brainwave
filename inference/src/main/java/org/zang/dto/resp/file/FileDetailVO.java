@@ -20,11 +20,6 @@ public class FileDetailVO {
     private String id;
 
     /**
-     * 文件访问地址
-     */
-    private String url;
-
-    /**
      * 文件大小，单位字节
      */
     private Long size;
@@ -32,6 +27,15 @@ public class FileDetailVO {
     /**
      * 文件名称
      */
-    private String filename;
+    private String originalFilename;
 
+    /**
+     * 文件是否已初始化
+     */
+    private String isInitialize;
+
+    /**
+     * 文件扩展名
+     */
+    private String ext;
 }
