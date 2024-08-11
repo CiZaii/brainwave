@@ -1,6 +1,6 @@
 <template>
          <div class="aiapplication">
-                <div ref="AnSwerScrollRef" :class="['aiapplication_answer',isShow?'':'active']">
+                <div ref="AnSwerScrollRef" :class="['aiapplication_answer pt-[10rem]',isShow?'':'active']">
                     <QuestionAnswer ref="AnswerRef"></QuestionAnswer>
                 </div>
                 <div :class="['aiapplication_question',isShow?'':'hiddens']" >
@@ -156,6 +156,7 @@ const handleSend = async ()=>{
           "modelFlag": "Qwen/Qwen2-7B-Instruct"
         }),
         onmessage: ({data}) => { 
+          SearchText.value = '';
           let content = JSON.parse(data);  
           console.log(content)
           AnswerRef.value.ChangeEndAnswer(content);
@@ -210,7 +211,7 @@ const updateScroll = ()=>{
      &_answer{ 
         height: 100px;
         overflow-y: scroll;
-        transition: all .8s ease-in-out .5s;
+        transition: all .8s ease-in-out 0s;
         @include scrollbar(1px,#ccc);
         &.active{
             height: calc(100% - 200px);
@@ -222,8 +223,8 @@ const updateScroll = ()=>{
          display: flex;
          align-items: center; 
          flex-direction: column;   
-          overflow: hidden;
-        transition: all 1.2s ease-in-out .5s;
+        overflow: hidden;
+         transition: all 0.8s ease-in-out 0s;
         &.hiddens{ 
             height: 200px;
         }
@@ -232,7 +233,7 @@ const updateScroll = ()=>{
             display: flex;
             align-items: center; 
             justify-content: flex-start !important;     
-            transition: all 0.8s ease-in-out 0s; 
+            transition: all 0.5s ease-in-out 0s; 
             &.hiddens{ 
               
                 height: 50px; 
@@ -254,7 +255,7 @@ const updateScroll = ()=>{
                  cursor: pointer;
                  transform: translateX(0);
                  opacity: 1;
-                 transition: all .4s ease-in-out 1s;
+                 transition: all .4s ease-in-out 0.6s;
                  visibility: visible;
                  &.hiddens{
                    transform: translateX(-100px);
@@ -294,7 +295,7 @@ const updateScroll = ()=>{
              }
              height: 200px;
             overflow: hidden;
-             transition: all 1.2s ease-in-out 0s;
+             transition: all 0.8s ease-in-out 0s;
              &.hiddens{ 
                    height: 0px;
                    opacity: 0;
@@ -308,7 +309,7 @@ const updateScroll = ()=>{
              margin: 1.5rem 0;  
              height: 100px;
              overflow: hidden;
-             transition: all .9s ease-in-out .3s;
+             transition: all .8s ease-in-out 0s;
              &.hiddens{ 
                    height: 0px;
                    opacity: 0;
@@ -344,7 +345,7 @@ const updateScroll = ()=>{
         margin-bottom: 2rem;
         height: 100px;
              overflow: hidden;
-             transition: all .9s ease-in-out .6s;
+             transition: all .8s ease-in-out 0s;
              &.hiddens{ 
                    height: 0px;
                    opacity: 0;
