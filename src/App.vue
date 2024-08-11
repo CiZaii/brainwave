@@ -5,7 +5,7 @@ import type { WatermarkProps } from 'naive-ui';
 import { useAppStore } from './store/modules/app';
 import { useThemeStore } from './store/modules/theme';
 import { naiveDateLocales, naiveLocales } from './locales/naive';
-
+import { NDialogProvider } from 'naive-ui';
 defineOptions({
   name: 'App'
 });
@@ -41,6 +41,7 @@ const watermarkProps = computed<WatermarkProps>(() => {
 </script>
 
 <template>
+   
   <NConfigProvider
     :theme="naiveDarkTheme"
     :theme-overrides="themeStore.naiveTheme"
@@ -48,10 +49,15 @@ const watermarkProps = computed<WatermarkProps>(() => {
     :date-locale="naiveDateLocale"
     class="h-full"
   >
+
     <AppProvider>
-      <RouterView class="bg-layout" />
+      <NDialogProvider>
+        <RouterView class="bg-layout" />
+      </NDialogProvider>
+    
       <NWatermark v-if="themeStore.watermark?.visible" v-bind="watermarkProps" />
     </AppProvider>
+ 
   </NConfigProvider>
 </template>
 

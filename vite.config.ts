@@ -35,7 +35,7 @@ export default defineConfig(configEnv => {
       open: true,
       proxy:{
         '/api':{
-          target: 'http://mollusk-willing-quickly.ngrok-free.app',
+          target: 'http://ai.zverify.cn',
           changeOrigin: true,
           rewrite: path => path.replace(/^\/api/, '')
         } 

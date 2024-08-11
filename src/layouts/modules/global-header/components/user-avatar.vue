@@ -5,7 +5,7 @@ import { useAuthStore } from '@/store/modules/auth';
 import { useRouterPush } from '@/hooks/common/router';
 import { useSvgIcon } from '@/hooks/common/icon';
 import { $t } from '@/locales';
-
+import { useDialog } from 'naive-ui'
 defineOptions({
   name: 'UserAvatar'
 });
@@ -44,15 +44,9 @@ const options = computed(() => {
 });
 
 function logout() {
-  window.$dialog?.info({
-    title: $t('common.tip'),
-    content: $t('common.logoutConfirm'),
-    positiveText: $t('common.confirm'),
-    negativeText: $t('common.cancel'),
-    onPositiveClick: () => {
-      authStore.resetStore();
-    }
-  });
+    localStorage.clear();
+    sessionStorage.clear();
+    location.reload();
 }
 
 function handleDropdown(key: DropdownKey) {
@@ -65,15 +59,11 @@ function handleDropdown(key: DropdownKey) {
 }
 </script>
 
-<template>
-  <NButton v-if="!authStore.isLogin" quaternary @click="loginOrRegister">
-    {{ $t('page.login.common.loginOrRegister') }}
-  </NButton>
-  <NDropdown v-else placement="bottom" trigger="click" :options="options" @select="handleDropdown">
+<template> 
+  <NDropdown  placement="bottom" trigger="click" :options="options" @select="handleDropdown">
     <div>
-      <ButtonIcon>
-        <SvgIcon icon="ph:user-circle" class="text-icon-large" />
-        <span class="text-16px font-medium">{{ authStore.userInfo.userName }}</span>
+      <ButtonIcon> 
+        <span class="text-16px font-medium">超级用户</span>
       </ButtonIcon>
     </div>
   </NDropdown>

@@ -35,7 +35,7 @@ async function handleSubmit() {
   <div class="flex items-center flex-center absolute z-10 w-full pb-5">
     <div class="text-light-50 flex flex-col w-500px mr-[25%] space-y-8">
       <h1 class="text-[2rem] flex items-center font-bold">
-        Gitee平台2024年最牛逼AI中台🤖
+        Gitee平台2024年最牛逼的言启AI中台🤖
       </h1>
       <h1 class="text-[1.5rem]">
         <p class="inline ">这是一个AI的时代</p>

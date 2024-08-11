@@ -17,9 +17,10 @@ export const request = createFlatRequest<App.Service.Response, RequestInstanceSt
   {
     async onRequest(config) {
       const { headers } = config;  
-      const token = localStg.get('token');
+      const token = localStg.get('token'); 
       const Authorization = token ? `Bearer ${token}` : null;
       Object.assign(headers, { Authorization });  
+      console.log(headers)
       return config;
     },
     isBackendSuccess(response) { 

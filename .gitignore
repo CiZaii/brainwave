@@ -23,6 +23,7 @@ coverage
 !.vscode/settings.json
 !.vscode/launch.json
 .idea
+.history
 *.suo
 *.ntvs*
 *.njsproj

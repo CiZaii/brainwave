@@ -49,6 +49,7 @@
   "dependencies": {
     "@better-scroll/core": "2.5.1",
     "@iconify/vue": "4.1.2",
+    "@microsoft/fetch-event-source": "^2.0.1",
     "@sa/axios": "workspace:*",
     "@sa/color": "workspace:*",
     "@sa/hooks": "workspace:*",
@@ -99,13 +100,6 @@
     "vite-plugin-vue-devtools": "7.3.7",
     "vue-eslint-parser": "9.4.3",
     "vue-tsc": "2.0.29"
-  },
-  "simple-git-hooks": {
-    "commit-msg": "pnpm sa git-commit-verify",
-    "pre-commit": "pnpm typecheck && pnpm lint-staged"
-  },
-  "lint-staged": {
-    "*": "eslint --fix"
-  },
+  }, 
   "website": "https://admin.soybeanjs.cn"
 }

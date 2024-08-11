@@ -11,6 +11,7 @@
       "@/*": ["./src/*"],
       "~/*": ["./*"]
     },
+    "noEmit": true,
     "resolveJsonModule": true,
     "types": ["vite/client", "node", "unplugin-icons/types/vue", "naive-ui/volar"],
     "strict": true,

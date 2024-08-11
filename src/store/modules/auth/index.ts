@@ -44,13 +44,13 @@ export const useAuthStore = defineStore(SetupStoreId.Auth, () => {
     // 
     const authStore = useAuthStore();
 
-    // clearAuthStorage();
+    clearAuthStorage();
 
     // authStore.$reset();
 
     if (!route.meta.constant) {
       // await toLogin();
-      console.log('==============',isLogin,route.meta.constant)
+      
     } 
     tabStore.cacheTabs();
     routeStore.resetStore();
@@ -61,16 +61,7 @@ export const useAuthStore = defineStore(SetupStoreId.Auth, () => {
        return {
         "userName": username,
         "passWord": password,
-        "saLoginModel": {
-          "device": "device_y15nz",
-          "isLastingCookie": true,
-          "timeout": 10000*24,
-          "activeTimeout": 1,
-          "extraData": {},
-          "token": "token_a8zff",
-          "isWriteHeader": true,
-          "tokenSignTag": {}
-        }
+    
       }
   }
   /**
@@ -99,9 +90,9 @@ export const useAuthStore = defineStore(SetupStoreId.Auth, () => {
     localStg.set('refreshToken', loginToken);
 
     // 2. get user info
-    const pass = await getUserInfo();
+    // const pass = await getUserInfo();
  
-    if (pass) {
+    if (true) {
       token.value = loginToken.token;
 
       return true;
@@ -127,11 +118,11 @@ export const useAuthStore = defineStore(SetupStoreId.Auth, () => {
     const hasToken = getToken();
 
     if (hasToken) {
-      const pass = await getUserInfo();
+      // const pass = await getUserInfo();
 
-      if (!pass) {
-        resetStore();
-      }
+      // if (!pass) {
+      //   resetStore();
+      // }
     }
   }
 

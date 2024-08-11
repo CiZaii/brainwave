@@ -16,7 +16,7 @@ export function fetchLogin(data:Object) {
 
 /** Get user info */
 export function fetchGetUserInfo() {
-  return request<Api.Auth.UserInfo>({ url: '/auth/getUserInfo' });
+  return false;
 }
 
 /**
