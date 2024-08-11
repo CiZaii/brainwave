@@ -44,13 +44,13 @@
                                         <n-icon size="20" color="#000">
                                             <Apps />
                                         </n-icon> 
-                                        <p>Ai大模型</p>
+                                        <p class="text-gray-700">Ai大模型</p>
                                      </div>
                                     </n-dropdown>
                              
                              </div>
                              <div class="aiapplication_question-input-text">
-                                  <input v-model="SearchText" placeholder="请输入问答内容" type="text">
+                                  <input class="text-gray-800" v-model="SearchText" placeholder="请输入问答内容" type="text">
                              </div>
                              <div class="aiapplication_question-input-file">
                                 <n-icon size="20" color="#000">
@@ -245,7 +245,7 @@ const updateScroll = ()=>{
                 background: transparent;
                 border: 1px solid rgba(0, 0, 0, .06);
                 color: #1c1f23;
-                font-weight: 100; 
+                 font-weight: 100; 
                  padding: 0 .5rem;
                  font-size: 12px;
                  display: flex;
@@ -359,6 +359,7 @@ const updateScroll = ()=>{
                 box-shadow: 0 2px 4px 1px #4b4b590a; 
                 border-radius: 10px;
                 border: 2px solid #fff;
+                color: #1c1f23;
                  border-radius: 5px;
                  padding: 0 .8rem;
                  font-size: 14px;
